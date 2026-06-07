@@ -156,15 +156,21 @@ def registry_entry(label: str) -> dict | None:
     return next((v for v in registry() if v.get("label") == label), None)
 
 
+def flake_attr(label: str) -> str:
+    """Package attribute for a label: dots -> underscores so the `nix build .#attr`
+    CLI path isn't split on '.' (the flake applies the same transform)."""
+    return "version-" + label.replace(".", "_")
+
+
 def fetch_from_flake(label: str) -> Path:
-    """`nix build .#version-<label>` and return the extracted-build out path."""
+    """`nix build .#version-<label>` and return the extracted-build out path.
+    stderr streams through so flake build errors are visible, not swallowed."""
     require_tool("nix")
     out = subprocess.run(
-        ["nix", "build", f".#version-{label}", "--no-link", "--print-out-paths"],
-        cwd=REPO_DIR, capture_output=True, text=True, check=True,
+        ["nix", "build", f".#{flake_attr(label)}", "--no-link", "--print-out-paths"],
+        cwd=REPO_DIR, stdout=subprocess.PIPE, text=True, check=True,
     )
-    path = out.stdout.strip().splitlines()[-1]
-    return Path(path)
+    return Path(out.stdout.strip().splitlines()[-1])
 
 
 # --- objdiff config emission (vendored from vostok-review) ------------------

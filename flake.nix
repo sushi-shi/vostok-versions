@@ -58,8 +58,11 @@
               cp -r "$dir"/. "$out"/
             '';
         in
+        # Dots in a label would split the `nix build .#attr` CLI path, so the
+        # package attribute uses an underscore-sanitized label (scripts/common.py
+        # applies the same transform). The human label keeps its dots.
         builtins.listToAttrs (map (v: {
-          name = "version-${v.label}";
+          name = "version-${builtins.replaceStrings [ "." ] [ "_" ] v.label}";
           value = extract v;
         }) versions)
       );
