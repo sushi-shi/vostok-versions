@@ -19,29 +19,43 @@
       packages = forAll (system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
+
+          # Two packaging formats seen on archive.org: InnoSetup .exe installers
+          # (2013 builds) and plain .7z trees (2014 builds, "survarium_full_*").
           extract = v:
             let
               installer = pkgs.fetchurl {
-                name = "${v.label}-installer.exe";
+                name = builtins.baseNameOf v.url;
                 url = v.url;
                 sha256 = v.sha256;
               };
+              is7z = pkgs.lib.hasSuffix ".7z" v.url;
+              unpack =
+                if is7z
+                then ''7z x -y -oextract "${installer}" >/dev/null''
+                else ''innoextract -d extract "${installer}"'';
+              # A build flagged symbols=false (e.g. a stripped retail-style drop)
+              # is allowed through without a PDB; the delink step just won't apply.
+              requirePdb = (v.symbols or true);
             in
             pkgs.runCommand "survarium-${v.label}" {
-              nativeBuildInputs = [ pkgs.innoextract ];
+              nativeBuildInputs = [ pkgs.innoextract pkgs.p7zip ];
             } ''
               mkdir extract
-              innoextract -d extract "${installer}"
+              ${unpack}
               surv_exe=$(find extract -iname survarium.exe ! -path "*uninstall*" \
                 -printf "%s %p\n" | sort -rn | head -1 | awk '{print $2}')
               if [ -z "$surv_exe" ]; then
                 echo "ERROR: survarium.exe not found in ${v.label}"; exit 1
               fi
-              if [ ! -e "''${surv_exe%.exe}.pdb" ] && ! ls "$(dirname "$surv_exe")"/*.pdb >/dev/null 2>&1; then
-                echo "ERROR: no .pdb beside survarium.exe in ${v.label} (symbol-less build)"; exit 1
+              dir=$(dirname "$surv_exe")
+              if [ ! -e "''${surv_exe%.exe}.pdb" ] && ! ls "$dir"/*.pdb >/dev/null 2>&1; then
+                ${if requirePdb
+                  then ''echo "ERROR: no .pdb beside survarium.exe in ${v.label} (symbol-less build)"; exit 1''
+                  else ''echo "WARNING: ${v.label} has no .pdb (symbols=false); extracting exe only"''}
               fi
               mkdir -p "$out"
-              cp -r "$(dirname "$surv_exe")"/. "$out"/
+              cp -r "$dir"/. "$out"/
             '';
         in
         builtins.listToAttrs (map (v: {
