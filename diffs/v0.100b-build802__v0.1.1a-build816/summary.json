@@ -1,0 +1,1073 @@
+{
+  "base": "v0.100b-build802",
+  "target": "v0.1.1a-build816",
+  "counts": {
+    "identical": 24252,
+    "changed": 419,
+    "new_or_rewritten": 750,
+    "removed_units": 7
+  },
+  "top_changed": [
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 7.388889,
+      "unit": "vostok/animation/anim_track_common.h",
+      "fn": "vostok::animation::`dynamic initializer for 'zero''"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 12.0,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 21.120878,
+      "unit": "vostok/game_core/sources/weapon_core_aimed_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_aimed_fire_state_base::initialize(void)"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 28.2,
+      "unit": "vostok/math_curve_inline.h",
+      "fn": "`vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare"
+    },
+    {
+      "pct": 39.68182,
+      "unit": "vostok/game_core/sources/weapon_core_aimed_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_aimed_fire_state_base::finalize(void)"
+    },
+    {
+      "pct": 40.127518,
+      "unit": "vostok/game/sources/swf_input_translator.cpp",
+      "fn": "public: bool __thiscall survarium::swf_input_translator::process_keyboard(struct vostok::input::world *, enum vostok::input::enum_keyboard, enum vostok::input::enum_keyboard_action, struct survarium::flash_movie *, unsigned int)"
+    },
+    {
+      "pct": 40.6,
+      "unit": "vostok/game_core/sources/weapon_core_aimed_fire_state_base.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon_core_aimed_fire_state_base::on_animation_end_impl(bool &)"
+    },
+    {
+      "pct": 40.6,
+      "unit": "vostok/game_core/sources/weapon_core_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_fire_state_base::on_animation_end_impl(bool &)"
+    },
+    {
+      "pct": 48.57143,
+      "unit": "vostok/game_core/sources/weapon_core_idle_state_base.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon_core_idle_state_base::finalize(void)"
+    },
+    {
+      "pct": 50.0,
+      "unit": "boost/system/error_code.hpp",
+      "fn": "boost::system::`dynamic initializer for 'errno_ecat''"
+    },
+    {
+      "pct": 50.0,
+      "unit": "boost/system/error_code.hpp",
+      "fn": "boost::system::`dynamic initializer for 'native_ecat''"
+    },
+    {
+      "pct": 50.0,
+      "unit": "boost/system/error_code.hpp",
+      "fn": "boost::system::`dynamic initializer for 'posix_category''"
+    },
+    {
+      "pct": 51.733334,
+      "unit": "vostok/game_core/sources/weapon_core_fire_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_fire_state_base::finalize(void)"
+    },
+    {
+      "pct": 59.612904,
+      "unit": "vostok/game_core/sources/weapon_core_shotgun_reload_state.cpp",
+      "fn": "private: void __thiscall survarium::weapon_core_shotgun_reload_state::initialize_logic(class survarium::weapon_core_shotgun_reload_base_substate *, class survarium::weapon_core_shotgun_reload_base_substate *, class survarium::weapon_core_shotgun_reload_base_substate *)"
+    },
+    {
+      "pct": 59.9,
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "public: virtual void __thiscall survarium::weapon_core::instant_aim_start(void)"
+    },
+    {
+      "pct": 60.0,
+      "unit": "vostok/game_core/sources/weapon_core_hide_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_hide_state_base::finalize(void)"
+    },
+    {
+      "pct": 60.0,
+      "unit": "vostok/game_core/sources/weapon_core_show_state_base.cpp",
+      "fn": "protected: virtual void __thiscall survarium::weapon_core_show_state_base::finalize(void)"
+    },
+    {
+      "pct": 65.95349,
+      "unit": "vostok/game/sources/weapon.cpp",
+      "fn": "private: virtual void __thiscall survarium::weapon::deactivate(void)"
+    },
+    {
+      "pct": 65.95744,
+      "unit": "vostok/game_core/sources/weapon_core_shotgun_reload_finish_substate.cpp",
+      "fn": "private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_core_shotgun_reload_finish_substate::on_animation_end(struct vostok::animation::animation_callback_params &)"
+    }
+  ],
+  "new_or_rewritten": [
+    {
+      "unit": "_msvc_internal/Opcode",
+      "fn": "public: virtual void * __thiscall Opcode::AABBTreeBuilder::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Opcode",
+      "fn": "public: virtual void * __thiscall Opcode::AABBTreeBuilder::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: __thiscall Scaleform::StringBuffer::~StringBuffer(void)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: __thiscall Scaleform::StringBuffer::~StringBuffer(void)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::Class::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::Class::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::Class::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::Class::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::Class::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::Class::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::Class::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::AS3::ClassTraits::Traits::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::BlurFilter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::CacheBase::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::DDS::FileReader::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::DDS::FileReader::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::DDS::FileReader::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::DDS::FileReader::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::DDS::FileReader::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::HALNotify::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::SKI_Filter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::Render::TextureGlyph::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/Scaleform",
+      "fn": "public: virtual void * __thiscall Scaleform::SysAllocMapper::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/SupportVertexCallback",
+      "fn": "public: virtual void * __thiscall btTriangleCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/binary_tree_weight_driving_animation_getter",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: __thiscall btHashMap<class btHashPtr, int>::~btHashMap<class btHashPtr, int>(void)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btBoxShape::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btBoxShape::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btCollisionWorld::RayResultCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btConcaveShape::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btConcaveShape::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btConstraintSolver::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btEmptyAlgorithm::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btEmptyAlgorithm::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btSoftBodyConcaveCollisionAlgorithm::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btSoftBodyTriangleCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btTriangleCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btTriangleCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btTriangleCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btTriangleCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/bullet",
+      "fn": "public: virtual void * __thiscall btTriangleCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/c_lang",
+      "fn": "__imp_load_GetKeyNameTextW"
+    },
+    {
+      "unit": "_msvc_internal/c_lang",
+      "fn": "__imp_load_GetKeyState"
+    },
+    {
+      "unit": "_msvc_internal/c_lang",
+      "fn": "__imp_load_GetKeyboardLayout"
+    },
+    {
+      "unit": "_msvc_internal/c_lang",
+      "fn": "__imp_load_MapVirtualKeyExA"
+    },
+    {
+      "unit": "_msvc_internal/n_ary_tree_time_inverter",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "[thunk]: __thiscall survarium::weapon_core_cook::`vcall'{36, {flat}}"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "[thunk]: __thiscall survarium::weapon_core_cook::`vcall'{36, {flat}}"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: __thiscall survarium::body_part_parameters::~body_part_parameters(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: __thiscall survarium::inventory_slot::inventory_slot(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: __thiscall survarium::inventory_slot::~inventory_slot(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: __thiscall survarium::items_dictionary::items_dictionary(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: __thiscall survarium::weapon_user_animations_container::weapon_user_animations_container(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: struct survarium::dictionary_item & __thiscall survarium::dictionary_item::operator=(struct survarium::dictionary_item const &)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual __thiscall survarium::inventory::~inventory(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual __thiscall survarium::items_dictionary::~items_dictionary(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual __thiscall survarium::weapon_user_animations_container::~weapon_user_animations_container(void)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall Scaleform::GFx::State::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::game_material_manager::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::generic_anomaly_core::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::hit_initiator::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::inventory_holder::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::items_dictionary::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::usable_object::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall survarium::weapon_user_animations_container::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/survarium",
+      "fn": "public: virtual void * __thiscall vostok::render::base_scene::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "[thunk]: __thiscall vostok::network::world::`vcall'{4, {flat}}"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "[thunk]: __thiscall vostok::network::world::`vcall'{4, {flat}}"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: __thiscall vostok::intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: __thiscall vostok::particle::lod_entry::~lod_entry(void)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: __thiscall vostok::render::game::renderer::draw_scene_params::~draw_scene_params(void)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: __thiscall vostok::vectora<struct vostok::resources::request>::~vectora<struct vostok::resources::request>(void)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: __thiscall vostok::vfs::mount_result::mount_result(struct vostok::vfs::mount_result const &)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: __thiscall vostok::vfs::mount_result::~mount_result(void)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual __thiscall vostok::particle::particle_system_instance::~particle_system_instance(void)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall btClosestNotMeConvexResultCallback::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::animation::animation_collection::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::collision::aabb_object::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::collision::box_geometry_instance::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::core::engine::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::memory::base_allocator::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::memory::managed_node_owner::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::particle::particle_system_instance_impl::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::physics::animated_model_instance::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::render::render_model::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::render::render_model::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::render::render_surface::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::render::render_surface::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::render::render_surface::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::render::stage_forward::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::sound::sound_spl_cook::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "_msvc_internal/vostok",
+      "fn": "public: virtual void * __thiscall vostok::vfs::mounter::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/basic_io_object.hpp",
+      "fn": "public: __thiscall boost::asio::detail::deadline_timer_service<struct boost::asio::time_traits<class boost::posix_time::ptime> >::implementation_type::implementation_type(void)"
+    },
+    {
+      "unit": "boost/asio/buffer.hpp",
+      "fn": "public: void * __thiscall boost::asio::detail::win_iocp_socket_send_op<class boost::asio::mutable_buffers_1, class boost::asio::detail::write_op<class boost::asio::basic_stream_socket<class boost::asio::ip::tcp, class boost::asio::stream_socket_service<class boost::asio::ip::tcp> >, class boost::asio::mutable_buffers_1, class boost::asio::detail::transfer_all_t, class boost::_bi::bind_t<void, class boost::_mfi::mf3<void, class vostok::network::login_client_impl, class boost::function<void __cdecl (enum vostok::connection_error_types_enum, enum vostok::handshaking_error_types_enum, enum vostok::socket_error_types_enum, enum vostok::login_server_message_types_enum)> const &, class boost::system::error_code const &, unsigned int>, class boost::_bi::list4<class boost::_bi::value<class vostok::network::login_client_impl *>, class boost::_bi::value<class boost::function<void __cdecl (enum vostok::connection_error_types_enum, enum vostok::handshaking_error_types_enum, enum vostok::socket_error_types_enum, enum vostok::login_server_message_types_enum)> >, struct boost::arg<1>, struct boost::arg<2> > > > >::`scalar deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual __thiscall boost::asio::stream_socket_service<class boost::asio::ip::tcp>::~stream_socket_service<class boost::asio::ip::tcp>(void)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall boost::asio::detail::win_thread::func_base::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall boost::asio::ssl::detail::verify_callback_base::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall boost::asio::ssl::detail::verify_callback_base::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall boost::asio::stream_socket_service<class boost::asio::ip::tcp>::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall stlp_std::logic_error::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall stlp_std::logic_error::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall stlp_std::logic_error::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/deadline_timer_service.hpp",
+      "fn": "public: virtual void * __thiscall stlp_std::logic_error::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/detail/completion_handler.hpp",
+      "fn": "public: virtual __thiscall boost::asio::stream_socket_service<class boost::asio::ip::tcp>::~stream_socket_service<class boost::asio::ip::tcp>(void)"
+    },
+    {
+      "unit": "boost/asio/detail/completion_handler.hpp",
+      "fn": "public: virtual void * __thiscall boost::asio::stream_socket_service<class boost::asio::ip::tcp>::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/detail/deadline_timer_service.hpp",
+      "fn": "protected: virtual void * __thiscall boost::asio::io_service::service::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/detail/deadline_timer_service.hpp",
+      "fn": "protected: virtual void * __thiscall boost::asio::io_service::service::`vector deleting destructor'(unsigned int)"
+    },
+    {
+      "unit": "boost/asio/detail/handler_alloc_helpers.hpp",
+      "fn": "public: __thiscall vostok::network_core::async_connector::~async_connector(void)"
+    },
+    {
+      "unit": "boost/asio/detail/handler_alloc_helpers.hpp",
+      "fn": "public: __thiscall vostok::network_core::tcp_packet_socket<class boost::asio::basic_stream_socket<class boost::asio::ip::tcp, class boost::asio::stream_socket_service<class boost::asio::ip::tcp> > >::~tcp_packet_socket<class boost::asio::basic_stream_socket<class boost::asio::ip::tcp, class boost::asio::stream_socket_service<class boost::asio::ip::tcp> > >(void)"
+    },
+    {
+      "unit": "boost/asio/detail/impl/winsock_init.ipp",
+      "fn": "public: virtual void * __thiscall boost::system::error_category::`vector deleting destructor'(unsigned int)"
+    }
+  ],
+  "removed_units": [
+    "boost/noncopyable.hpp",
+    "bullet/bulletcollision/broadphasecollision/btbroadphaseinterface.h",
+    "vostok/core_debug_engine.h",
+    "vostok/detail_noncopyable.h",
+    "vostok/network/sources/functor_response.h",
+    "vostok/sound/sources/sound_rms.cpp",
+    "vostok/sound/sources/sound_rms_cook.cpp"
+  ]
+}
