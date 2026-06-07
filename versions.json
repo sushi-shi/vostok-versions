@@ -15,5 +15,21 @@
     "url": "https://archive.org/download/vostok_engine_v0.1_build_816_internal_id_494_may_14_2013/survarium_alpha_setup_v0.1.1a.exe",
     "sha256": "1a26qavgqs4fx4n3wwhfm4fb95a84m2mdg81gnifakj3yz1r9648",
     "engine_path": "c:/survarium/sources"
+  },
+  {
+    "label": "v0.1.1b-build826",
+    "build": 826,
+    "date": "2013-05-14",
+    "url": "https://archive.org/download/vostok_engine_v0.1_build_826_internal_id_494_may_14_2013/survarium_setup_v011b.exe",
+    "sha256": "10zvg9k9ylmqvmsz0lgb6fw0x9r7awd4nyk1q1z4ia1qv94rhag7",
+    "engine_path": "c:/survarium/sources"
+  },
+  {
+    "label": "v0.1.1c-build870",
+    "build": 870,
+    "date": "2013-05-24",
+    "url": "https://archive.org/download/vostok_engine_v0.1_build_870_internal_id_504_may_24_2013/survarium_alpha_setup_v0.1.1c.exe",
+    "sha256": "0az8zskg6l0gg14v6hl3idl817rjrk0w99k0749q2ahn5mz5cm5p",
+    "engine_path": "c:/survarium/sources"
   }
 ]
