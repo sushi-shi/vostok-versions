@@ -1,19 +1,18 @@
 # v0.1.1e-build884 -> v0.1.1c-build870
 
-Lists below: **engine only** (`vostok/*`). Third-party counts shown for transparency.
+Lists below: **hand-written engine** (`vostok/*`, compiler-generated excluded). Full breakdown:
 
-| bucket | engine (`vostok/*`) | third-party |
-| --- | ---: | ---: |
-| identical | **13998** | 10161 |
-| changed | **462** | 9 |
-| new / rewritten | **281** | 358 |
-| units removed | **2** | 3 |
+| bucket | engine | generated | third-party |
+| --- | ---: | ---: | ---: |
+| identical | **12289** | 1443 | 10427 |
+| changed | **461** | 1 | 9 |
+| new / rewritten | **88** | 187 | 364 |
+| units removed | **2** | - | 3 |
 
 ## Most-changed engine functions (50 shown)
 
 | match % | unit | function |
 | ---: | --- | --- |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
@@ -63,6 +62,7 @@ Lists below: **engine only** (`vostok/*`). Third-party counts shown for transpar
 | 99.50 | vostok/core/sources/resources_query_result.cpp | `private: void __thiscall vostok::resources::query_result::add_loaded_bytes(unsigned int)` |
 | 99.50 | vostok/render/engine/sources/renderer_context.cpp | `public: void __thiscall vostok::render::renderer_context::set_scene(class vostok::render::scene *)` |
 | 99.50 | vostok/render/engine/sources/renderer_context.cpp | `public: class vostok::render::scene_view * __thiscall vostok::render::renderer_context::get_scene_view(void)` |
+| 99.50 | vostok/render/engine/sources/renderer_context.cpp | `public: class vostok::render::scene_view const * __thiscall vostok::render::renderer_context::scene_view(void) const` |
 
 ## Engine units in base but gone in target
 

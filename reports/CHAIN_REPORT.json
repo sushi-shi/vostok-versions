@@ -11,7 +11,6 @@
       "from": "v0.100b-build802",
       "to": "v0.1.1a-build816",
       "added": [
-        "[thunk]: __thiscall vostok::sound::world::`vcall'{12, {flat}}",
         "private: bool __thiscall survarium::weapon_core::AE_pred(void) const",
         "private: bool __thiscall survarium::weapon_core::aimed_fire_AE_pred(void) const",
         "private: bool __thiscall survarium::weapon_core::aimed_fire_pred(void) const",
@@ -53,7 +52,6 @@
         "private: bool __thiscall survarium::weapon_user_animations_selector::sprint_predicate(void) const",
         "private: bool __thiscall survarium::weapon_user_animations_selector::stand_from_crouch_predicate(void) const",
         "private: float __thiscall survarium::character_dispersion_calculator::get_skill_coef(enum survarium::weapon_user_state_enum, bool, bool) const",
-        "private: virtual void * __thiscall survarium::medkit::`vector deleting destructor'(unsigned int)",
         "private: virtual void __thiscall survarium::weapon::on_fire_state_end(void)",
         "private: virtual void __thiscall survarium::weapon::on_fire_state_start(void)",
         "private: void __thiscall survarium::weapon::add_weapon_fire_light(void)",
@@ -66,7 +64,6 @@
         "protected: void __thiscall survarium::swf_input_translator::register_char_bind(enum vostok::input::enum_keyboard, int, bool, bool)",
         "protected: void __thiscall survarium::swf_input_translator::register_char_bind(enum vostok::input::enum_keyboard, wchar_t, wchar_t, int, bool, bool)",
         "protected: wchar_t __thiscall survarium::swf_input_translator::translate_key_action(struct vostok::input::world *, bool, bool, struct survarium::dik_to_swf_bind &)",
-        "public: __thiscall boost::_bi::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > >::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > >(struct boost::_bi::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > > const &)",
         "public: __thiscall survarium::character_dispersion_skill_influence::character_dispersion_skill_influence(void)",
         "public: __thiscall survarium::game_scene::~game_scene(void)",
         "public: __thiscall vostok::ai::planning::plan_tracker::~plan_tracker(void)",
@@ -96,23 +93,6 @@
         "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)",
         "public: virtual bool __thiscall vostok::input::receiver::keyboard::caps_lock_state(void) const",
         "public: virtual bool __thiscall vostok::input::receiver::keyboard::get_scan_unicode(int, wchar_t *, unsigned int) const",
-        "public: virtual void * __thiscall btCollisionWorld::ContactResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btCollisionWorld::RayResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall stlp_std::runtime_error::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::animated_model_instance::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::collision_geometry::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::jump_logic_base_state::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::ladder_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::player_logic_sprint_state::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::ai::selectors::enemy_target_selector::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::detail::concrete_type_helper<unsigned char>::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::memory::writer::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::memory::writer_base::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::particle::particle_system_wrapper_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::grass_world::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_light_propagation_volumes::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_translucency::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::static_render_surface::`vector deleting destructor'(unsigned int)",
         "public: virtual void __thiscall survarium::base_player::on_fire(void)",
         "public: void __thiscall survarium::character_dispersion_calculator::set_character_dispersion_skill_influence(struct survarium::character_dispersion_skill_influence const *)",
         "public: void __thiscall survarium::character_dispersion_skill_influence::load(class vostok::configs::binary_config_value const &)",
@@ -121,12 +101,6 @@
         "vostok::render::index_to_shadow_size"
       ],
       "deleted": [
-        "[thunk]: __thiscall survarium::weapon_core::`vcall'{196, {flat}}",
-        "[thunk]: __thiscall survarium::weapon_core_cook::`vcall'{36, {flat}}",
-        "[thunk]: public: virtual struct vostok::ui::window * __thiscall vostok::ui::ui_text_edit::w(void)",
-        "[thunk]: public: virtual void * __thiscall vostok::ui::ui_text<struct vostok::ui::dynamic_text>::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void * __thiscall vostok::ui::ui_text_edit::`vector deleting destructor'(unsigned int)",
-        "`vostok::sound::sound_world::register_sound_cooks'::`2'::`dynamic atexit destructor for 's_sound_rms_cook''",
         "class vostok::resources::managed_resource * __cdecl vostok::resources::allocate_managed_resource(unsigned int, enum vostok::resources::class_id_enum)",
         "private: bool __thiscall survarium::weapon_core::can_and_must_reload_and_animation_ended_predicate(void) const",
         "private: bool __thiscall survarium::weapon_core::can_and_must_reload_predicate(void) const",
@@ -175,21 +149,6 @@
         "public: virtual __thiscall vostok::sound::sound_rms_cook::~sound_rms_cook(void)",
         "public: virtual class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const & __thiscall vostok::sound::composite_sound::get_sound_rms(void) const",
         "public: virtual class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const & __thiscall vostok::sound::single_sound::get_sound_rms(void) const",
-        "public: virtual void * __thiscall Scaleform::Render::MappedTextureBase::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btClosestNotMeConvexResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::collision_sensor::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::free_fly_camera::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::game_options::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::rifle_scope::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::usable_object::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::victory_item::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::weapon_core_shotgun_reload_state::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::animation::animation_collection::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::core::engine::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::memory::managed_node_owner::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::particle::particle_system_instance_impl::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_forward::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::sound_rms_cook::`vector deleting destructor'(unsigned int)",
         "public: virtual void __thiscall survarium::weapon_core::set_target(enum survarium::weapon_targets)",
         "public: virtual void __thiscall vostok::sound::sound_rms_cook::delete_resource(class vostok::resources::resource_base *)",
         "public: virtual void __thiscall vostok::sound::sound_rms_cook::translate_query(class vostok::resources::query_result_for_cook &)",
@@ -197,22 +156,9 @@
         "public: void __thiscall survarium::weapon_core::instant_idle_end(void)",
         "public: void __thiscall survarium::weapon_core::instant_toggle_end(void)",
         "public: void __thiscall survarium::weapon_core::instant_toggle_start(void)",
-        "void __cdecl vostok::memory::zero<char, 14>(char (&)[14])",
-        "vostok::sound::`dynamic initializer for 's_discr_frequency''"
+        "void __cdecl vostok::memory::zero<char, 14>(char (&)[14])"
       ],
       "changed": [
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::network::world::`vcall'{0, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void * __thiscall survarium::ladder::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "empty_stub"
-        },
         {
           "pct": 0.0,
           "fn": "long __cdecl vostok::threading::interlocked_decrement(long volatile &)"
@@ -223,19 +169,11 @@
         },
         {
           "pct": 0.0,
-          "fn": "private: virtual void * __thiscall survarium::booby_trap::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
           "fn": "private: virtual void __thiscall survarium::medkit::tick(void)"
         },
         {
           "pct": 0.0,
           "fn": "protected: virtual void __thiscall survarium::weapon_core_shotgun_reload_finish_substate::finalize(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: __thiscall boost::function0<bool>::~function0<bool>(void)"
         },
         {
           "pct": 0.0,
@@ -319,90 +257,6 @@
         },
         {
           "pct": 0.0,
-          "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall Scaleform::GFx::State::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::artefact_base::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::empty_hands::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::lobby_menu::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::player_logic_base_state::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::planning::operator_base::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::sensors::smell_sensor::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::memory::base_allocator::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::network::functor_order::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::physics::animated_model_instance::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::base_scene::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::render_model_instance_impl::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::render_surface::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::speedtree_tree_component::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::sound::sound_spl_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
           "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
         },
         {
@@ -415,19 +269,11 @@
         },
         {
           "pct": 0.0,
-          "fn": "public: void * __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf2<void, class survarium::object_wire, class vostok::resources::queries_result &, class boost::function<void __cdecl (class survarium::game_object_&)> &>, class boost::_bi::list3<class boost::_bi::value<class survarium::object_wire *>, struct boost::arg<1>, class boost::_bi::value<class boost::function<void __cdecl (class survarium::game_object_&)> > > >::`scalar deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
           "fn": "survarium::true_predicate"
         },
         {
           "pct": 0.0,
           "fn": "vec_begin"
-        },
-        {
-          "pct": 0.0,
-          "fn": "vostok::animation::`dynamic initializer for 'zero''"
         },
         {
           "pct": 12.0,
@@ -856,10 +702,6 @@
         {
           "pct": 99.666664,
           "fn": "public: virtual struct vostok::physics::world * __thiscall survarium::player::get_physics_world(void)"
-        },
-        {
-          "pct": 99.666664,
-          "fn": "vostok::math::`dynamic initializer for 'SNaN''"
         },
         {
           "pct": 99.67572,
@@ -1918,38 +1760,21 @@
           "fn": "private: void __thiscall survarium::project_cooker_simple::create_game_objects(class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::query_result_for_cook *)"
         }
       ],
-      "identical": 12267
+      "identical": 11060
     },
     {
       "from": "v0.1.1a-build816",
       "to": "v0.1.1b-build826",
       "added": [
-        "[thunk]: __thiscall survarium::weapon_core::`vcall'{196, {flat}}",
         "bool __cdecl vostok::console_commands::execute_console_commands(class vostok::fs_new::native_path_string, enum vostok::console_commands::execution_filter, bool)",
         "private: bool __thiscall survarium::weapon_core::idle_AE_or_chamber_a_round_break_pred(void) const",
         "private: bool __thiscall survarium::weapon_core::reload_break_pred(void) const",
-        "public: __thiscall boost::intrusive::set_member_hook<struct boost::intrusive::link_mode<2>, struct boost::intrusive::none, struct boost::intrusive::none, struct boost::intrusive::none>::~set_member_hook<struct boost::intrusive::link_mode<2>, struct boost::intrusive::none, struct boost::intrusive::none, struct boost::intrusive::none>(void)",
         "public: __thiscall vostok::particle::lod_entry::~lod_entry(void)",
         "public: __thiscall vostok::vectora<struct vostok::resources::request>::~vectora<struct vostok::resources::request>(void)",
         "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)",
         "public: virtual __thiscall vostok::particle::particle_system_instance::~particle_system_instance(void)",
         "public: virtual __thiscall vostok::render::stage_postprocess::~stage_postprocess(void)",
         "public: virtual __thiscall vostok::resources::fs_task_unmount::~fs_task_unmount(void)",
-        "public: virtual void * __thiscall Scaleform::Render::MappedTextureBase::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btClosestNotMeConvexResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::free_fly_camera::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::game_options::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::global_input_handler::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::usable_object::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::weapon_core_idle_state::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::ai::selectors::sound_target_selector::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::memory::managed_node_owner::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::particle::particle_system_instance_impl::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::speedtree_instance::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_forward::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_postprocess::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::resources::fs_task_unmount::`vector deleting destructor'(unsigned int)",
         "public: void __thiscall survarium::game::load_cc_script(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>, bool, bool)",
         "public: void __thiscall survarium::game::load_config_query(char const *, bool, bool)",
         "public: void __thiscall survarium::game::on_config_loaded(class vostok::resources::queries_result &, bool, bool)",
@@ -1962,12 +1787,6 @@
         "void __cdecl vostok::console_commands::load(class vostok::memory::reader &, enum vostok::console_commands::execution_filter, bool)"
       ],
       "deleted": [
-        "[thunk]: __thiscall vostok::network::world::`vcall'{4, {flat}}",
-        "[thunk]: public: virtual void __thiscall vostok::engine::editor_console::on_activate(void)",
-        "[thunk]: public: virtual void __thiscall vostok::engine::editor_console::on_deactivate(void)",
-        "`survarium::game::register_console_commands'::`2'::`dynamic atexit destructor for 'cfg_load_level''",
-        "`survarium::game::register_console_commands'::`2'::`dynamic atexit destructor for 'cfg_unload_level''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'use_parallax_cc''",
         "bool __cdecl vostok::console_commands::execute_console_commands(class vostok::fs_new::native_path_string, enum vostok::console_commands::execution_filter)",
         "private: void __thiscall survarium::game::load_cmd(char const *)",
         "private: void __thiscall survarium::game::unload_cmd(char const *)",
@@ -1977,8 +1796,6 @@
         "private: void __thiscall vostok::render::constants_handler<1>::set_constant_array<class vostok::math::float4>(class vostok::render::shader_constant_host const &, class vostok::math::float4const *, unsigned int)",
         "private: void __thiscall vostok::render::constants_handler<2>::set_constant<class vostok::math::float3>(class vostok::render::shader_constant_host const &, class vostok::math::float3const &)",
         "private: void __thiscall vostok::render::shader_constant_buffer::set_memory(unsigned int, char const *, unsigned int)",
-        "public: __thiscall boost::_bi::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > >::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > >(struct boost::_bi::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > > const &)",
-        "public: __thiscall boost::function0<bool>::~function0<bool>(void)",
         "public: __thiscall vostok::detail::abstract_type_helper::abstract_type_helper(void)",
         "public: __thiscall vostok::render::geometry_batch::~geometry_batch(void)",
         "public: __thiscall vostok::render::render_target_instance::render_target_instance(void)",
@@ -1990,21 +1807,6 @@
         "public: struct vostok::render::streaming_ready_texture & __thiscall vostok::render::streaming_ready_texture::operator=(struct vostok::render::streaming_ready_texture const &)",
         "public: virtual __thiscall survarium::animated_model_instance::~animated_model_instance(void)",
         "public: virtual __thiscall survarium::player_logic_sprint_state::~player_logic_sprint_state(void)",
-        "public: virtual void * __thiscall Scaleform::GFx::State::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall Scaleform::Log::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall Scaleform::Render::TextureFormat::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btCollisionWorld::ContactResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btCollisionWorld::RayResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall stlp_std::runtime_error::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::animated_model_instance::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::player_logic_sprint_state::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::console_impl::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::grass_render_surface::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_light_propagation_volumes::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_translucency::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::static_render_surface::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::resources::managed_resource::`vector deleting destructor'(unsigned int)",
-        "public: void * __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf2<void, class survarium::object_wire, class vostok::resources::queries_result &, class boost::function<void __cdecl (class survarium::game_object_&)> &>, class boost::_bi::list3<class boost::_bi::value<class survarium::object_wire *>, struct boost::arg<1>, class boost::_bi::value<class boost::function<void __cdecl (class survarium::game_object_&)> > > >::`scalar deleting destructor'(unsigned int)",
         "public: void __thiscall survarium::game::load_cc_script(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>, bool)",
         "public: void __thiscall survarium::game::load_config_query(char const *, bool)",
         "public: void __thiscall survarium::game::on_config_loaded(class vostok::resources::queries_result &, bool)",
@@ -2013,50 +1815,6 @@
         "void __cdecl vostok::console_commands::load(class vostok::memory::reader &, enum vostok::console_commands::execution_filter)"
       ],
       "changed": [
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::engine_user::world::`vcall'{20, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::network::world::`vcall'{0, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::sound::world::`vcall'{12, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: private: virtual char const * __thiscall vostok::engine::engine_world::get_resources_path(void) const"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: private: virtual void __thiscall vostok::engine::engine_world::enter_editor_mode(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual int __thiscall vostok::engine::engine_world::get_exit_code(void) const"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void * __thiscall survarium::ladder::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void * __thiscall vostok::engine::engine_world::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void __thiscall vostok::engine::engine_world::exit(int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void __thiscall vostok::engine::engine_world::set_exit_code(int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "empty_stub"
-        },
         {
           "pct": 0.0,
           "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
@@ -2107,10 +1865,6 @@
         },
         {
           "pct": 0.0,
-          "fn": "public: bool __thiscall boost::function_base::empty(void) const"
-        },
-        {
-          "pct": 0.0,
           "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
         },
         {
@@ -2123,110 +1877,6 @@
         },
         {
           "pct": 0.0,
-          "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::collision_geometry::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::console_command_bind::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::damage_protector::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::empty_hands::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::flash_external_handler::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::lobby_menu::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::brain_unit::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::planning::operator_base::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::collision::aabb_object::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::collision::box_geometry_instance::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::detail::concrete_type_helper<unsigned short>::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::memory::writer::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::memory::writer_base::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::physics::animated_model_instance::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::base_scene::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::grass_world::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::render_surface::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::sound::sound_spl_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
           "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
         },
         {
@@ -2236,10 +1886,6 @@
         {
           "pct": 0.0,
           "fn": "vec_begin"
-        },
-        {
-          "pct": 0.0,
-          "fn": "vostok::animation::`dynamic initializer for 'zero''"
         },
         {
           "pct": 6.0753427,
@@ -2578,22 +2224,6 @@
           "fn": "private: void __thiscall vostok::render::stage_postprocess::accumulate_motion_vectors(void)"
         },
         {
-          "pct": 86.875,
-          "fn": "survarium::`dynamic initializer for 's_recoil_back_eanble_cc''"
-        },
-        {
-          "pct": 86.875,
-          "fn": "survarium::`dynamic initializer for 's_recoil_enable_cc''"
-        },
-        {
-          "pct": 86.875,
-          "fn": "survarium::`dynamic initializer for 's_recoil_horizontal_eanble_cc''"
-        },
-        {
-          "pct": 86.875,
-          "fn": "survarium::`dynamic initializer for 's_recoil_vertical_eanble_cc''"
-        },
-        {
           "pct": 87.18132,
           "fn": "private: void __thiscall vostok::render::stage_postprocess::advanced_bloom(void)"
         },
@@ -2760,10 +2390,6 @@
         {
           "pct": 99.666664,
           "fn": "public: void __thiscall vostok::render::backend::set_render_target(enum vostok::render::enum_render_target_enum, class vostok::render::render_target const *)"
-        },
-        {
-          "pct": 99.666664,
-          "fn": "vostok::math::`dynamic initializer for 'SNaN''"
         },
         {
           "pct": 99.68421,
@@ -3206,22 +2832,12 @@
           "fn": "public: void __thiscall vostok::render::renderer::fill_opaque_models(void)"
         }
       ],
-      "identical": 12457
+      "identical": 11268
     },
     {
       "from": "v0.1.1b-build826",
       "to": "v0.1.1c-build870",
       "added": [
-        "[thunk]: __thiscall survarium::booby_trap_core::`vcall'{16, {flat}}",
-        "[thunk]: __thiscall survarium::weapon_core::`vcall'{200, {flat}}",
-        "[thunk]: __thiscall survarium::weapon_core_cook::`vcall'{36, {flat}}",
-        "[thunk]: __thiscall vostok::network::world::`vcall'{4, {flat}}",
-        "[thunk]: public: virtual struct vostok::ui::window * __thiscall vostok::ui::ui_text_edit::w(void)",
-        "[thunk]: public: virtual void * __thiscall survarium::free_fly_camera::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void * __thiscall vostok::ui::ui_text<struct vostok::ui::dynamic_text>::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void * __thiscall vostok::ui::ui_text_edit::`vector deleting destructor'(unsigned int)",
-        "`dynamic initializer for 's_net_client_account_name_cl''",
-        "`dynamic initializer for 's_net_client_account_password_cl''",
         "float __cdecl survarium::chamber_a_round_timescale_calculator(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, struct survarium::weapon_state_creation_params const &)",
         "float __cdecl survarium::computed_hide_animation_time_scale(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, float)",
         "float __cdecl survarium::hide_timescale_calculator(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, struct survarium::weapon_state_creation_params const &)",
@@ -3271,9 +2887,6 @@
         "protected: __thiscall survarium::weapon_core_show_state_base::weapon_core_show_state_base(class survarium::weapon_core &)",
         "protected: bool __thiscall survarium::booby_trap_set_core::try_place_trap(class survarium::booby_trap_core &)",
         "protected: class survarium::booby_trap_core * __thiscall survarium::booby_trap_set_core::find_free_trap(void)",
-        "protected: virtual void * __thiscall Scaleform::SysAllocBase::`vector deleting destructor'(unsigned int)",
-        "protected: virtual void * __thiscall survarium::booby_trap_core::`vector deleting destructor'(unsigned int)",
-        "public: __thiscall boost::function0<bool>::~function0<bool>(void)",
         "public: __thiscall survarium::body_part_parameters::body_part_parameters(char const *, float, float, float, float, bool, class survarium::damage_model &, unsigned char)",
         "public: __thiscall survarium::client_player_update::client_player_update(void)",
         "public: __thiscall survarium::player_state::player_state(void)",
@@ -3322,17 +2935,6 @@
         "public: virtual float __thiscall vostok::sound::ogg_encoded_sound_interface::get_rms_by_time(unsigned __int64) const",
         "public: virtual float __thiscall vostok::sound::single_sound::get_sound_spl_value(void) const",
         "public: virtual int __thiscall survarium::game_world::input_priority(void)",
-        "public: virtual void * __thiscall Scaleform::Render::TextureFormat::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall stlp_std::runtime_error::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::animated_model_instance::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::game_world_object::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::items_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::rifle_scope::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::victory_item::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::animation::animation_collection::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::console_impl::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_translucency::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::resources::managed_resource::`vector deleting destructor'(unsigned int)",
         "public: virtual void __thiscall survarium::base_player::remove_game_world_objects(void)",
         "public: virtual void __thiscall survarium::game_world_ui::callback(struct survarium::flash_movie *, char const *, struct survarium::flash_value const *, unsigned int)",
         "public: virtual void __thiscall vostok::render::effect_environment_probe_index::compile(class vostok::render::effect_compiler &, class vostok::render::custom_config_value const &)",
@@ -3367,8 +2969,6 @@
         "public: void __thiscall vostok::sound::sound_scene::tick(unsigned int)",
         "public: void __thiscall vostok::sound::sound_voice::set_volume(float)",
         "public: void __thiscall vostok::sound::voice_bridge::set_volume(float)",
-        "survarium::`dynamic atexit destructor for 's_movement_speed_factor_cc''",
-        "survarium::`dynamic initializer for 's_movement_speed_factor_cc''",
         "survarium::arbitrary_right",
         "survarium::call_item_remove_game_world_objects",
         "void __cdecl `public: void __thiscall vostok::render::effect_manager::create_effect<class vostok::render::effect_environment_probe_index>(class render::resources::resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base> *)'::`2'::descriptor_object::`dynamic atexit destructor'(void)",
@@ -3378,34 +2978,10 @@
         "void __cdecl vostok::memory::detail::delete_helper_impl<class vostok::memory::single_size_buffer_allocator<96, class vostok::threading::single_threading_policy>, class vostok::sound::sound_voice, struct vostok::memory::detail::call_destructor_predicate>(class vostok::memory::single_size_buffer_allocator<96, class vostok::threading::single_threading_policy> &, class vostok::sound::sound_voice *&, struct vostok::memory::detail::call_destructor_predicate const &)",
         "void __cdecl vostok::sound::test_ogg_query(void)",
         "void __cdecl vostok::sound::test_snd_loaded(class vostok::resources::queries_result &)",
-        "vostok::render::`dynamic atexit destructor for 's_log_texture_stats_cc''",
-        "vostok::render::`dynamic initializer for 's_log_texture_stats_cc''",
-        "vostok::render::`dynamic initializer for 's_no_render_targets''",
         "vostok::render::format_name",
-        "vostok::render::modify_shader_configuration",
-        "vostok::sound::`dynamic atexit destructor for 's_test''",
-        "vostok::sound::`dynamic initializer for 's_test''"
+        "vostok::render::modify_shader_configuration"
       ],
       "deleted": [
-        "[thunk]: __thiscall survarium::weapon_core::`vcall'{196, {flat}}",
-        "[thunk]: public: virtual void * __thiscall survarium::damage_zone::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void * __thiscall survarium::game_world::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void * __thiscall survarium::weapon_core_fire_state::`vector deleting destructor'(unsigned int)",
-        "`dynamic initializer for 's_no_level''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'cascaded_shadow_map_size_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'num_max_light_instances_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'ssao_num_samples_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'update_shadows_every_frame_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'use_16bit_rt_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'use_god_rays_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'use_poisson_disc_shadow_filter_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'use_screenspace_reflections_mask_cc''",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'use_vegetation_trample_cc''",
-        "`vostok::sound::sound_world::register_sound_cooks'::`2'::`dynamic atexit destructor for 's_ogg_file_contents_cook''",
-        "`vostok::sound::sound_world::register_sound_cooks'::`2'::`dynamic atexit destructor for 's_ogg_sound_cook''",
-        "`vostok::sound::sound_world::register_sound_cooks'::`2'::`dynamic atexit destructor for 's_ogg_source_cook''",
-        "`vostok::sound::sound_world::register_sound_cooks'::`2'::`dynamic atexit destructor for 's_sound_environment_cook''",
-        "`vostok::sound::sound_world::register_sound_cooks'::`2'::`dynamic atexit destructor for 's_wav_encoded_sound_interface_cook''",
         "class vostok::animation::mixing::addition_lexeme & __cdecl vostok::animation::mixing::operator+<class vostok::animation::mixing::animation_lexeme, class vostok::animation::mixing::animation_lexeme>(class vostok::animation::mixing::animation_lexeme &, class vostok::animation::mixing::animation_lexeme &)",
         "float __cdecl survarium::computed_reload_animation_time_scale(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, float)",
         "private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_hide_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_hide_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char, bool &)",
@@ -3462,8 +3038,6 @@
         "protected: __thiscall survarium::weapon_core_show_state_base::weapon_core_show_state_base(class survarium::weapon_core &, bool &)",
         "protected: class vostok::resources::resource_ptr<class survarium::booby_trap_core, class vostok::resources::unmanaged_intrusive_base> * __thiscall survarium::booby_trap_set_core::try_place_trap(void)",
         "protected: virtual void __thiscall survarium::booby_trap_set_core::remove(void)",
-        "public: __thiscall Scaleform::Render::Color::Color(class Scaleform::Render::Color const &)",
-        "public: __thiscall boost::intrusive::set_member_hook<struct boost::intrusive::link_mode<2>, struct boost::intrusive::none, struct boost::intrusive::none, struct boost::intrusive::none>::~set_member_hook<struct boost::intrusive::link_mode<2>, struct boost::intrusive::none, struct boost::intrusive::none, struct boost::intrusive::none>(void)",
         "public: __thiscall survarium::body_part_parameters::body_part_parameters(char const *, float, float, float, bool, class survarium::damage_model &, unsigned char)",
         "public: __thiscall vostok::buffer_vector<class vostok::variant<32> const *>::buffer_vector<class vostok::variant<32> const *>(void *, unsigned int, unsigned int)",
         "public: __thiscall vostok::fixed_string<256>::fixed_string<256>(void)",
@@ -3531,27 +3105,6 @@
         "public: virtual __thiscall vostok::sound::wav_encoded_sound_interface_cook::~wav_encoded_sound_interface_cook(void)",
         "public: virtual class vostok::detail::abstract_type_helper * __thiscall vostok::detail::concrete_type_helper<struct vostok::particle::world *>::copy_helper(class vostok::mutable_buffer)",
         "public: virtual unsigned int __thiscall vostok::sound::wav_encoded_sound_interface::decompress(unsigned char *, unsigned int, unsigned int &, unsigned int)",
-        "public: virtual void * __thiscall Scaleform::Render::MappedTextureBase::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btClosestNotMeConvexResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::damage_zone::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::generic_anomaly::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::ladder_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::player_input_handler::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::weapon_core_fire_state::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::weapon_core_shotgun_reload_start_substate::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::memory::managed_node_owner::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::particle::particle_system_wrapper_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_forward::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::resources::fs_task_unmount::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::ogg_file_contents::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::ogg_file_contents_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::ogg_sound::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::ogg_sound_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::sound_environment::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::wav_encoded_sound_interface::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::sound::wav_encoded_sound_interface_cook::`vector deleting destructor'(unsigned int)",
         "public: virtual void __thiscall vostok::sound::ogg_file_contents_cook::delete_resource(class vostok::resources::resource_base *)",
         "public: virtual void __thiscall vostok::sound::ogg_file_contents_cook::translate_query(class vostok::resources::query_result_for_cook &)",
         "public: virtual void __thiscall vostok::sound::ogg_sound_cook::delete_resource(class vostok::resources::resource_base *)",
@@ -3591,138 +3144,6 @@
         "vostok::sound::compare_propagator_info_by_distance"
       ],
       "changed": [
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::sound::world::`vcall'{12, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: protected: virtual class vostok::sound::sound_propagator_emitter const * __thiscall vostok::sound::single_sound::get_sound_propagator_emitter(unsigned __int64) const"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void * __thiscall survarium::ladder::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void * __thiscall vostok::sound::single_sound::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_aimed_fire_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_chamber_a_round_aimed_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_chamber_a_round_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_aimed_fire_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_fire_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_hide_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_reload_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_show_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_weapon_core_aimed_idle_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_weapon_core_idle_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_fire_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_hide_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_aimed_fire_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_fire_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_hide_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_reload_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_show_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_weapon_core_aimed_idle_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_weapon_core_idle_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_reload_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_reload_finish_substate_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_reload_one_round_substate_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_reload_start_substate_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_weapon_reload_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_show_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_weapon_core_aimed_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_weapon_core_idle_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_weapon_core_inactive_state_cook''"
-        },
-        {
-          "pct": 0.0,
-          "fn": "empty_stub"
-        },
         {
           "pct": 0.0,
           "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
@@ -3770,10 +3191,6 @@
         {
           "pct": 0.0,
           "fn": "protected: virtual bool __thiscall btCollisionObject::checkCollideWithOverride(class btCollisionObject *)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: __thiscall boost::function1<void, class vostok::vfs::vfs_iterator &>::~function1<void, class vostok::vfs::vfs_iterator &>(void)"
         },
         {
           "pct": 0.0,
@@ -3913,126 +3330,6 @@
         },
         {
           "pct": 0.0,
-          "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::console_command_bind::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::damage_protector::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::empty_hands::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::flash_external_handler::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::jump_logic_base_state::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::player_logic_base_state::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::victory_items_container::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::planning::operator_base::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::selectors::enemy_target_selector::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::selectors::sound_target_selector::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::sensors::smell_sensor::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::collision::aabb_object::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::collision::box_geometry_instance::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::memory::base_allocator::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::network::functor_response::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::network::string_response::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::physics::animated_model_instance::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::base_scene::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::render_model_instance_impl::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::render_surface::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::sound::sound_scene::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::sound::sound_spl_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
           "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
         },
         {
@@ -4130,10 +3427,6 @@
         {
           "pct": 0.0,
           "fn": "void __cdecl vostok::memory::detail::delete_helper_impl<class vostok::memory::base_allocator, class vostok::vfs::mounter, struct vostok::memory::detail::call_destructor_predicate>(class vostok::memory::base_allocator &, class vostok::vfs::mounter *&, struct vostok::memory::detail::call_destructor_predicate const &)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "vostok::animation::`dynamic initializer for 'zero''"
         },
         {
           "pct": 0.0,
@@ -4660,10 +3953,6 @@
           "fn": "public: void __thiscall vostok::particle::particle_system_instance_impl::set_template(unsigned int, class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>)"
         },
         {
-          "pct": 73.818184,
-          "fn": "`dynamic initializer for 'cfg_save_system_cc''"
-        },
-        {
           "pct": 74.128204,
           "fn": "public: virtual void __thiscall vostok::render::static_model_instance_cook::translate_query(class vostok::resources::query_result_for_cook &)"
         },
@@ -4726,10 +4015,6 @@
         {
           "pct": 75.71429,
           "fn": "public: __thiscall vostok::ai::sound_item::sound_item(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &, char const *)"
-        },
-        {
-          "pct": 75.89552,
-          "fn": "`dynamic initializer for 'cfg_save_user_cc''"
         },
         {
           "pct": 75.96774,
@@ -4882,14 +4167,6 @@
         {
           "pct": 81.565895,
           "fn": "public: void __thiscall vostok::render::grass_patch::render(struct vostok::render::grass_world *, class vostok::render::renderer_context *, class vostok::math::float3const &, enum vostok::render::enum_render_stage_type, unsigned int, float, class vostok::render::res_effect *, unsigned int)"
-        },
-        {
-          "pct": 81.59091,
-          "fn": "survarium::`dynamic initializer for 'bullet_tracer_exposition''"
-        },
-        {
-          "pct": 81.59091,
-          "fn": "survarium::`dynamic initializer for 's_ik_foot_capsule_radius_cc''"
         },
         {
           "pct": 81.77778,
@@ -5414,14 +4691,6 @@
         {
           "pct": 89.1982,
           "fn": "public: virtual void __thiscall survarium::damage_zone_cook::translate_query(class vostok::resources::query_result_for_cook &)"
-        },
-        {
-          "pct": 89.2,
-          "fn": "`dynamic initializer for 's_dump_statistics''"
-        },
-        {
-          "pct": 89.2,
-          "fn": "`dynamic initializer for 's_reset_statistics''"
         },
         {
           "pct": 89.245285,
@@ -6580,10 +5849,6 @@
           "fn": "public: void __thiscall survarium::game::discard_current_match(void)"
         },
         {
-          "pct": 99.666664,
-          "fn": "vostok::math::`dynamic initializer for 'SNaN''"
-        },
-        {
           "pct": 99.675674,
           "fn": "public: void __thiscall vostok::render::renderer_context::update_eye_rays(void)"
         },
@@ -7250,10 +6515,6 @@
         {
           "pct": 99.916664,
           "fn": "public: void __thiscall vostok::sound::sound_scene::resume(void)"
-        },
-        {
-          "pct": 99.92,
-          "fn": "public: virtual void * __thiscall vostok::render::render_output_window::`vector deleting destructor'(unsigned int)"
         },
         {
           "pct": 99.92,
@@ -9744,19 +9005,12 @@
           "fn": "public: void __thiscall vostok::engine::engine_world::finalize(void)"
         }
       ],
-      "identical": 11051
+      "identical": 9916
     },
     {
       "from": "v0.1.1c-build870",
       "to": "v0.1.1e-build884",
       "added": [
-        "[thunk]: public: virtual void * __thiscall survarium::damage_zone::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void * __thiscall survarium::game_world::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void * __thiscall vostok::engine::game_console::`vector deleting destructor'(unsigned int)",
-        "[thunk]: public: virtual void __thiscall vostok::engine::editor_console::on_activate(void)",
-        "[thunk]: public: virtual void __thiscall vostok::engine::editor_console::on_deactivate(void)",
-        "[thunk]: public: virtual void __thiscall vostok::engine::game_console::on_activate(void)",
-        "[thunk]: public: virtual void __thiscall vostok::engine::game_console::on_deactivate(void)",
         "private: float __thiscall survarium::medkit::reduce_damage(char const *, char const *, float, float)",
         "private: struct survarium::medkit::damage_protection const * __thiscall survarium::medkit::find_damage_protection(char const *, char const *)",
         "private: void __thiscall survarium::medkit::active_tick(unsigned int)",
@@ -9765,31 +9019,16 @@
         "private: void __thiscall survarium::medkit::set_active(bool)",
         "private: void __thiscall vostok::resources::allocate_functionality::allocate_final_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> &, bool)",
         "private: void __thiscall vostok::resources::resources_manager::create_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> const &, class vostok::resources::query_result *, bool)",
-        "public: __thiscall boost::_bi::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > >::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > >(struct boost::_bi::storage3<class boost::_bi::value<class vostok::render::engine::world *>, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> >, class boost::_bi::value<class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> > > const &)",
         "public: __thiscall survarium::player_death_subscriber::player_death_subscriber(class boost::function<void __cdecl (void)> const &)",
         "public: __thiscall vostok::fs_new::virtual_path_string::ctor<char *>(char *const &)",
         "public: __thiscall vostok::render::speedtree_data::speedtree_data(void)",
         "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_front(void)",
         "public: class vostok::resources::query_result * __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::pop_all_and_clear(unsigned int *)",
         "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)",
-        "public: virtual void * __thiscall Scaleform::Render::MappedTextureBase::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btCollisionWorld::ContactResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall btCollisionWorld::RayResultCallback::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::damage_zone::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::generic_anomaly::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::player_input_handler::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::weapon_core_shotgun_reload_start_substate::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::core::engine::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::engine::game_console::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::particle::particle_system_wrapper_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::scene_view::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage::`vector deleting destructor'(unsigned int)",
         "public: virtual void __thiscall survarium::medkit::holder_assigned(void)",
         "public: virtual void __thiscall survarium::medkit::holder_removed(void)",
         "public: virtual void __thiscall survarium::medkit::remove(void)",
         "public: virtual void __thiscall vostok::resources::hdd_manager::grab_sorted_queries(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &)",
-        "public: void * __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf2<void, class survarium::object_wire, class vostok::resources::queries_result &, class boost::function<void __cdecl (class survarium::game_object_&)> &>, class boost::_bi::list3<class boost::_bi::value<class survarium::object_wire *>, struct boost::arg<1>, class boost::_bi::value<class boost::function<void __cdecl (class survarium::game_object_&)> > > >::`scalar deleting destructor'(unsigned int)",
         "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::erase(class vostok::resources::query_result *)",
         "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 624, 620, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
         "public: void __thiscall vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
@@ -9799,9 +9038,6 @@
         "public: void __thiscall vostok::render::stage_shadow_direct::prepare_models(class vostok::render::vector<struct vostok::render::render_surface_instance *> &, class vostok::math::float4x4const &, unsigned int, unsigned int, class vostok::math::float3const &, unsigned int)"
       ],
       "deleted": [
-        "[thunk]: __thiscall survarium::booby_trap_core::`vcall'{16, {flat}}",
-        "[thunk]: public: virtual void * __thiscall survarium::free_fly_camera::`vector deleting destructor'(unsigned int)",
-        "`vostok::render::options::register_console_commands'::`2'::`dynamic atexit destructor for 'enabled_light_propagation_volumes_stage_cc''",
         "private: void __thiscall vostok::render::culling::portal_sector_system::draw_portals(class vostok::render::system_renderer &, unsigned int)",
         "private: void __thiscall vostok::render::culling::portal_sector_system::draw_quads(class vostok::render::system_renderer &)",
         "private: void __thiscall vostok::render::renderer::draw_frame_histogram(void) const",
@@ -9811,8 +9047,6 @@
         "private: void __thiscall vostok::resources::resources_manager::create_resources<class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> const &, class vostok::resources::query_result *, bool)",
         "protected: float __thiscall survarium::medkit::reduce_damage(char const *, char const *, float, float)",
         "protected: struct survarium::medkit::damage_protection const * __thiscall survarium::medkit::find_damage_protection(char const *, char const *)",
-        "protected: virtual void * __thiscall Scaleform::SysAllocBase::`vector deleting destructor'(unsigned int)",
-        "protected: virtual void * __thiscall survarium::booby_trap_core::`vector deleting destructor'(unsigned int)",
         "protected: void __thiscall survarium::medkit::active_tick(unsigned int)",
         "protected: void __thiscall survarium::medkit::remove_affects(void)",
         "protected: void __thiscall survarium::medkit::set_active(bool)",
@@ -9825,21 +9059,6 @@
         "public: unsigned int __thiscall vostok::render::resource_manager::get_texture_video_memory_size(void)",
         "public: virtual __thiscall survarium::rifle_scope::~rifle_scope(void)",
         "public: virtual __thiscall vostok::particle::particle_system_instance::~particle_system_instance(void)",
-        "public: virtual void * __thiscall Scaleform::Render::TextureFormat::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall stlp_std::runtime_error::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::artefact_base::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::game_world_object::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::global_input_handler::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::items_cook::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::rifle_scope::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall survarium::usable_object::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::console_impl::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::detail::concrete_type_helper<unsigned char>::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::particle::particle_system_instance_impl::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::render::stage_visibility::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::resources::managed_resource::`vector deleting destructor'(unsigned int)",
-        "public: virtual void * __thiscall vostok::vfs::mounter::`vector deleting destructor'(unsigned int)",
         "public: virtual void __thiscall vostok::resources::hdd_manager::grab_sorted_queries(class vostok::intrusive_list<class vostok::resources::query_result, class vostok::resources::query_result *, 608, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &)",
         "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, 612, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::erase(class vostok::resources::query_result *)",
         "public: void __thiscall vostok::intrusive_double_linked_list<class vostok::resources::query_result, class vostok::resources::query_result *, 616, 612, class vostok::threading::mutex, class vostok::no_size_policy, class vostok::debug_policy>::push_back(class vostok::resources::query_result *, bool *)",
@@ -9861,63 +9080,11 @@
       "changed": [
         {
           "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::engine_user::world::`vcall'{20, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::network::world::`vcall'{0, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: __thiscall vostok::sound::world::`vcall'{12, {flat}}"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: private: virtual char const * __thiscall vostok::engine::engine_world::get_resources_path(void) const"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: private: virtual void __thiscall vostok::engine::engine_world::enter_editor_mode(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual int __thiscall vostok::engine::engine_world::get_exit_code(void) const"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void * __thiscall vostok::engine::engine_world::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void __thiscall vostok::engine::engine_world::exit(int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "[thunk]: public: virtual void __thiscall vostok::engine::engine_world::set_exit_code(int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "empty_stub"
-        },
-        {
-          "pct": 0.0,
           "fn": "long __cdecl vostok::threading::interlocked_decrement(long volatile &)"
         },
         {
           "pct": 0.0,
           "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "private: virtual void * __thiscall survarium::booby_trap::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: __thiscall boost::function0<bool>::~function0<bool>(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: __thiscall boost::function1<void, class vostok::vfs::vfs_iterator &>::~function1<void, class vostok::vfs::vfs_iterator &>(void)"
         },
         {
           "pct": 0.0,
@@ -9997,123 +9164,11 @@
         },
         {
           "pct": 0.0,
-          "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::damage_protector::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::empty_hands::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::flash_external_handler::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::jump_logic_base_state::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::behaviour::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::brain_unit::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::selectors::enemy_target_selector::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::ai::sensors::smell_sensor::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::collision::aabb_object::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::collision::box_geometry_instance::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::detail::abstract_type_helper::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::network::functor_order::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::network::functor_response::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::network::string_response::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::base_scene::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::grass_world::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::render_model_instance_impl::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::render_surface::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::speedtree_instance::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::render::speedtree_tree_component::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::sound::sound_collection::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
-          "fn": "public: virtual void * __thiscall vostok::sound::sound_spl_cook::`vector deleting destructor'(unsigned int)"
-        },
-        {
-          "pct": 0.0,
           "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
         },
         {
           "pct": 0.0,
           "fn": "vec_begin"
-        },
-        {
-          "pct": 0.0,
-          "fn": "vostok::animation::`dynamic initializer for 'zero''"
         },
         {
           "pct": 2.050633,
@@ -11916,7 +10971,7 @@
           "fn": "private: void __thiscall survarium::project_cooker_simple::create_game_objects(class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::query_result_for_cook *)"
         }
       ],
-      "identical": 12190
+      "identical": 11012
     }
   ]
 }

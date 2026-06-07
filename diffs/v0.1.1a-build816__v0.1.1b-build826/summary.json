@@ -1,19 +1,25 @@
 {
   "base": "v0.1.1a-build816",
   "target": "v0.1.1b-build826",
-  "engine_only": true,
+  "scope": {
+    "generated": false,
+    "third_party": false
+  },
   "counts": {
     "identical": {
-      "engine": 14136,
-      "third_party": 10213
+      "engine": 12481,
+      "generated": 1388,
+      "third_party": 10480
     },
     "changed": {
-      "engine": 286,
+      "engine": 264,
+      "generated": 22,
       "third_party": 9
     },
     "new": {
-      "engine": 328,
-      "third_party": 403
+      "engine": 95,
+      "generated": 227,
+      "third_party": 409
     }
   },
   "removed_units": {
@@ -34,76 +40,6 @@
       "pct": 6.0753427,
       "unit": "vostok/game/sources/game_project.cpp",
       "fn": "public: class survarium::victory_items_container_core * __thiscall survarium::simple_game_project::get_items_container(unsigned char)"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
     },
     {
       "pct": 9.958333,
@@ -279,21 +215,79 @@
       "pct": 31.5,
       "unit": "vostok/render/core/dx11/backend_inline.h",
       "fn": "public: void __thiscall vostok::render::backend::set_ps_constant<unsigned int>(class vostok::render::shader_constant_host const *, unsigned int const &)"
+    },
+    {
+      "pct": 31.5,
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::set_ps_constant<unsigned int>(class vostok::render::shader_constant_host const *, unsigned int const &)"
+    },
+    {
+      "pct": 31.5,
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::set_ps_constant<unsigned int>(class vostok::render::shader_constant_host const *, unsigned int const &)"
+    },
+    {
+      "pct": 34.197117,
+      "unit": "vostok/render/engine/sources/stage_lights.cpp",
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_speedtree_lighting(struct vostok::render::lod_entry const *, class SpeedTree::CInstance const *, struct SpeedTree::SInstanceLod const *, class vostok::render::speedtree_tree_component *, class vostok::render::light *)"
+    },
+    {
+      "pct": 34.68182,
+      "unit": "vostok/render/engine/sources/grass_world.cpp",
+      "fn": "public: void __thiscall vostok::render::grass_world::set_trample_parameters(struct vostok::render::trample_desc &)"
+    },
+    {
+      "pct": 35.78626,
+      "unit": "vostok/render/engine/sources/system_renderer.cpp",
+      "fn": "public: void __thiscall vostok::render::system_renderer::draw_triangles(struct vostok::render::vertex_colored const *const, struct vostok::render::vertex_colored const *const, unsigned short const *const, unsigned short const *const, bool)"
+    },
+    {
+      "pct": 37.904762,
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: bool __thiscall survarium::weapon_core::chamber_a_round_on_reload_break_pred(void) const"
+    },
+    {
+      "pct": 38.31541,
+      "unit": "vostok/render/engine/sources/radiance_volume.cpp",
+      "fn": "public: void __thiscall vostok::render::radiance_volume::propagate_lighting_iter(unsigned int, unsigned int)"
+    },
+    {
+      "pct": 40.289356,
+      "unit": "vostok/render/engine/sources/stage_lights.cpp",
+      "fn": "private: void __thiscall vostok::render::stage_lights::render_light(class vostok::render::light *, bool)"
+    },
+    {
+      "pct": 42.340908,
+      "unit": "vostok/render/engine/sources/render_model_skeleton.cpp",
+      "fn": "public: virtual void __thiscall vostok::render::skeleton_render_model_instance::set_constants(void)"
+    },
+    {
+      "pct": 42.726936,
+      "unit": "vostok/render/engine/sources/stage_ambient_lighting.cpp",
+      "fn": "public: virtual void __thiscall vostok::render::stage_ambient_lighting::execute(void)"
+    },
+    {
+      "pct": 45.139442,
+      "unit": "vostok/render/engine/sources/stage_postprocess.cpp",
+      "fn": "public: void __thiscall vostok::render::scene_shader_constants::set(class vostok::render::renderer_context *, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, float, float, float, class vostok::math::float4const &, struct vostok::render::post_process_parameters const &)"
+    },
+    {
+      "pct": 46.132076,
+      "unit": "vostok/render/engine/sources/decal_instance.cpp",
+      "fn": "public: void __thiscall vostok::render::decal_shader_constants_and_geometry::set(class vostok::render::renderer_context *, class vostok::math::float4x4const &, class vostok::math::float4x4const &, float, float, class vostok::math::float3const &, class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 50.521965,
+      "unit": "vostok/render/engine/sources/renderer_context.cpp",
+      "fn": "public: void __thiscall vostok::render::renderer_context::set_v(class vostok::math::float4x4const &)"
+    },
+    {
+      "pct": 50.88889,
+      "unit": "vostok/render/engine/sources/stage_particles.cpp",
+      "fn": "public: void __thiscall vostok::render::particle_shader_constants::set_time(float)"
     }
   ],
   "new_or_rewritten": [
-    {
-      "unit": "vostok/ai/npc.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/ai/search/operator_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::planning::operator_base::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/ai/search/operator_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::planning::operator_base::`vector deleting destructor'(unsigned int)"
-    },
     {
       "unit": "vostok/ai/sources/animation_target_selector.h",
       "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
@@ -303,204 +297,8 @@
       "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
     },
     {
-      "unit": "vostok/ai/sources/position_target_selector.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::selectors::sound_target_selector::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/ai/sources/sound_target_selector.h",
       "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::weapon_core_idle_state::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_animation_lexeme_parameters.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_animation_lexeme_parameters.h",
-      "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_animation_lexeme_parameters.h",
-      "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_binary_tree_weight_node.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_time_scale_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_time_scale_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_time_scale_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_time_scale_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_time_scale_transition_node.cpp",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_event_iterator.cpp",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_transition_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_transition_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/buffer_vector_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/buffer_vector_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/buffer_vector_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/collision/sources/sphere_geometry_instance.h",
-      "fn": "public: virtual void * __thiscall vostok::collision::box_geometry_instance::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall survarium::console_command_bind::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/core/sources/console_command_processor.cpp",
@@ -513,142 +311,6 @@
     {
       "unit": "vostok/core/sources/console_command_processor.cpp",
       "fn": "void __cdecl vostok::console_commands::load(class vostok::memory::reader &, enum vostok::console_commands::execution_filter, bool)"
-    },
-    {
-      "unit": "vostok/core/sources/resources_manager_helper.cpp",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/core_debug_engine.h",
-      "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-    },
-    {
-      "unit": "vostok/core_debug_engine.h",
-      "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-    },
-    {
-      "unit": "vostok/core_debug_engine.h",
-      "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/pointer_cast.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/engine/sources/apc.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/engine/sources/apc.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/engine/sources/apc.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/engine/sources/apc.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/engine/sources/apc.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/fs/path_string_impl.h",
-      "fn": "[thunk]: __thiscall vostok::network::world::`vcall'{0, {flat}}"
-    },
-    {
-      "unit": "vostok/fs/path_string_impl.h",
-      "fn": "[thunk]: __thiscall vostok::sound::world::`vcall'{12, {flat}}"
-    },
-    {
-      "unit": "vostok/fs/path_string_impl.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/fs/path_string_impl.h",
@@ -667,10 +329,6 @@
       "fn": "public: __thiscall vostok::vfs::vfs_mount::~vfs_mount(void)"
     },
     {
-      "unit": "vostok/game/sources/free_fly_camera.h",
-      "fn": "public: virtual void * __thiscall survarium::free_fly_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/game/sources/game.cpp",
       "fn": "public: void __thiscall survarium::game::load_cc_script(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>, bool, bool)"
     },
@@ -683,14 +341,6 @@
       "fn": "public: void __thiscall survarium::game::on_config_loaded(class vostok::resources::queries_result &, bool, bool)"
     },
     {
-      "unit": "vostok/game/sources/game_generate_shaders.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game/sources/game_options.h",
-      "fn": "public: virtual void * __thiscall survarium::game_options::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/game/sources/game_world.h",
       "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
     },
@@ -705,50 +355,6 @@
     {
       "unit": "vostok/game/sources/game_world.h",
       "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
-    },
-    {
-      "unit": "vostok/game/sources/global_input_handler.h",
-      "fn": "public: virtual void * __thiscall survarium::global_input_handler::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game/sources/lobby_menu.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_menu::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game/sources/login_menu_ui.cpp",
-      "fn": "public: virtual void * __thiscall survarium::flash_external_handler::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
     },
     {
       "unit": "vostok/game_core/booby_trap_set_core.h",
@@ -763,24 +369,8 @@
       "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
     },
     {
-      "unit": "vostok/game_core/collision_geometry.h",
-      "fn": "public: virtual void * __thiscall survarium::collision_geometry::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/damage_protector.h",
-      "fn": "public: virtual void * __thiscall survarium::damage_protector::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/damage_protector.h",
-      "fn": "public: virtual void * __thiscall survarium::damage_protector::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/game_core/items_dictionary_cook.h",
       "fn": "public: __thiscall vostok::vectora<struct vostok::resources::request>::~vectora<struct vostok::resources::request>(void)"
-    },
-    {
-      "unit": "vostok/game_core/ladder.h",
-      "fn": "public: virtual void * __thiscall survarium::usable_object::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/game_core/sources/weapon_core.cpp",
@@ -792,70 +382,10 @@
     },
     {
       "unit": "vostok/intrusive_list_inline.h",
-      "fn": "[thunk]: public: virtual void * __thiscall survarium::ladder::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/intrusive_list_inline.h",
       "fn": "public: __thiscall vostok::intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
     },
     {
       "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: __thiscall survarium::weapon_core::`vcall'{196, {flat}}"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: __thiscall vostok::engine_user::world::`vcall'{20, {flat}}"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: __thiscall vostok::network::world::`vcall'{0, {flat}}"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: __thiscall vostok::sound::world::`vcall'{12, {flat}}"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: private: virtual char const * __thiscall vostok::engine::engine_world::get_resources_path(void) const"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: private: virtual char const * __thiscall vostok::engine::engine_world::get_resources_path(void) const"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: private: virtual void __thiscall vostok::engine::engine_world::enter_editor_mode(void)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: public: virtual int __thiscall vostok::engine::engine_world::get_exit_code(void) const"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: public: virtual void * __thiscall vostok::engine::engine_world::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: public: virtual void * __thiscall vostok::engine::engine_world::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: public: virtual void __thiscall vostok::engine::engine_world::exit(int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "[thunk]: public: virtual void __thiscall vostok::engine::engine_world::set_exit_code(int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "public: bool __thiscall boost::function_base::empty(void) const"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "public: bool __thiscall boost::function_base::empty(void) const"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
       "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
     },
     {
@@ -885,42 +415,6 @@
     {
       "unit": "vostok/intrusive_ptr_inline.h",
       "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::inventory_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::brain_unit::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/intrusive_ptr_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::detail::concrete_type_helper<unsigned short>::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/managed_node_owner.h",
-      "fn": "public: virtual void * __thiscall vostok::memory::managed_node_owner::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_aabb_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_aabb_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_aabb_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/math_curve_inline.h",
@@ -945,54 +439,6 @@
     {
       "unit": "vostok/math_curve_inline.h",
       "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
-    },
-    {
-      "unit": "vostok/math_float2_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float2_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float2_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float3_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float3_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float4x4_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::collision::box_geometry_instance::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float4x4_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float4x4_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float4x4_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float4x4_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float4x4_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/math_float4x4_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::functor_command::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/memory_allocator_helper_inline.h",
@@ -1007,26 +453,6 @@
       "fn": "public: virtual __thiscall vostok::particle::particle_system_instance::~particle_system_instance(void)"
     },
     {
-      "unit": "vostok/memory_allocator_helper_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::particle::particle_system_instance_impl::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/memory_allocator_helper_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::effect_sun::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/memory_debug.h",
-      "fn": "public: virtual void * __thiscall vostok::collision::aabb_object::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/memory_writer.h",
-      "fn": "public: virtual void * __thiscall vostok::memory::writer::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/memory_writer.h",
-      "fn": "public: virtual void * __thiscall vostok::memory::writer_base::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/network_core/base_packet.h",
       "fn": "public: __thiscall vostok::one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >::~one_way_threads_channel<class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4>, class vostok::intrusive_spsc_queue<class vostok::network::order, class vostok::network::order, 4> >(void)"
     },
@@ -1041,18 +467,6 @@
     {
       "unit": "vostok/physics/bullet_utils.h",
       "fn": "public: virtual __thiscall vostok::console_commands::cc_u32::~cc_u32(void)"
-    },
-    {
-      "unit": "vostok/physics/sources/bullet_physics_world.cpp",
-      "fn": "public: virtual void * __thiscall btClosestNotMeConvexResultCallback::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/physics/sources/bullet_physics_world.cpp",
-      "fn": "public: virtual void * __thiscall btClosestNotMeConvexResultCallback::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/physics/sources/bullet_physics_world.cpp",
-      "fn": "public: virtual void * __thiscall btClosestNotMeConvexResultCallback::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/render/core/dx11/backend_inline.h",
@@ -1060,10 +474,6 @@
     },
     {
       "unit": "vostok/render/core/dx11/backend_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::render::stage_postprocess::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/render/core/dx11/backend_inline.h",
       "fn": "public: void __thiscall vostok::render::backend::set_gs_constant<float>(class vostok::render::shader_constant_host const *, float const &)"
     },
     {
@@ -1081,6 +491,182 @@
     {
       "unit": "vostok/render/core/dx11/backend_inline.h",
       "fn": "public: void __thiscall vostok::render::backend::set_ps_constant<class vostok::math::float4>(class vostok::render::shader_constant_host const *, class vostok::math::float4const *, unsigned int)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::set_ps_constant<unsigned int>(class vostok::render::shader_constant_host const *, unsigned int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::set_ps_constant<unsigned int>(class vostok::render::shader_constant_host const *, unsigned int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::set_vs_constant<float>(class vostok::render::shader_constant_host const *, float const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::set_vs_constant<float>(class vostok::render::shader_constant_host const *, float const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::set_vs_constant<float>(class vostok::render::shader_constant_host const *, float const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<class vostok::math::float4>(class vostok::render::shader_constant_slot const &, class vostok::math::float4const *, unsigned int)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<class vostok::math::float4>(class vostok::render::shader_constant_slot const &, class vostok::math::float4const *, unsigned int)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/shader_constant_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::render::shader_constant_buffer::set_typed<int>(class vostok::render::shader_constant_slot const &, int const &)"
+    },
+    {
+      "unit": "vostok/render/core/shader_constant_binding_inline.h",
+      "fn": "public: __thiscall vostok::render::sun_cascade::sun_cascade(struct vostok::render::sun_cascade const &)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/stage_lights.cpp",
+      "fn": "private: void __thiscall vostok::render::stage_lights::draw_geometry(class vostok::render::light *)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: virtual __thiscall vostok::render::functor_command::~functor_command(void)"
+    },
+    {
+      "unit": "vostok/resources_fs_task.h",
+      "fn": "public: virtual __thiscall vostok::resources::fs_task_unmount::~fs_task_unmount(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::render::stage_lights::lights_instance::lights_instance(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/threading_event.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/threading_event.h",
+      "fn": "public: __thiscall survarium::game_scene::~game_scene(void)"
+    },
+    {
+      "unit": "vostok/threading_policies.h",
+      "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
+    },
+    {
+      "unit": "vostok/threading_policies.h",
+      "fn": "long __cdecl vostok::threading::interlocked_increment(long volatile &)"
+    },
+    {
+      "unit": "vostok/type_variant_inline.h",
+      "fn": "public: __thiscall vostok::render::skeleton_combined_cook_data::~skeleton_combined_cook_data(void)"
     }
   ]
 }

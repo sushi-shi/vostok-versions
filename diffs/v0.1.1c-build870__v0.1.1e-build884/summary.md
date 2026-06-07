@@ -1,20 +1,19 @@
 # v0.1.1c-build870 -> v0.1.1e-build884
 
-Lists below: **engine only** (`vostok/*`). Third-party counts shown for transparency.
+Lists below: **hand-written engine** (`vostok/*`, compiler-generated excluded). Full breakdown:
 
-| bucket | engine (`vostok/*`) | third-party |
-| --- | ---: | ---: |
-| identical | **13998** | 10161 |
-| changed | **464** | 9 |
-| new / rewritten | **226** | 430 |
-| units removed | **1** | 1 |
+| bucket | engine | generated | third-party |
+| --- | ---: | ---: | ---: |
+| identical | **12289** | 1443 | 10427 |
+| changed | **463** | 1 | 9 |
+| new / rewritten | **67** | 149 | 440 |
+| units removed | **1** | - | 1 |
 
 ## Most-changed engine functions (50 shown)
 
 | match % | unit | function |
 | ---: | --- | --- |
 | 2.05 | vostok/render/engine/sources/system_renderer.cpp | `public: void __thiscall vostok::render::system_renderer::draw_screen_lines(class vostok::math::float3const *, unsigned int, class vostok::math::color const &, float, unsigned int, bool, bool)` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
@@ -63,6 +62,7 @@ Lists below: **engine only** (`vostok/*`). Third-party counts shown for transpar
 | 99.38 | vostok/render/engine/sources/renderer_context.cpp | `private: void __thiscall vostok::render::renderer_context::update_near_far(void)` |
 | 99.44 | vostok/core/sources/resources_query_result_initialization.cpp | `public: __thiscall vostok::resources::query_result_for_cook::query_result_for_cook(class vostok::resources::queries_result *)` |
 | 99.50 | vostok/core/sources/resources_query_result.cpp | `private: void __thiscall vostok::resources::query_result::add_loaded_bytes(unsigned int)` |
+| 99.50 | vostok/render/engine/sources/renderer_context.cpp | `public: void __thiscall vostok::render::renderer_context::set_scene(class vostok::render::scene *)` |
 
 ## Engine units in base but gone in target
 

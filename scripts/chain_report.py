@@ -19,6 +19,7 @@ Run inside vostok-review's `nix develop` (needs objdiff-cli).
 
 from __future__ import annotations
 
+import argparse
 import json
 import subprocess
 import sys
@@ -51,23 +52,25 @@ def ensure_report(base: str, target: str) -> Path:
     return diff_dir / "report.json"
 
 
-def engine_funcs(report_path: Path) -> dict[str, float]:
-    """Demangled name -> lowest match% across units, engine units only."""
+def reportable_funcs(report_path: Path, include_generated: bool) -> dict[str, float]:
+    """Demangled name -> lowest match% across units, hand-written engine only
+    (compiler-generated included when asked)."""
     rep = json.loads(report_path.read_text())
     out: dict[str, float] = {}
     for unit in rep.get("units", []):
-        if not c.is_engine_unit(unit.get("name", "")):
-            continue
+        uname = unit.get("name", "")
         for fn in unit.get("functions", []):
             name = fn.get("metadata", {}).get("demangled_name") or fn.get("name", "?")
-            pct = fn.get("fuzzy_match_percent", 0.0)
-            out[name] = min(pct, out.get(name, 100.0))
+            cls = c.classify(uname, name)
+            if cls == "engine" or (cls == "generated" and include_generated):
+                pct = fn.get("fuzzy_match_percent", 0.0)
+                out[name] = min(pct, out.get(name, 100.0))
     return out
 
 
-def diff_pair(a: str, b: str) -> dict:
-    fb = engine_funcs(ensure_report(a, b))   # target = b, % vs a
-    fa = engine_funcs(ensure_report(b, a))   # target = a, % vs b
+def diff_pair(a: str, b: str, include_generated: bool) -> dict:
+    fb = reportable_funcs(ensure_report(a, b), include_generated)   # target = b, % vs a
+    fa = reportable_funcs(ensure_report(b, a), include_generated)   # target = a, % vs b
     names_a, names_b = set(fa), set(fb)
     both = names_a & names_b
     changed = sorted(((fb[n], n) for n in both if fb[n] < 100.0))
@@ -87,6 +90,11 @@ def _capped(items: list, render) -> list[str]:
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser(description="Chain report across consecutive ingested versions.")
+    ap.add_argument("--with-generated", action="store_true",
+                    help="include compiler-generated functions (thunks, deleting dtors, ...)")
+    args = ap.parse_args()
+
     versions = ingested_ordered()
     if len(versions) < 2:
         sys.exit("chain_report: need >= 2 ingested versions")
@@ -94,7 +102,7 @@ def main() -> None:
 
     steps = []
     for a, b in zip(versions, versions[1:]):
-        d = diff_pair(a["label"], b["label"])
+        d = diff_pair(a["label"], b["label"], args.with_generated)
         d["a"], d["b"] = a, b
         steps.append(d)
 
@@ -106,9 +114,11 @@ def main() -> None:
              "identical": s["identical"]} for s in steps]}, indent=2) + "\n")
 
     # --- markdown ---
+    scope = ("hand-written engine + compiler-generated" if args.with_generated
+             else "hand-written engine (compiler-generated excluded)")
     md = ["# Survarium cross-version chain report",
           "",
-          "Engine (`vostok/*`) functions, deduped by demangled name. "
+          f"{scope} functions under `vostok/*`, deduped by demangled name. "
           "`changed` magnitude is the lowest match % across units.",
           "",
           "## Overview",

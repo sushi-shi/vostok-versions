@@ -146,6 +146,71 @@ def is_engine_unit(unit: str) -> bool:
     return unit.startswith("vostok/")
 
 
+# Compiler-synthesized / non-source functions (MSVC demangled names). These are
+# not hand-written - vtable thunks, deleting destructors, static init/teardown,
+# EH/RTTI iterators, delinker stubs - and they churn with layout/codegen changes
+# rather than source edits, so a source-level diff drops them by default.
+_GENERATED_SUBSTRINGS = (
+    "[thunk]:",                       # adjustor / vcall thunks
+    "vcall'",
+    "vtordisp",
+    "vector deleting destructor",     # synthesized array/scalar deleting dtors
+    "scalar deleting destructor",
+    "vbase destructor'",
+    "dynamic initializer for",        # static init / teardown
+    "dynamic atexit destructor for",
+    "eh vector",                      # EH array ctor/dtor iterators
+    "vector constructor iterator",
+    "vector destructor iterator",
+    "copy constructor closure",
+    "default constructor closure",
+    "`RTTI",                          # RTTI descriptors
+    "local static guard",             # function-static init guards
+    "local static thread guard",
+    "__autoclassinit",
+)
+
+
+def is_compiler_generated(name: str) -> bool:
+    return name == "empty_stub" or any(s in name for s in _GENERATED_SUBSTRINGS)
+
+
+# Third-party libraries whose templates get instantiated *inside* engine (vostok/)
+# translation units - their owning namespace is third-party even though the unit
+# path is vostok/*. Matched against the owning qualified name (the token right
+# after the calling convention), so library types in *parameters* don't trip it.
+_CALLING_CONVENTIONS = (" __thiscall ", " __cdecl ", " __stdcall ", " __fastcall ", " __vectorcall ")
+_THIRDPARTY_NAMESPACES = (
+    "boost::", "std::", "stlport::", "Scaleform::", "Wm4::", "eastl::",
+    "fastdelegate::", "OpenSSL::", "Opcode::",
+)
+
+
+def _owning_namespace_thirdparty(name: str) -> bool:
+    # The owning class/function begins after the last calling convention; the
+    # return type (which may mention a library type) sits before it and is ignored.
+    cut = -1
+    for cc in _CALLING_CONVENTIONS:
+        p = name.rfind(cc)
+        if p > cut:
+            cut = p + len(cc)
+    owner = (name[cut:] if cut >= 0 else name).lstrip("&* ")
+    return owner.startswith(_THIRDPARTY_NAMESPACES)
+
+
+def classify(unit: str, name: str) -> str:
+    """One of: 'third_party', 'generated' (compiler-synthesized engine), or
+    'engine' (hand-written first-party). Third-party is detected by both unit
+    path and owning namespace (library templates inlined into engine units)."""
+    if not is_engine_unit(unit):
+        return "third_party"
+    if is_compiler_generated(name):
+        return "generated"
+    if _owning_namespace_thirdparty(name):
+        return "third_party"
+    return "engine"
+
+
 # --- version registry (versions.json) + flake fetch ------------------------
 # versions.json is the single source of truth, read by BOTH this script (json)
 # and flake.nix (builtins.fromJSON). Each entry: label, url, sha256, and

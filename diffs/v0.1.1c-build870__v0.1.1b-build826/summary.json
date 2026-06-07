@@ -1,19 +1,25 @@
 {
   "base": "v0.1.1c-build870",
   "target": "v0.1.1b-build826",
-  "engine_only": true,
+  "scope": {
+    "generated": false,
+    "third_party": false
+  },
   "counts": {
     "identical": {
-      "engine": 12804,
-      "third_party": 10011
+      "engine": 11154,
+      "generated": 1383,
+      "third_party": 10278
     },
     "changed": {
-      "engine": 1432,
+      "engine": 1407,
+      "generated": 25,
       "third_party": 45
     },
     "new": {
-      "engine": 514,
-      "third_party": 569
+      "engine": 279,
+      "generated": 229,
+      "third_party": 575
     }
   },
   "removed_units": {
@@ -54,71 +60,6 @@
       "pct": 6.117117,
       "unit": "vostok/sound/sources/sound_voice_callbacks.cpp",
       "fn": "public: void __thiscall vostok::sound::sound_voice::on_buffer_start(void *)"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "pct": 7.388889,
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
     },
     {
       "pct": 12.0,
@@ -284,28 +225,77 @@
       "pct": 31.0,
       "unit": "vostok/game_core/sources/player_parameters_cook.cpp",
       "fn": "public: virtual void __thiscall survarium::player_parameters_modifyer_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "pct": 31.0,
+      "unit": "vostok/game_core/sources/weapon_ammunition_cook.cpp",
+      "fn": "public: virtual void __thiscall survarium::weapon_ammunition_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "pct": 31.153847,
+      "unit": "vostok/resources_query_result.h",
+      "fn": "public: void __thiscall vostok::resources::query_result_for_cook::set_managed_resource(class vostok::resources::managed_resource *)"
+    },
+    {
+      "pct": 33.083332,
+      "unit": "vostok/sound/sources/sound_voice_callbacks.cpp",
+      "fn": "private: void __thiscall vostok::sound::sound_voice::on_buffer_end_impl(void *)"
+    },
+    {
+      "pct": 33.25,
+      "unit": "vostok/sound/sources/sound_propagator.cpp",
+      "fn": "public: void __thiscall vostok::sound::new_sound_propagator::stop_propagation(void)"
+    },
+    {
+      "pct": 35.163044,
+      "unit": "vostok/sound/sources/debug_statistic.cpp",
+      "fn": "public: void __thiscall vostok::sound::sound_scene_statistic::fill_text_tree(class vostok::strings::text_tree_item *) const"
+    },
+    {
+      "pct": 37.636364,
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>(class vostok::resources::managed_resource *)"
+    },
+    {
+      "pct": 38.26923,
+      "unit": "vostok/render/engine/sources/decal_instance.cpp",
+      "fn": "private: void __thiscall vostok::render::decal_instance::set_materail_effects(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "pct": 38.573196,
+      "unit": "vostok/sound/sources/sound_scene.cpp",
+      "fn": "public: __thiscall vostok::sound::sound_scene::sound_scene(class vostok::sound::sound_world &, struct vostok::sound::sound_scene_creation_params const &, struct IXAudio2SubmixVoice *, unsigned int, class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 38.9,
+      "unit": "vostok/sound/sources/sound_voice.cpp",
+      "fn": "public: void __thiscall vostok::sound::sound_voice::set_output_matrix(float const *)"
+    },
+    {
+      "pct": 40.122807,
+      "unit": "vostok/render/engine/sources/grass_world.cpp",
+      "fn": "public: void __thiscall vostok::render::grass_world::accumulate_trample(class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 40.52381,
+      "unit": "vostok/sound/sources/voice_bridge.cpp",
+      "fn": "private: virtual void __stdcall vostok::sound::voice_bridge::OnBufferStart(void *)"
+    },
+    {
+      "pct": 40.52381,
+      "unit": "vostok/sound/sources/voice_bridge.cpp",
+      "fn": "private: virtual void __stdcall vostok::sound::voice_bridge::OnLoopEnd(void *)"
+    },
+    {
+      "pct": 40.5625,
+      "unit": "vostok/sound/sources/voice_bridge.cpp",
+      "fn": "private: virtual void __stdcall vostok::sound::voice_bridge::OnStreamEnd(void)"
     }
   ],
   "new_or_rewritten": [
     {
-      "unit": "vostok/ai/npc.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/ai/search/operator_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::planning::operator_base::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/ai/search/operator_inline.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::planning::operator_base::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/ai/sources/animation_target_selector.h",
       "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
-    },
-    {
-      "unit": "vostok/ai/sources/enemy_target_selector.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::selectors::enemy_target_selector::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/ai/sources/fsm.cpp",
@@ -320,388 +310,16 @@
       "fn": "public: virtual __thiscall vostok::ai::selectors::sound_target_selector::~sound_target_selector(void)"
     },
     {
-      "unit": "vostok/ai/sources/weapon_target_selector.h",
-      "fn": "public: virtual void * __thiscall vostok::ai::selectors::enemy_target_selector::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_aimed_fire_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_chamber_a_round_aimed_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_chamber_a_round_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_aimed_fire_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_fire_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_hide_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_reload_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_show_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_weapon_core_aimed_idle_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_double_barreled_weapon_core_idle_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_fire_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_hide_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_aimed_fire_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_fire_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_hide_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_reload_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_show_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_weapon_core_aimed_idle_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_pistol_weapon_core_idle_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_reload_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_reload_finish_substate_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_reload_one_round_substate_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_reload_start_substate_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_shotgun_weapon_reload_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_show_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_weapon_core_aimed_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_weapon_core_idle_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "`survarium::weapon_cook::register_cooks_for_logic_states'::`2'::`dynamic atexit destructor for 's_weapon_core_inactive_state_cook''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
-      "unit": "vostok/animation/anim_track_common.h",
-      "fn": "vostok::animation::`dynamic initializer for 'zero''"
-    },
-    {
       "unit": "vostok/animation/cubic_spline_skeleton_animation.h",
       "fn": "public: float __thiscall vostok::animation::cubic_spline_skeleton_animation::length_in_frames(void) const"
-    },
-    {
-      "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
-      "fn": "[thunk]: public: virtual void * __thiscall survarium::weapon_core_fire_state::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
       "fn": "class vostok::animation::mixing::addition_lexeme & __cdecl vostok::animation::mixing::operator+<class vostok::animation::mixing::animation_lexeme, class vostok::animation::mixing::animation_lexeme>(class vostok::animation::mixing::animation_lexeme &, class vostok::animation::mixing::animation_lexeme &)"
     },
     {
-      "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::weapon_core_fire_state::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_animation_lexeme_parameters.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_animation_lexeme_parameters.h",
-      "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_animation_lexeme_parameters.h",
-      "fn": "public: virtual void * __thiscall vostok::animation::mixing::addition_lexeme::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/mixing_binary_tree_weight_node.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/animation/sources/mixing_n_ary_tree_weight_node.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/buffer_vector_inline.h",
       "fn": "public: __thiscall vostok::buffer_vector<class vostok::variant<32> const *>::buffer_vector<class vostok::variant<32> const *>(void *, unsigned int, unsigned int)"
-    },
-    {
-      "unit": "vostok/buffer_vector_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/buffer_vector_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/buffer_vector_inline.h",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/collision/sources/sphere_geometry_instance.h",
-      "fn": "public: virtual void * __thiscall vostok::collision::box_geometry_instance::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall survarium::console_command_bind::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/console_command.h",
-      "fn": "public: virtual void * __thiscall vostok::console_commands::cc_u32::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/core/sources/resources_manager_helper.cpp",
-      "fn": "public: virtual void * __thiscall survarium::player_cook::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/core_debug_engine.h",
-      "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-    },
-    {
-      "unit": "vostok/core_debug_engine.h",
-      "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-    },
-    {
-      "unit": "vostok/core_debug_engine.h",
-      "fn": "public: virtual bool __thiscall Scaleform::MemoryFile::Flush(void)"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/debug/macros.h",
-      "fn": "empty_stub"
     },
     {
       "unit": "vostok/debug/sources/debug_win.cpp",
@@ -725,14 +343,6 @@
     },
     {
       "unit": "vostok/fs/path_string_impl.h",
-      "fn": "[thunk]: __thiscall vostok::sound::world::`vcall'{12, {flat}}"
-    },
-    {
-      "unit": "vostok/fs/path_string_impl.h",
-      "fn": "public: virtual void * __thiscall survarium::lobby_camera::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/fs/path_string_impl.h",
       "fn": "vec_begin"
     },
     {
@@ -742,10 +352,6 @@
     {
       "unit": "vostok/fs/path_string_impl.h",
       "fn": "vec_begin"
-    },
-    {
-      "unit": "vostok/fs/path_string_impl_inline.h",
-      "fn": "public: __thiscall boost::function1<void, class vostok::vfs::vfs_iterator &>::~function1<void, class vostok::vfs::vfs_iterator &>(void)"
     },
     {
       "unit": "vostok/game/sources/game_world.h",
@@ -784,10 +390,6 @@
       "fn": "private: void __thiscall survarium::human_npc::set_brain_unit(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
     },
     {
-      "unit": "vostok/game/sources/login_menu_ui.cpp",
-      "fn": "public: virtual void * __thiscall survarium::flash_external_handler::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/game/sources/network_client_lobby.cpp",
       "fn": "private: virtual void __thiscall survarium::network_client::close_current_match(bool)"
     },
@@ -802,42 +404,6 @@
     {
       "unit": "vostok/game/sources/player_input_handler.cpp",
       "fn": "public: bool __thiscall survarium::player_input_handler::alt_is_held(void) const"
-    },
-    {
-      "unit": "vostok/game/sources/player_input_handler.h",
-      "fn": "public: virtual void * __thiscall survarium::player_input_handler::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
-    },
-    {
-      "unit": "vostok/game/sources/weapon.cpp",
-      "fn": "empty_stub"
     },
     {
       "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
@@ -972,30 +538,6 @@
       "fn": "public: __thiscall vostok::intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
     },
     {
-      "unit": "vostok/game_core/damage_protector.h",
-      "fn": "public: virtual void * __thiscall survarium::damage_protector::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/damage_protector.h",
-      "fn": "public: virtual void * __thiscall survarium::damage_protector::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/generic_anomaly_core.h",
-      "fn": "public: virtual void * __thiscall survarium::generic_anomaly::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/hit_initiator.h",
-      "fn": "[thunk]: public: virtual void * __thiscall survarium::damage_zone::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/hit_initiator.h",
-      "fn": "[thunk]: public: virtual void * __thiscall survarium::damage_zone::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/hit_initiator.h",
-      "fn": "public: virtual void * __thiscall survarium::damage_zone::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/game_core/sources/body_part_parameters.cpp",
       "fn": "public: __thiscall survarium::body_part_parameters::body_part_parameters(char const *, float, float, float, bool, class survarium::damage_model &, unsigned char)"
     },
@@ -1026,14 +568,6 @@
     {
       "unit": "vostok/game_core/sources/double_barreled_weapon_core_show_state.cpp",
       "fn": "protected: __thiscall survarium::double_barreled_weapon_core_show_state::double_barreled_weapon_core_show_state(class survarium::weapon_core &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *, unsigned int, bool &)"
-    },
-    {
-      "unit": "vostok/game_core/sources/jump_logic_base_state.h",
-      "fn": "public: virtual void * __thiscall survarium::jump_logic_base_state::`vector deleting destructor'(unsigned int)"
-    },
-    {
-      "unit": "vostok/game_core/sources/jump_logic_base_state.h",
-      "fn": "public: virtual void * __thiscall survarium::jump_logic_base_state::`vector deleting destructor'(unsigned int)"
     },
     {
       "unit": "vostok/game_core/sources/pistol_weapon_core_hide_state.cpp",
@@ -1076,16 +610,488 @@
       "fn": "public: virtual __thiscall survarium::victory_items_container_core::~victory_items_container_core(void)"
     },
     {
-      "unit": "vostok/game_core/victory_items_container_core.h",
-      "fn": "public: virtual void * __thiscall survarium::victory_items_container::`vector deleting destructor'(unsigned int)"
-    },
-    {
       "unit": "vostok/game_core/weapon_animations_timescale_inline.h",
       "fn": "float __cdecl survarium::computed_reload_animation_time_scale(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, float)"
     },
     {
       "unit": "vostok/game_core/weapon_core_base_state.h",
       "fn": "public: bool __thiscall survarium::weapon_core_base_state::has_animation_ended(void) const"
+    },
+    {
+      "unit": "vostok/game_core/weapon_core_show_state_base.h",
+      "fn": "private: virtual bool __thiscall survarium::weapon_core_hide_state_base::is_ready_for_transition(void) const"
+    },
+    {
+      "unit": "vostok/game_core/weapon_core_show_state_base.h",
+      "fn": "private: virtual bool __thiscall survarium::weapon_core_hide_state_base::is_ready_for_transition(void) const"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: __thiscall vostok::intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct vostok::ai::percept_memory_object, struct vostok::ai::percept_memory_object *, 40, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: bool __thiscall vostok::intrusive_list<class vostok::particle::particle_emitter_instance, class vostok::particle::particle_emitter_instance *, 224, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>::erase(class vostok::particle::particle_emitter_instance *)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: bool __thiscall vostok::intrusive_list<class vostok::sound::sound_voice, class vostok::sound::sound_voice *, 0, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::erase(class vostok::sound::sound_voice *)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: void __thiscall vostok::intrusive_list<class vostok::particle::particle_emitter_instance, class vostok::particle::particle_emitter_instance *, 224, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::particle::particle_emitter_instance *, bool *)"
+    },
+    {
+      "unit": "vostok/intrusive_list_inline.h",
+      "fn": "public: void __thiscall vostok::intrusive_list<class vostok::sound::sound_voice, class vostok::sound::sound_voice *, 0, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::push_back(class vostok::sound::sound_voice *, bool *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "private: void __thiscall vostok::intrusive_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base, class vostok::threading::simple_lock>::set(class vostok::resources::managed_resource *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "private: void __thiscall vostok::intrusive_ptr<class vostok::sound::encoded_sound_interface, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::set(class vostok::intrusive_ptr<class vostok::sound::encoded_sound_interface, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "private: void __thiscall vostok::intrusive_ptr<class vostok::sound::sound_spl, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::dec(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "private: void __thiscall vostok::intrusive_ptr<class vostok::sound::sound_spl, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::set(class vostok::sound::sound_spl *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "private: void __thiscall vostok::intrusive_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::set(struct vostok::render::base_scene *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::intrusive_ptr<class vostok::sound::sound_spl, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::intrusive_ptr<class vostok::sound::sound_spl, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>(class vostok::intrusive_ptr<class vostok::sound::sound_spl, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::unmanaged_resource *)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: class vostok::intrusive_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock> & __thiscall vostok::intrusive_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::operator=(class vostok::intrusive_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> & __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::operator=(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> & __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::operator=(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/intrusive_ptr_inline.h",
+      "fn": "public: virtual __thiscall survarium::inventory_cook::~inventory_cook(void)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "public: __thiscall vostok::ai::brain_unit_cook_params::~brain_unit_cook_params(void)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "void __cdecl vostok::memory::delete_helper<class vostok::memory::doug_lea_allocator, class vostok::memory::writer>(class vostok::memory::doug_lea_allocator &, class vostok::memory::writer *&)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "void __cdecl vostok::memory::delete_helper<class vostok::memory::doug_lea_allocator, class vostok::render::light const>(class vostok::memory::doug_lea_allocator &, class vostok::render::light const *&)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "void __cdecl vostok::memory::detail::delete_helper_impl<class vostok::memory::doug_lea_allocator, class vostok::math::float4x4, struct vostok::memory::detail::call_destructor_predicate>(class vostok::memory::doug_lea_allocator &, class vostok::math::float4x4*&, struct vostok::memory::detail::call_destructor_predicate const &)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "void __cdecl vostok::memory::detail::delete_helper_impl<class vostok::memory::doug_lea_allocator, struct vostok::sound::propagator_statistic, struct vostok::memory::detail::call_destructor_predicate>(class vostok::memory::doug_lea_allocator &, struct vostok::sound::propagator_statistic *&, struct vostok::memory::detail::call_destructor_predicate const &)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "void __cdecl vostok::memory::detail::delete_helper_impl<class vostok::memory::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy>, class vostok::sound::new_sound_propagator, struct vostok::memory::detail::call_destructor_predicate>(class vostok::memory::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy> &, class vostok::sound::new_sound_propagator *&, struct vostok::memory::detail::call_destructor_predicate const &)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "void __cdecl vostok::memory::detail::delete_helper_impl<class vostok::memory::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy>, class vostok::sound::sound_voice, struct vostok::memory::detail::call_destructor_predicate>(class vostok::memory::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy> &, class vostok::sound::sound_voice *&, struct vostok::memory::detail::call_destructor_predicate const &)"
+    },
+    {
+      "unit": "vostok/memory_allocator_helper_inline.h",
+      "fn": "void __cdecl vostok::memory::detail::delete_helper_impl<class vostok::memory::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy>, class vostok::sound::voice_bridge, struct vostok::memory::detail::call_destructor_predicate>(class vostok::memory::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy> &, class vostok::sound::voice_bridge *&, struct vostok::memory::detail::call_destructor_predicate const &)"
+    },
+    {
+      "unit": "vostok/memory_buffer.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/memory_buffer.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/memory_buffer.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/memory_buffer.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/memory_buffer.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/memory_buffer.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/memory_buffer.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/memory_single_size_buffer_allocator_inline.h",
+      "fn": "public: __thiscall vostok::memory::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy>::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy>(void *, unsigned int)"
+    },
+    {
+      "unit": "vostok/memory_single_size_buffer_allocator_inline.h",
+      "fn": "public: __thiscall vostok::memory::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy>::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy>(void *, unsigned int)"
+    },
+    {
+      "unit": "vostok/memory_single_size_buffer_allocator_inline.h",
+      "fn": "public: __thiscall vostok::memory::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy>::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy>(void *, unsigned int)"
+    },
+    {
+      "unit": "vostok/memory_single_size_buffer_allocator_inline.h",
+      "fn": "public: void * __thiscall vostok::memory::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy>::allocate(void)"
+    },
+    {
+      "unit": "vostok/memory_single_size_buffer_allocator_inline.h",
+      "fn": "public: void * __thiscall vostok::memory::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy>::malloc_impl(unsigned int)"
+    },
+    {
+      "unit": "vostok/memory_single_size_buffer_allocator_inline.h",
+      "fn": "public: void * __thiscall vostok::memory::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy>::allocate(void)"
+    },
+    {
+      "unit": "vostok/memory_single_threading_single_size_allocator_policy_inline.h",
+      "fn": "public: static union vostok::memory::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy>::node * __cdecl vostok::memory::single_threading_single_size_allocator_policy<union vostok::memory::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy>::node>::allocate(class vostok::memory::single_threading_single_size_allocator_policy<union vostok::memory::single_size_buffer_allocator<108, class vostok::threading::single_threading_policy>::node>::free_list_type &)"
+    },
+    {
+      "unit": "vostok/memory_single_threading_single_size_allocator_policy_inline.h",
+      "fn": "public: static union vostok::memory::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy>::node * __cdecl vostok::memory::single_threading_single_size_allocator_policy<union vostok::memory::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy>::node>::allocate(class vostok::memory::single_threading_single_size_allocator_policy<union vostok::memory::single_size_buffer_allocator<136, class vostok::threading::single_threading_policy>::node>::free_list_type &)"
+    },
+    {
+      "unit": "vostok/memory_single_threading_single_size_allocator_policy_inline.h",
+      "fn": "public: static union vostok::memory::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy>::node * __cdecl vostok::memory::single_threading_single_size_allocator_policy<union vostok::memory::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy>::node>::allocate(class vostok::memory::single_threading_single_size_allocator_policy<union vostok::memory::single_size_buffer_allocator<28, class vostok::threading::single_threading_policy>::node>::free_list_type &)"
+    },
+    {
+      "unit": "vostok/particle/sources/curve_line.h",
+      "fn": "public: __thiscall vostok::particle::curve_line_ranged_float::curve_line_ranged_float(void)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/sources/device.cpp",
+      "fn": "private: void __thiscall vostok::render::device::create_d3d(void)"
+    },
+    {
+      "unit": "vostok/render/core/dx11/sources/effect_compiler.cpp",
+      "fn": "public: class vostok::render::effect_compiler & __thiscall vostok::render::effect_compiler::begin_pass(char const *, char const *, char const *, struct vostok::render::shader_configuration const &, struct vostok::render::shader_include_getter *)"
+    },
+    {
+      "unit": "vostok/render/core/shader_constant_binding_inline.h",
+      "fn": "public: __thiscall vostok::render::sun_cascade::sun_cascade(struct vostok::render::sun_cascade const &)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/grass_patch.cpp",
+      "fn": "public: void __thiscall vostok::render::grass_patch::try_accumulate_trample(struct vostok::render::trample_desc &, struct vostok::render::grass_world *, class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/render_engine_world_pc_dx11.cpp",
+      "fn": "public: struct vostok::particle::world & __thiscall vostok::render::engine::world::particle_world(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/scene.cpp",
+      "fn": "public: void __thiscall vostok::render::scene::build_lpv_geometry(void)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/stage_lights.cpp",
+      "fn": "private: unsigned int __thiscall vostok::render::stage_lights::index_to_shadow_size(unsigned int) const"
+    },
+    {
+      "unit": "vostok/render/engine/sources/statistics.h",
+      "fn": "public: __thiscall vostok::render::cascaded_sun_shadow_statistics_group::~cascaded_sun_shadow_statistics_group(void)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/statistics.h",
+      "fn": "public: __thiscall vostok::render::debug_statistics_group::~debug_statistics_group(void)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/statistics.h",
+      "fn": "public: __thiscall vostok::render::lpv_statistics_group::~lpv_statistics_group(void)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/statistics.h",
+      "fn": "public: __thiscall vostok::render::particles_statistics_group::~particles_statistics_group(void)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/statistics.h",
+      "fn": "public: __thiscall vostok::render::visibility_statistics_group::~visibility_statistics_group(void)"
+    },
+    {
+      "unit": "vostok/render/facade/sources/scene_renderer.cpp",
+      "fn": "public: struct vostok::particle::world & __thiscall vostok::render::scene_renderer::particle_world(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/resources_fs_task.h",
+      "fn": "public: virtual __thiscall vostok::resources::fs_task_unmount::~fs_task_unmount(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::animation::mixing::animation_interval::~animation_interval(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class survarium::game_world_object, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class survarium::game_world_object, class vostok::resources::unmanaged_intrusive_base>(class survarium::game_world_object *)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class survarium::game_world_object, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class survarium::game_world_object, class vostok::resources::unmanaged_intrusive_base>(class survarium::game_world_object *)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>(class vostok::configs::binary_config *)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::sound::panning_lut, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<class vostok::sound::panning_lut, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::sound::panning_lut, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base>::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<struct vostok::render::base_output_window, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> & __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::operator=(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> & __thiscall vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base>::operator=(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/size_policies.h",
+      "fn": "vec_begin"
+    },
+    {
+      "unit": "vostok/sound/sound_spl.h",
+      "fn": "public: float __thiscall vostok::sound::sound_spl::get_loudness(float) const"
+    },
+    {
+      "unit": "vostok/sound/sources/debug_statistic.cpp",
+      "fn": "public: void __thiscall vostok::sound::propagator_statistic::fill_text_tree(class vostok::strings::text_tree_item *) const"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_encoded_sound_interface.cpp",
+      "fn": "public: __thiscall vostok::sound::ogg_encoded_sound_interface::ogg_encoded_sound_interface(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_encoded_sound_interface_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::ogg_encoded_sound_interface_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_encoded_sound_interface_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::ogg_encoded_sound_interface_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents.cpp",
+      "fn": "public: __thiscall vostok::sound::ogg_file_contents::ogg_file_contents(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents.cpp",
+      "fn": "public: unsigned int __thiscall vostok::sound::ogg_file_contents::decompress(unsigned char *, unsigned int, unsigned int &, unsigned int)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents.cpp",
+      "fn": "public: virtual __thiscall vostok::sound::ogg_file_contents::~ogg_file_contents(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::ogg_file_contents_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents_cook.cpp",
+      "fn": "public: __thiscall vostok::sound::ogg_file_contents_cook::ogg_file_contents_cook(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents_cook.cpp",
+      "fn": "public: virtual __thiscall vostok::sound::ogg_file_contents_cook::~ogg_file_contents_cook(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::ogg_file_contents_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_file_contents_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::ogg_file_contents_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_sound.cpp",
+      "fn": "public: __thiscall vostok::sound::ogg_sound::ogg_sound(class vostok::resources::resource_ptr<class vostok::sound::ogg_file_contents, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_sound.cpp",
+      "fn": "public: virtual __thiscall vostok::sound::ogg_sound::~ogg_sound(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_sound_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::ogg_sound_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_sound_cook.cpp",
+      "fn": "public: __thiscall vostok::sound::ogg_sound_cook::ogg_sound_cook(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_sound_cook.cpp",
+      "fn": "public: virtual __thiscall vostok::sound::ogg_sound_cook::~ogg_sound_cook(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_sound_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::ogg_sound_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_sound_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::ogg_sound_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_source_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::ogg_source_cook::on_ogg_file_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_source_cook.cpp",
+      "fn": "public: __thiscall vostok::sound::ogg_source_cook::ogg_source_cook(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_source_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::ogg_source_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "unit": "vostok/sound/sources/ogg_source_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::ogg_source_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "unit": "vostok/sound/sources/single_sound.cpp",
+      "fn": "public: __thiscall vostok::sound::single_sound::single_sound(class vostok::resources::resource_ptr<class vostok::sound::encoded_sound_with_qualities, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::sound::sound_spl, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/sound/sources/single_sound_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::single_sound_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_environment.cpp",
+      "fn": "public: __thiscall vostok::sound::sound_environment::sound_environment(unsigned int)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_environment.cpp",
+      "fn": "public: virtual __thiscall vostok::sound::sound_environment::~sound_environment(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_environment_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::sound_environment_cook::on_environment_options_loaded(class vostok::resources::queries_result &, class vostok::math::float4x4*)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_environment_cook.cpp",
+      "fn": "private: void __thiscall vostok::sound::sound_environment_cook::on_model_config_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_environment_cook.cpp",
+      "fn": "public: __thiscall vostok::sound::sound_environment_cook::sound_environment_cook(void)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_environment_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::sound_environment_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_environment_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::sound::sound_environment_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_instance_proxy_internal.cpp",
+      "fn": "public: void __thiscall vostok::sound::sound_instance_proxy_internal::tick(unsigned int)"
+    },
+    {
+      "unit": "vostok/sound/sources/sound_propagator.cpp",
+      "fn": "private: class vostok::sound::sound_voice * __thiscall vostok::sound::new_sound_propagator::attach_voice(unsigned int)"
     }
   ]
 }

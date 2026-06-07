@@ -1,13 +1,13 @@
 # v0.1.1b-build826 -> v0.1.1c-build870
 
-Lists below: **engine only** (`vostok/*`). Third-party counts shown for transparency.
+Lists below: **hand-written engine** (`vostok/*`, compiler-generated excluded). Full breakdown:
 
-| bucket | engine (`vostok/*`) | third-party |
-| --- | ---: | ---: |
-| identical | **12804** | 10011 |
-| changed | **1433** | 43 |
-| new / rewritten | **504** | 474 |
-| units removed | **14** | 3 |
+| bucket | engine | generated | third-party |
+| --- | ---: | ---: | ---: |
+| identical | **11154** | 1383 | 10278 |
+| changed | **1407** | 26 | 43 |
+| new / rewritten | **277** | 222 | 479 |
+| units removed | **14** | - | 3 |
 
 ## Most-changed engine functions (50 shown)
 
@@ -23,20 +23,6 @@ Lists below: **engine only** (`vostok/*`). Third-party counts shown for transpar
 | 4.09 | vostok/sound/sources/sound_world.cpp | `public: virtual void __thiscall vostok::sound::sound_world::clear_resources(void)` |
 | 4.58 | vostok/sound/sources/sound_voice_callbacks.cpp | `public: void __thiscall vostok::sound::sound_voice::on_buffer_end(void *)` |
 | 5.59 | vostok/game/sources/game_world_input.cpp | `public: virtual bool __thiscall survarium::game_world::on_mouse_key_action(struct vostok::input::world *, enum vostok::input::mouse_button, enum vostok::input::enum_mouse_key_action)` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
 | 8.01 | vostok/sound/sources/voice_bridge.cpp | `private: virtual void __stdcall vostok::sound::voice_bridge::OnBufferEnd(void *)` |
 | 8.89 | vostok/core/sources/resources_query_result_finalization.cpp | `public: void __thiscall vostok::resources::query_result_for_cook::finish_query(enum vostok::resources::query_result_for_user::error_type_enum, enum assert_on_fail_bool)` |
 | 10.33 | vostok/game/sources/player.cpp | `private: void __thiscall survarium::player::remove_alive(void)` |
@@ -63,6 +49,20 @@ Lists below: **engine only** (`vostok/*`). Third-party counts shown for transpar
 | 28.20 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare` |
 | 28.20 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare` |
 | 28.20 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
+| 28.20 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
+| 28.20 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare` |
+| 28.57 | vostok/sound/sources/voice_bridge.cpp | `private: virtual void __stdcall vostok::sound::voice_bridge::OnVoiceProcessingPassEnd(void)` |
+| 30.00 | vostok/resources_resource_ptr_inline.h | `public: class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> & __thiscall vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>::operator=(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)` |
+| 31.00 | vostok/sound/sources/voice_bridge.cpp | `private: virtual void __stdcall vostok::sound::voice_bridge::OnVoiceError(void *, long)` |
+| 32.07 | vostok/sound/sources/voice_bridge.cpp | `private: virtual void __stdcall vostok::sound::voice_bridge::OnStreamEnd(void)` |
+| 34.23 | vostok/sound/sources/voice_bridge.cpp | `public: void __thiscall vostok::sound::voice_bridge::set_low_pass_filter_params(float)` |
+| 34.82 | vostok/game_core/sources/booby_trap_core.cpp | `private: virtual void __thiscall survarium::booby_trap_core::on_enter(class vostok::buffer_vector<class vostok::physics::base_physics_object *> const &)` |
+| 35.21 | vostok/game/sources/object_solid_visual.cpp | `public: virtual void __thiscall survarium::object_particle_visual::load(class vostok::configs::binary_config_value const &, char const *, class boost::function<void __cdecl (class survarium::game_object_&)> &)` |
+| 35.60 | vostok/game_core/sources/animation_analysis_result_cook.cpp | `public: virtual void __thiscall survarium::animation_analysis_result_cook::delete_resource(class vostok::resources::resource_base *)` |
+| 35.60 | vostok/game_core/sources/items_cook.cpp | `public: virtual void __thiscall survarium::items_cook::delete_resource(class vostok::resources::resource_base *)` |
+| 35.60 | vostok/game_core/sources/items_dictionary_cook.cpp | `public: virtual void __thiscall survarium::items_dictionary_cook::delete_resource(class vostok::resources::resource_base *)` |
+| 35.60 | vostok/game_core/sources/player_parameters_cook.cpp | `public: virtual void __thiscall survarium::player_parameters_modifyer_cook::delete_resource(class vostok::resources::resource_base *)` |
+| 35.60 | vostok/game_core/sources/weapon_ammunition_cook.cpp | `public: virtual void __thiscall survarium::weapon_ammunition_cook::delete_resource(class vostok::resources::resource_base *)` |
 
 ## Engine units in base but gone in target
 

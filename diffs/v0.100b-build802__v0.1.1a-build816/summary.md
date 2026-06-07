@@ -1,28 +1,18 @@
 # v0.100b-build802 -> v0.1.1a-build816
 
-Lists below: **engine only** (`vostok/*`). Third-party counts shown for transparency.
+Lists below: **hand-written engine** (`vostok/*`, compiler-generated excluded). Full breakdown:
 
-| bucket | engine (`vostok/*`) | third-party |
-| --- | ---: | ---: |
-| identical | **13992** | 10260 |
-| changed | **407** | 12 |
-| new / rewritten | **287** | 463 |
-| units removed | **5** | 2 |
+| bucket | engine | generated | third-party |
+| --- | ---: | ---: | ---: |
+| identical | **12280** | 1444 | 10528 |
+| changed | **393** | 14 | 12 |
+| new / rewritten | **174** | 103 | 473 |
+| units removed | **5** | - | 2 |
 
 ## Most-changed engine functions (50 shown)
 
 | match % | unit | function |
 | ---: | --- | --- |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
@@ -63,6 +53,16 @@ Lists below: **engine only** (`vostok/*`). Third-party counts shown for transpar
 | 65.98 | vostok/game_core/sources/weapon_core_fire_state_base.cpp | `protected: virtual void __thiscall survarium::weapon_core_fire_state_base::initialize(void)` |
 | 67.05 | vostok/game_core/game_net_defines.h | `public: __thiscall survarium::player_profile::player_profile(void)` |
 | 69.82 | vostok/game/sources/lobby_menu_ui.cpp | `public: virtual void __thiscall survarium::relocate_item_func::call(struct survarium::flash_function_handler_params &)` |
+| 70.00 | vostok/game_core/sources/weapon_core_hide_state_base.cpp | `protected: virtual void __thiscall survarium::weapon_core_hide_state_base::initialize(void)` |
+| 70.00 | vostok/game_core/sources/weapon_core_show_state_base.cpp | `protected: virtual void __thiscall survarium::weapon_core_show_state_base::initialize(void)` |
+| 70.89 | vostok/sound/sources/single_sound_cook.cpp | `private: void __thiscall vostok::sound::single_sound_cook::on_sub_resources_loaded(class vostok::resources::queries_result &)` |
+| 70.92 | vostok/game_core/sources/weapon_core.cpp | `public: void __thiscall survarium::weapon_core::instant_idle_start(void)` |
+| 71.11 | vostok/game_core/sources/weapon_core.cpp | `public: virtual void __thiscall survarium::weapon_core::instant_aim_end(void)` |
+| 73.21 | vostok/game_core/sources/weapon_core_shotgun_reload_state.cpp | `private: bool __thiscall survarium::weapon_core_shotgun_reload_state::finish_reload_predicate(void) const` |
+| 76.91 | vostok/render/engine/sources/lights_db.cpp | `vostok::render::fill_light` |
+| 80.30 | vostok/render/engine/sources/register_samplers.cpp | `void __cdecl vostok::render::register_samplers(void)` |
+| 80.36 | vostok/network/sources/match_client.cpp | `private: void __thiscall vostok::network::match_client::on_packet_received_impl(unsigned char, class vostok::network_core::packet_reader &)` |
+| 80.70 | vostok/game_core/sources/weapon_core.cpp | `private: void __thiscall survarium::weapon_core::initialize_weapon_logic(class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> const &)` |
 
 ## Engine units in base but gone in target
 

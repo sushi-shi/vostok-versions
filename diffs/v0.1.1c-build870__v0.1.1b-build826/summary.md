@@ -1,13 +1,13 @@
 # v0.1.1c-build870 -> v0.1.1b-build826
 
-Lists below: **engine only** (`vostok/*`). Third-party counts shown for transparency.
+Lists below: **hand-written engine** (`vostok/*`, compiler-generated excluded). Full breakdown:
 
-| bucket | engine (`vostok/*`) | third-party |
-| --- | ---: | ---: |
-| identical | **12804** | 10011 |
-| changed | **1432** | 45 |
-| new / rewritten | **514** | 569 |
-| units removed | **10** | 2 |
+| bucket | engine | generated | third-party |
+| --- | ---: | ---: | ---: |
+| identical | **11154** | 1383 | 10278 |
+| changed | **1407** | 25 | 45 |
+| new / rewritten | **279** | 229 | 575 |
+| units removed | **10** | - | 2 |
 
 ## Most-changed engine functions (50 shown)
 
@@ -17,19 +17,6 @@ Lists below: **engine only** (`vostok/*`). Third-party counts shown for transpar
 | 3.10 | vostok/sound/sources/debug_statistic.cpp | `public: void __thiscall vostok::sound::proxy_statistic::fill_text_tree(class vostok::strings::text_tree_item *, bool) const` |
 | 5.00 | vostok/render/engine/sources/render_engine_world_pc_dx11.cpp | `public: void __thiscall vostok::render::engine::world::build_lpv_geometry(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &)` |
 | 6.12 | vostok/sound/sources/sound_voice_callbacks.cpp | `public: void __thiscall vostok::sound::sound_voice::on_buffer_start(void *)` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
-| 7.39 | vostok/animation/anim_track_common.h | `vostok::animation::`dynamic initializer for 'zero''` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
 | 12.00 | vostok/math_curve_inline.h | ``vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare` |
@@ -63,6 +50,19 @@ Lists below: **engine only** (`vostok/*`). Third-party counts shown for transpar
 | 31.00 | vostok/game_core/sources/items_cook.cpp | `public: virtual void __thiscall survarium::items_cook::delete_resource(class vostok::resources::resource_base *)` |
 | 31.00 | vostok/game_core/sources/items_dictionary_cook.cpp | `public: virtual void __thiscall survarium::items_dictionary_cook::delete_resource(class vostok::resources::resource_base *)` |
 | 31.00 | vostok/game_core/sources/player_parameters_cook.cpp | `public: virtual void __thiscall survarium::player_parameters_modifyer_cook::delete_resource(class vostok::resources::resource_base *)` |
+| 31.00 | vostok/game_core/sources/weapon_ammunition_cook.cpp | `public: virtual void __thiscall survarium::weapon_ammunition_cook::delete_resource(class vostok::resources::resource_base *)` |
+| 31.15 | vostok/resources_query_result.h | `public: void __thiscall vostok::resources::query_result_for_cook::set_managed_resource(class vostok::resources::managed_resource *)` |
+| 33.08 | vostok/sound/sources/sound_voice_callbacks.cpp | `private: void __thiscall vostok::sound::sound_voice::on_buffer_end_impl(void *)` |
+| 33.25 | vostok/sound/sources/sound_propagator.cpp | `public: void __thiscall vostok::sound::new_sound_propagator::stop_propagation(void)` |
+| 35.16 | vostok/sound/sources/debug_statistic.cpp | `public: void __thiscall vostok::sound::sound_scene_statistic::fill_text_tree(class vostok::strings::text_tree_item *) const` |
+| 37.64 | vostok/resources_resource_ptr_inline.h | `public: __thiscall vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>(class vostok::resources::managed_resource *)` |
+| 38.27 | vostok/render/engine/sources/decal_instance.cpp | `private: void __thiscall vostok::render::decal_instance::set_materail_effects(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)` |
+| 38.57 | vostok/sound/sources/sound_scene.cpp | `public: __thiscall vostok::sound::sound_scene::sound_scene(class vostok::sound::sound_world &, struct vostok::sound::sound_scene_creation_params const &, struct IXAudio2SubmixVoice *, unsigned int, class vostok::resources::query_result_for_cook &)` |
+| 38.90 | vostok/sound/sources/sound_voice.cpp | `public: void __thiscall vostok::sound::sound_voice::set_output_matrix(float const *)` |
+| 40.12 | vostok/render/engine/sources/grass_world.cpp | `public: void __thiscall vostok::render::grass_world::accumulate_trample(class vostok::render::renderer *, class vostok::render::renderer_context *)` |
+| 40.52 | vostok/sound/sources/voice_bridge.cpp | `private: virtual void __stdcall vostok::sound::voice_bridge::OnBufferStart(void *)` |
+| 40.52 | vostok/sound/sources/voice_bridge.cpp | `private: virtual void __stdcall vostok::sound::voice_bridge::OnLoopEnd(void *)` |
+| 40.56 | vostok/sound/sources/voice_bridge.cpp | `private: virtual void __stdcall vostok::sound::voice_bridge::OnStreamEnd(void)` |
 
 ## Engine units in base but gone in target
 
