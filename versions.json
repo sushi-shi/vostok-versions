@@ -39,5 +39,13 @@
     "url": "https://archive.org/download/vostok_engine_v0.1_build_884_internal_id_508_may_28_2013_202006/survarium_setup_v011e.exe",
     "sha256": "1q3p3c70vp2pb54dwxga9mqxw5dgn7kh9dpa9y60km0rirjx8lcw",
     "engine_path": "c:/survarium/sources"
+  },
+  {
+    "label": "v0.20e-build1916",
+    "build": 1916,
+    "date": "2014-03-20",
+    "url": "https://archive.org/download/vostok_engine_v0.20e_build_1916_internal_id_804_mar_20_2014/survarium_full_020e.7z",
+    "sha256": "0gz7mdr7b8gxdr44l6lqsli9rinjcqzll1d42sknwpl8sg7ymi1q",
+    "engine_path": "c:/survarium/sources"
   }
 ]
