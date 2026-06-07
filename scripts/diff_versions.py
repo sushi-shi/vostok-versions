@@ -75,37 +75,41 @@ def _rel(path: Path, start: Path) -> str:
     return "./" + os.path.relpath(path, start)
 
 
-def summarize(diff_dir: Path, base: str, target: str) -> dict:
+def summarize(diff_dir: Path, base: str, target: str, engine_only: bool = True) -> dict:
     report = json.loads((diff_dir / "report.json").read_text())
-    identical, changed, new = [], [], []
+    # bucket every function by match level, tagging engine vs third-party.
+    buckets: dict[str, list[dict]] = {"identical": [], "changed": [], "new": []}
     for unit in report.get("units", []):
+        uname = unit.get("name")
+        eng = c.is_engine_unit(uname)
         for fn in unit.get("functions", []):
             pct = fn.get("fuzzy_match_percent", 0.0)
             name = fn.get("metadata", {}).get("demangled_name") or fn.get("name", "?")
-            entry = (pct, unit.get("name"), name)
-            if pct >= 100.0:
-                identical.append(entry)
-            elif pct > 0.0:
-                changed.append(entry)
-            else:
-                new.append(entry)
+            rec = {"pct": pct, "unit": uname, "fn": name, "engine": eng}
+            key = "identical" if pct >= 100.0 else ("changed" if pct > 0.0 else "new")
+            buckets[key].append(rec)
 
-    base_units = set(units_of(base))
-    target_units = set(units_of(target))
-    removed_units = sorted(base_units - target_units)
+    def split(lst: list[dict]) -> dict:
+        return {"engine": sum(r["engine"] for r in lst),
+                "third_party": sum(not r["engine"] for r in lst)}
 
-    changed.sort()  # lowest match (most changed) first
+    removed = sorted(set(units_of(base)) - set(units_of(target)))
+
+    changed = sorted(buckets["changed"], key=lambda r: r["pct"])
+    new = sorted(buckets["new"], key=lambda r: (r["unit"], r["fn"]))
+    if engine_only:
+        changed = [r for r in changed if r["engine"]]
+        new = [r for r in new if r["engine"]]
+
     summary = {
-        "base": base, "target": target,
-        "counts": {
-            "identical": len(identical),
-            "changed": len(changed),
-            "new_or_rewritten": len(new),
-            "removed_units": len(removed_units),
+        "base": base, "target": target, "engine_only": engine_only,
+        "counts": {k: split(v) for k, v in buckets.items()},
+        "removed_units": {
+            "engine": [u for u in removed if c.is_engine_unit(u)],
+            "third_party": [u for u in removed if not c.is_engine_unit(u)],
         },
-        "top_changed": [{"pct": p, "unit": u, "fn": n} for p, u, n in changed[:50]],
-        "new_or_rewritten": [{"unit": u, "fn": n} for _, u, n in sorted(new)[:200]],
-        "removed_units": removed_units,
+        "top_changed": [{"pct": r["pct"], "unit": r["unit"], "fn": r["fn"]} for r in changed[:50]],
+        "new_or_rewritten": [{"unit": r["unit"], "fn": r["fn"]} for r in new[:200]],
     }
     (diff_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     _write_summary_md(diff_dir, summary)
@@ -113,25 +117,30 @@ def summarize(diff_dir: Path, base: str, target: str) -> dict:
 
 
 def _write_summary_md(diff_dir: Path, s: dict) -> None:
-    cn = s["counts"]
+    cn, rm = s["counts"], s["removed_units"]
+    scope = "engine only" if s["engine_only"] else "all units"
     lines = [
         f"# {s['base']} -> {s['target']}",
         "",
-        f"- identical: **{cn['identical']}**",
-        f"- changed: **{cn['changed']}**",
-        f"- new / rewritten (0% vs base): **{cn['new_or_rewritten']}**",
-        f"- units removed in target: **{cn['removed_units']}**",
+        f"Lists below: **{scope}** (`vostok/*`). Third-party counts shown for transparency.",
         "",
-        "## Most-changed functions (lowest match first)",
+        "| bucket | engine (`vostok/*`) | third-party |",
+        "| --- | ---: | ---: |",
+        f"| identical | **{cn['identical']['engine']}** | {cn['identical']['third_party']} |",
+        f"| changed | **{cn['changed']['engine']}** | {cn['changed']['third_party']} |",
+        f"| new / rewritten | **{cn['new']['engine']}** | {cn['new']['third_party']} |",
+        f"| units removed | **{len(rm['engine'])}** | {len(rm['third_party'])} |",
+        "",
+        f"## Most-changed engine functions ({len(s['top_changed'])} shown)",
         "",
         "| match % | unit | function |",
         "| ---: | --- | --- |",
     ]
     for e in s["top_changed"]:
         lines.append(f"| {e['pct']:.2f} | {e['unit']} | `{e['fn']}` |")
-    if s["removed_units"]:
-        lines += ["", "## Units present in base but gone in target", ""]
-        lines += [f"- {u}" for u in s["removed_units"]]
+    if rm["engine"]:
+        lines += ["", "## Engine units in base but gone in target", ""]
+        lines += [f"- {u}" for u in rm["engine"]]
     (diff_dir / "summary.md").write_text("\n".join(lines) + "\n")
 
 
@@ -139,6 +148,8 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Diff two delinked Survarium versions.")
     ap.add_argument("a", help="base label, or target label if it's the only arg")
     ap.add_argument("b", nargs="?", help="target label (if omitted, base = config.json base)")
+    ap.add_argument("--all", action="store_true",
+                    help="include third-party units in the lists (default: engine vostok/* only)")
     args = ap.parse_args()
 
     if args.b is None:
@@ -162,10 +173,11 @@ def main() -> None:
         [c.objdiff_cli(), "report", "generate", "-p", str(diff_dir), "-o", str(report)],
         check=True,
     )
-    s = summarize(diff_dir, base, target)
+    s = summarize(diff_dir, base, target, engine_only=not args.all)
     cn = s["counts"]
-    c.log("diff", "identical {} | changed {} | new/rewritten {} | removed units {}".format(
-        cn["identical"], cn["changed"], cn["new_or_rewritten"], cn["removed_units"]))
+    c.log("diff", "engine: identical {} | changed {} | new {} (third-party: {}/{}/{})".format(
+        cn["identical"]["engine"], cn["changed"]["engine"], cn["new"]["engine"],
+        cn["identical"]["third_party"], cn["changed"]["third_party"], cn["new"]["third_party"]))
     c.log("diff", f"summary: {diff_dir / 'summary.md'}")
 
 

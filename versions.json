@@ -31,5 +31,13 @@
     "url": "https://archive.org/download/vostok_engine_v0.1_build_870_internal_id_504_may_24_2013/survarium_alpha_setup_v0.1.1c.exe",
     "sha256": "0az8zskg6l0gg14v6hl3idl817rjrk0w99k0749q2ahn5mz5cm5p",
     "engine_path": "c:/survarium/sources"
+  },
+  {
+    "label": "v0.1.1e-build884",
+    "build": 884,
+    "date": "2013-05-28",
+    "url": "https://archive.org/download/vostok_engine_v0.1_build_884_internal_id_508_may_28_2013_202006/survarium_setup_v011e.exe",
+    "sha256": "1q3p3c70vp2pb54dwxga9mqxw5dgn7kh9dpa9y60km0rirjx8lcw",
+    "engine_path": "c:/survarium/sources"
   }
 ]

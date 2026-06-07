@@ -136,6 +136,16 @@ def now_iso() -> str:
     return datetime.datetime.now().replace(microsecond=0).isoformat()
 
 
+# --- engine vs third-party classification ----------------------------------
+# First-party engine/game code lives under sources/vostok/, so its delinked
+# units are "vostok/...". Everything else (boost, bullet, stlport, scaleform,
+# vorbis, opcode, speedtree, zlib, ogg, wildmagic, _msvc_internal, ...) is
+# third-party and is the main source of cross-version diff noise.
+
+def is_engine_unit(unit: str) -> bool:
+    return unit.startswith("vostok/")
+
+
 # --- version registry (versions.json) + flake fetch ------------------------
 # versions.json is the single source of truth, read by BOTH this script (json)
 # and flake.nix (builtins.fromJSON). Each entry: label, url, sha256, and
