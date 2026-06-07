@@ -1,0 +1,11 @@
+# Extracted installers: survarium.exe (tens of MB) + survarium.pdb (hundreds of MB).
+cache/
+
+# Raw installers dropped into the repo.
+/installers/
+*.exe
+!scripts/**
+
+__pycache__/
+*.pyc
+.ruff_cache/
