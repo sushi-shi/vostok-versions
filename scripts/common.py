@@ -198,6 +198,53 @@ def _owning_namespace_thirdparty(name: str) -> bool:
     return owner.startswith(_THIRDPARTY_NAMESPACES)
 
 
+def split_qualified(name: str) -> tuple[str, str]:
+    """Split a demangled function name into (owning scope, leaf).
+
+    The owner is the class/namespace that encloses the function -
+    `survarium::weapon_core::aimed_fire_pred(void) const` -> ('survarium::weapon_core',
+    'aimed_fire_pred(void) const'). '::' inside template args or parameters is
+    ignored (angle-depth tracked; the parameter list is cut before scoping).
+    """
+    cut = -1
+    for cc in _CALLING_CONVENTIONS:
+        p = name.rfind(cc)
+        if p > cut:
+            cut = p + len(cc)
+    s = (name[cut:] if cut >= 0 else name).lstrip("&* ")
+
+    # body = signature without its parameter list (first top-level '(')
+    depth, body = 0, s
+    for i, ch in enumerate(s):
+        if ch == "<":
+            depth += 1
+        elif ch == ">":
+            depth -= 1
+        elif ch == "(" and depth == 0:
+            body = s[:i]
+            break
+
+    depth, last, i = 0, -1, 0
+    while i < len(body) - 1:
+        ch = body[i]
+        if ch == "<":
+            depth += 1
+        elif ch == ">":
+            depth -= 1
+        elif ch == ":" and depth == 0 and body[i + 1] == ":":
+            last = i
+            i += 2
+            continue
+        i += 1
+    if last < 0:
+        return ("", s)
+    return (body[:last], s[last + 2:])
+
+
+def owning_scope(name: str) -> str:
+    return split_qualified(name)[0]
+
+
 def classify(unit: str, name: str) -> str:
     """One of: 'third_party', 'generated' (compiler-synthesized engine), or
     'engine' (hand-written first-party). Third-party is detected by both unit
