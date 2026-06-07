@@ -101,13 +101,20 @@ def make_structure(label: str, pdb: Path, engine_path: str) -> None:
         shutil.rmtree(out)
     out.mkdir(parents=True, exist_ok=True)
     c.log("add", f"pdb_parser -> {out}")
-    subprocess.run(
-        [c.pdb_parser(),
-         "--output-path", str(out),
-         "--pdb-path", str(pdb),
-         "--engine-path", engine_path],
-        check=True,
-    )
+    # Structure stubs are readability-only; the delinked objects (what we diff)
+    # are already done. pdb_parser panics on some PDBs (e.g. "Enums cannot be of
+    # different length"), so never let it sink the whole ingest.
+    try:
+        subprocess.run(
+            [c.pdb_parser(),
+             "--output-path", str(out),
+             "--pdb-path", str(pdb),
+             "--engine-path", engine_path],
+            check=True,
+        )
+    except subprocess.CalledProcessError as e:
+        c.log("add", f"pdb_parser failed (exit {e.returncode}); skipping structure stubs")
+        shutil.rmtree(out, ignore_errors=True)
 
 
 def main() -> None:
@@ -123,11 +130,21 @@ def main() -> None:
     ap.add_argument("--base", action="store_true", help="record this version as the matching base")
     ap.add_argument("--no-structure", action="store_true", help="skip pdb_parser structure stubs")
     ap.add_argument("--keep-cache", action="store_true", help="reuse an existing cache/<label> extract")
+    ap.add_argument("--force", action="store_true", help="re-ingest even if meta.json already exists")
     args = ap.parse_args()
 
     entry = c.registry_entry(args.label) or {}
     engine_path = args.engine_path or entry.get("engine_path") or c.ENGINE_PATH_DEFAULT
     is_base = args.base or entry.get("base", False)
+
+    meta_path = c.VERSIONS_DIR / args.label / "meta.json"
+    if meta_path.exists() and not args.force:
+        c.log("add", f"{args.label} already ingested (meta.json present); --force to redo")
+        cfg = c.load_config()
+        if is_base:
+            cfg["base"] = args.label
+            c.save_config(cfg)
+        return
 
     if args.source is not None:
         exe, pdb = resolve_source(args.label, args.source, args.keep_cache)
@@ -153,7 +170,6 @@ def main() -> None:
         "n_objects": n_objects,
         "added": c.now_iso(),
     }
-    meta_path = c.VERSIONS_DIR / args.label / "meta.json"
     meta_path.write_text(json.dumps(meta, indent=2) + "\n")
 
     cfg = c.load_config()
