@@ -61,34 +61,44 @@ def resolve_source(label: str, source: Path, keep_cache: bool) -> tuple[Path, Pa
 def delink(label: str, exe: Path, pdb: Path, engine_path: str, align_to: str | None) -> Path:
     c.require_tool(c.delinker())
     out = c.VERSIONS_DIR / label / "objects"
-    if out.exists():
-        shutil.rmtree(out)
-    out.mkdir(parents=True, exist_ok=True)
-
     own_map = c.VERSIONS_DIR / label / "symbol-map.tsv"
-    # Align this build's folded-group names to the base's, when asked and possible;
-    # otherwise let the delinker choose and record them in our own map.
-    symbol_flags: list[str] = []
+
+    def run(flags: list[str]) -> None:
+        if out.exists():
+            shutil.rmtree(out)
+        out.mkdir(parents=True, exist_ok=True)
+        c.log("add", f"delinking {exe.name} -> {out}")
+        subprocess.run(
+            [c.delinker(),
+             "--pdb-path", str(pdb),
+             "--exe-path", str(exe),
+             "--output-path", str(out),
+             "--engine-path", engine_path,
+             *flags],
+            check=True,
+        )
+
+    write_own = ["--write-symbol-map", str(own_map)] if c.delinker_supports("--write-symbol-map") else []
+
+    # Prefer aligning this build's folded-group names to the base's (stable diffs).
+    aligned: list[str] = []
     if align_to:
         base_map = c.VERSIONS_DIR / align_to / "symbol-map.tsv"
         if base_map.exists() and c.delinker_supports("--read-symbol-map"):
-            symbol_flags = ["--read-symbol-map", str(base_map)]
-            c.log("add", f"aligning folded symbols to base {align_to!r}")
+            aligned = ["--read-symbol-map", str(base_map)]
         else:
             c.log("add", f"--align-to {align_to!r}: base map or flag missing; writing own map")
-    if not symbol_flags and c.delinker_supports("--write-symbol-map"):
-        symbol_flags = ["--write-symbol-map", str(own_map)]
 
-    c.log("add", f"delinking {exe.name} -> {out}")
-    subprocess.run(
-        [c.delinker(),
-         "--pdb-path", str(pdb),
-         "--exe-path", str(exe),
-         "--output-path", str(out),
-         "--engine-path", engine_path,
-         *symbol_flags],
-        check=True,
-    )
+    if aligned:
+        c.log("add", f"aligning folded symbols to base {align_to!r}")
+        try:
+            run(aligned)
+            return out
+        except subprocess.CalledProcessError as e:
+            # Best-effort alignment: a bad cross-version map shouldn't block the
+            # ingest - fall back to an unaligned delink that writes its own map.
+            c.log("add", f"aligned delink failed (exit {e.returncode}); retrying unaligned")
+    run(write_own)
     return out
 
 
