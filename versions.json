@@ -1,9 +1,19 @@
 [
   {
     "label": "v0.100b-build802",
+    "build": 802,
+    "date": "2013-05-09",
     "url": "https://archive.org/download/vostok_engine_v0.1_build_802_internal_id_489_may_9_2013/survarium_setup_v0100b.exe",
     "sha256": "16aassxvbbhqx9czfvsl3zynl41n2xa7xf9n0l1aip07qgfz2l24",
     "base": true,
+    "engine_path": "c:/survarium/sources"
+  },
+  {
+    "label": "v0.1.1a-build816",
+    "build": 816,
+    "date": "2013-05-14",
+    "url": "https://archive.org/download/vostok_engine_v0.1_build_816_internal_id_494_may_14_2013/survarium_alpha_setup_v0.1.1a.exe",
+    "sha256": "1a26qavgqs4fx4n3wwhfm4fb95a84m2mdg81gnifakj3yz1r9648",
     "engine_path": "c:/survarium/sources"
   }
 ]
