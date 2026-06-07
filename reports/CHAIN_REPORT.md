@@ -10,6 +10,8 @@ hand-written engine (compiler-generated excluded) functions under `vostok/*`, de
 | 2 | v0.1.1a-build816 | v0.1.1b-build826 | 19 | 26 | 254 | 11268 |
 | 3 | v0.1.1b-build826 | v0.1.1c-build870 | 142 | 160 | 1465 | 9916 |
 | 4 | v0.1.1c-build870 | v0.1.1e-build884 | 25 | 38 | 473 | 11012 |
+| 5 | v0.1.1e-build884 | v0.20e-build1916 | 4163 | 6812 | 4526 | 172 |
+| 6 | v0.20e-build1916 | v0.20f-build1923 | 1 | 3 | 11 | 8847 |
 
 ---
 
@@ -2084,3 +2086,1253 @@ _2013-05-24 → 2013-05-28 · +25 / -38 / ~473_
 - `vostok::render::draw_text`
 - `vostok::render::draw_text_shadowed`
 - `vostok::render::make_ui_vertices`
+
+---
+
+## v0.1.1e-build884 → v0.20e-build1916
+_2013-05-28 → 2014-03-20 · +4163 / -6812 / ~4526_
+
+### Changed (4526)
+
+| match % | function |
+| ---: | --- |
+| 0.00 | `CH_ReadProcessMemory` |
+| 0.00 | `GetSourceInfoFromAddress` |
+| 0.00 | `InitSymInfo` |
+| 0.00 | `PCSTR2LPTSTR` |
+| 0.00 | `WriteStackTrace` |
+| 0.00 | `__calloc_crt` |
+| 0.00 | `__malloc_crt` |
+| 0.00 | `__msize` |
+| 0.00 | `__realloc_crt` |
+| 0.00 | `__recalloc_crt` |
+| 0.00 | `_munmap` |
+| 0.00 | `bool __cdecl survarium::state_prio(struct survarium::anomaly_state *, struct survarium::anomaly_state *)` |
+| 0.00 | `bool __cdecl vostok::core::suppress_debug_window_on_crash(void)` |
+| 0.00 | `bool __cdecl vostok::fs_new::open_cached_file(class vostok::fs_new::synchronous_device_interface const &, void ***, class vostok::fs_new::native_path_string const &, enum vostok::fs_new::file_mode::mode_enum, enum vostok::fs_new::file_access::access_enum, enum assert_on_fail_bool, enum vostok::fs_new::notify_watcher_bool, enum vostok::fs_new::use_buffering_bool)` |
+| 0.00 | `bool __cdecl vostok::fs_new::path_starts_with(char const *, char const *)` |
+| 0.00 | `bool __cdecl vostok::network_core::operator>=(struct vostok::network_core::udp_match_stats const &, struct vostok::network_core::udp_match_stats const &)` |
+| 0.00 | `bool __cdecl vostok::network_core::operator>=(struct vostok::network_core::udp_match_stream_stats const &, struct vostok::network_core::udp_match_stream_stats const &)` |
+| 0.00 | `bool __cdecl vostok::render::reclaim<class vostok::render::res_xs<struct vostok::render::gs_data>, struct vostok::render::resource_manager::compare_shader_predicate<struct vostok::render::gs_data> >(class vostok::render::set<class vostok::render::res_xs<struct vostok::render::gs_data> *, struct vostok::render::resource_manager::compare_shader_predicate<struct vostok::render::gs_data> > &, class vostok::render::res_xs<struct vostok::render::gs_data> const *)` |
+| 0.00 | `bool __cdecl vostok::resources::is_associated_with(class vostok::vfs::vfs_iterator, class vostok::resources::resource_base *)` |
+| 0.00 | `bool __cdecl vostok::resources::try_clean_associated(class vostok::vfs::vfs_iterator, unsigned int)` |
+| 0.00 | `bool __cdecl vostok::strings::ends_with(char const *const, unsigned int, char const *const, unsigned int)` |
+| 0.00 | `bool __cdecl vostok::strings::iterate_items<struct vostok::logging::logger_predicate, char *>(char *const, unsigned int, struct vostok::logging::logger_predicate const &, char)` |
+| 0.00 | `bool __cdecl vostok::strings::less(char const *, char const *)` |
+| 0.00 | `bool __cdecl vostok::testing::run_tests_command_line(void)` |
+| 0.00 | `bool __cdecl vostok::vfs::check_is_archive_file(char const *, class vostok::fs_new::synchronous_device_interface &)` |
+| 0.00 | `bool __cdecl vostok::vfs::convert_physical_to_virtual_path(class vostok::intrusive_double_linked_list<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_mount *, 16, 12, class vostok::threading::simple_lock, class vostok::no_size_policy, class vostok::debug_policy> &, class vostok::fs_new::virtual_path_string *, class vostok::fs_new::native_path_string const &, unsigned int, class vostok::intrusive_ptr<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_intrusive_mount_base, class vostok::threading::simple_lock> *)` |
+| 0.00 | `bool __cdecl vostok::vfs::convert_virtual_to_physical_path(class vostok::intrusive_double_linked_list<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_mount *, 16, 12, class vostok::threading::simple_lock, class vostok::no_size_policy, class vostok::debug_policy> &, class vostok::fs_new::native_path_string *, class vostok::fs_new::virtual_path_string const &, class boost::function<bool __cdecl (char const *, char const *, char const *)> const &, class vostok::intrusive_ptr<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_intrusive_mount_base, class vostok::threading::simple_lock> *)` |
+| 0.00 | `bool __cdecl vostok::vfs::convert_virtual_to_physical_path(class vostok::intrusive_double_linked_list<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_mount *, 16, 12, class vostok::threading::simple_lock, class vostok::no_size_policy, class vostok::debug_policy> &, class vostok::fs_new::native_path_string *, class vostok::fs_new::virtual_path_string const &, unsigned int, class vostok::intrusive_ptr<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_intrusive_mount_base, class vostok::threading::simple_lock> *)` |
+| 0.00 | `bool __cdecl vostok::vfs::get_inline_data<1>(class vostok::vfs::base_node<1> const *, class vostok::const_buffer *)` |
+| 0.00 | `bool __cdecl vostok::vfs::lock_node(class vostok::vfs::base_node<1> *, enum vostok::vfs::lock_type_enum, enum vostok::vfs::lock_operation_enum)` |
+| 0.00 | `bool __cdecl vostok::vfs::mount_overlapped_if_needed(struct vostok::vfs::find_environment &)` |
+| 0.00 | `bool __cdecl vostok::vfs::need_automatic_archive_mount(bool *, class vostok::vfs::base_node<1> *, class vostok::memory::base_allocator *)` |
+| 0.00 | `bool __cdecl vostok::vfs::need_physical_folder_mount(class vostok::vfs::base_node<1> *, enum vostok::vfs::find_enum, enum vostok::vfs::traverse_enum)` |
+| 0.00 | `bool __cdecl vostok::vfs::need_physical_mount_or_async(class vostok::vfs::base_node<1> *, enum vostok::vfs::find_enum, enum vostok::vfs::traverse_enum)` |
+| 0.00 | `bool __cdecl vostok::vfs::set_inline_data<1>(class vostok::vfs::base_node<1> *, class vostok::const_buffer const &)` |
+| 0.00 | `char * __cdecl vostok::strings::copy(char *, unsigned int, char const *)` |
+| 0.00 | `char * __cdecl vostok::strings::copy<32>(char (&)[32], char const *)` |
+| 0.00 | `char const * __cdecl vostok::fs_new::file_name_from_path<class vostok::fs_new::native_path_string>(class vostok::fs_new::native_path_string const &)` |
+| 0.00 | `char const * __cdecl vostok::fs_new::file_name_from_path<class vostok::fs_new::virtual_path_string>(class vostok::fs_new::virtual_path_string const &)` |
+| 0.00 | `char const * __cdecl vostok::render::stage_type_to_string(enum vostok::render::enum_render_stage_type)` |
+| 0.00 | `char const * __cdecl vostok::strings::get_token(char const *, char *, unsigned int, char)` |
+| 0.00 | `class btCompoundShape * __cdecl vostok::physics::new_compound_shape_from_hit_targets_config(class vostok::configs::binary_config_value const &, class vostok::buffer_vector<class vostok::collision::bone_collision_data> &, class vostok::memory::base_allocator *)` |
+| 0.00 | `class btQuaternion __cdecl vostok::physics::from_vostok(class vostok::math::quaternion const &)` |
+| 0.00 | `class vostok::animation::mixing::addition_lexeme & __cdecl vostok::animation::mixing::operator+<class vostok::animation::mixing::multiplication_lexeme, class vostok::animation::mixing::multiplication_lexeme>(class vostok::animation::mixing::multiplication_lexeme &, class vostok::animation::mixing::multiplication_lexeme &)` |
+| 0.00 | `class vostok::animation::mixing::expression __cdecl vostok::animation::mixing::operator+<class vostok::animation::mixing::animation_lexeme>(class vostok::animation::mixing::expression &, class vostok::animation::mixing::animation_lexeme &)` |
+| 0.00 | `class vostok::animation::mixing::multiplication_lexeme & __cdecl vostok::animation::mixing::operator*<class vostok::animation::mixing::animation_lexeme, class vostok::animation::mixing::weight_lexeme>(class vostok::animation::mixing::animation_lexeme &, class vostok::animation::mixing::weight_lexeme &)` |
+| 0.00 | `class vostok::collision::object * __cdecl vostok::collision::new_aabb_object(class vostok::memory::base_allocator *, unsigned int, class vostok::math::float3const &, class vostok::math::float3const &, void *)` |
+| 0.00 | `class vostok::console_commands::console_command * __cdecl vostok::console_commands::find(char const *)` |
+| 0.00 | `class vostok::fs_new::native_path_string __cdecl vostok::vfs::get_node_physical_path<class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::fs_new::native_path_string __cdecl vostok::vfs::get_node_physical_path<class vostok::vfs::physical_file_node, 1>(class vostok::vfs::physical_file_node<1> *)` |
+| 0.00 | `class vostok::intrusive_list<struct vostok::vfs::mount_referer_base, struct vostok::vfs::mount_referer *, 0, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> * __cdecl vostok::threading::get_or_create_tls_value<class vostok::intrusive_list<struct vostok::vfs::mount_referer_base, struct vostok::vfs::mount_referer *, 0, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> >(unsigned int, class vostok::memory::base_allocator *const)` |
+| 0.00 | `class vostok::intrusive_ptr<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_intrusive_mount_base, class vostok::threading::simple_lock> __cdecl vostok::vfs::find_in_mount_history(class vostok::fs_new::virtual_path_string const &, class vostok::fs_new::native_path_string const &, class vostok::intrusive_double_linked_list<class vostok::vfs::vfs_mount, class vostok::vfs::vfs_mount *, 16, 12, class vostok::threading::simple_lock, class vostok::no_size_policy, class vostok::debug_policy> &)` |
+| 0.00 | `class vostok::math::float2 __cdecl vostok::math::normalize_safe(class vostok::math::float2_pod const &, class vostok::math::float2_pod const &)` |
+| 0.00 | `class vostok::math::float3 __cdecl vostok::particle::read_config_value<class vostok::math::float3, class vostok::configs::binary_config_value>(class vostok::configs::binary_config_value const &, char const *, class vostok::math::float3const &)` |
+| 0.00 | `class vostok::math::float4_pod __cdecl vostok::math::linear_interpolation<class vostok::math::float4_pod>(class vostok::math::float4_pod, class vostok::math::float4_pod, float)` |
+| 0.00 | `class vostok::math::float4_pod __cdecl vostok::particle::bilinear_interpolation<class vostok::math::float4_pod>(class vostok::math::float4_pod, class vostok::math::float4_pod, class vostok::math::float4_pod, class vostok::math::float4_pod, float, float)` |
+| 0.00 | `class vostok::math::float4x4 __cdecl vostok::math::create_camera_at(class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &)` |
+| 0.00 | `class vostok::math::float4x4 __cdecl vostok::math::operator*(class vostok::math::float4x4const &, class vostok::math::float4x4const &)` |
+| 0.00 | `class vostok::math::quaternion __cdecl vostok::physics::from_bullet(class btQuaternion const &)` |
+| 0.00 | `class vostok::physics::bt_collision_shape * __cdecl vostok::physics::create_compound_shape(class vostok::configs::binary_config_value const &, class vostok::math::float3const &, char const *)` |
+| 0.00 | `class vostok::render::render_surface * __cdecl vostok::render::model_factory::create_render_surface(unsigned short)` |
+| 0.00 | `class vostok::resources::query_result * __cdecl vostok::resources::get_associated_query_result(class vostok::vfs::vfs_iterator)` |
+| 0.00 | `class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl vostok::resources::get_associated_managed_resource_ptr(class vostok::vfs::vfs_iterator)` |
+| 0.00 | `class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::resources::get_associated_unmanaged_resource_ptr(class vostok::vfs::vfs_iterator)` |
+| 0.00 | `class vostok::vfs::archive_compressed_file_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_compressed_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::archive_folder_mount_root_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_folder_mount_root_node, class vostok::vfs::mount_root_node_base, 1>(class vostok::vfs::mount_root_node_base<1> *)` |
+| 0.00 | `class vostok::vfs::archive_inline_compressed_file_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_inline_compressed_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::archive_inline_file_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_inline_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::base_folder_node<1> * __cdecl vostok::vfs::cast_folder<1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::find_node_of_mount(class vostok::vfs::vfs_hashset &, class vostok::fs_new::virtual_path_string const &, unsigned int, unsigned int)` |
+| 0.00 | `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::find_referenced_link_node(class vostok::vfs::base_node<1> const *)` |
+| 0.00 | `class vostok::vfs::mount_helper_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::mount_helper_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::mount_root_node_base<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::mount_root_node_base, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::physical_file_node<1> * __cdecl vostok::vfs::cast_physical_file<1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::physical_file_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::physical_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::physical_folder_mount_root_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::physical_folder_mount_root_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::physical_folder_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::physical_folder_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::universal_file_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::universal_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `class vostok::vfs::vfs_mount * __cdecl vostok::vfs::mount_of_node<1>(class vostok::vfs::base_node<1> *)` |
+| 0.00 | `compare_parts` |
+| 0.00 | `convert_stick_value` |
+| 0.00 | `convert_to_unicode_if_needed` |
+| 0.00 | `enum vostok::math::enum_evaluate_type __cdecl vostok::math::string_to_evaluate_type(char const *)` |
+| 0.00 | `enum vostok::vfs::result_enum __cdecl vostok::vfs::fill_expand_nodes_and_incref(class vostok::vfs::base_node<1> *, class vostok::vfs::base_node<1> *, class vostok::vfs::base_node<1> *, class vostok::intrusive_list<struct vostok::vfs::node_to_expand, struct vostok::vfs::node_to_expand *, 8, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &, struct vostok::vfs::async_callbacks_data *, unsigned int)` |
+| 0.00 | `enum vostok::vfs::result_enum __cdecl vostok::vfs::fill_nodes_to_expand_from_overlapped(class vostok::vfs::base_node<1> *, class vostok::vfs::base_node<1> *, class vostok::intrusive_list<struct vostok::vfs::node_to_expand, struct vostok::vfs::node_to_expand *, 8, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> &, class vostok::memory::base_allocator *, enum vostok::vfs::find_enum, enum vostok::vfs::traverse_enum, unsigned int)` |
+| 0.00 | `enum vostok::vfs::result_enum __cdecl vostok::vfs::overlapped_chain_is_expanded(class vostok::vfs::base_node<1> *, struct vostok::vfs::find_environment &)` |
+| 0.00 | `enum vostok::vfs::result_enum __cdecl vostok::vfs::try_find_sync(char const *, class vostok::vfs::vfs_locked_iterator *, enum vostok::vfs::find_enum, class vostok::vfs::virtual_file_system *, class vostok::memory::base_allocator *)` |
+| 0.00 | `enum vostok::vfs::result_enum __cdecl vostok::vfs::try_pin_tree(class vostok::vfs::base_node<1> *, struct vostok::vfs::find_environment &)` |
+| 0.00 | `fill_state` |
+| 0.00 | `float __cdecl survarium::computed_shooting_animation_time_scale(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, float)` |
+| 0.00 | `float __cdecl vostok::render::calculate_streaming_texture_factor(class vostok::math::float3const *, class vostok::math::float2const *, unsigned int, unsigned int, unsigned short const *, unsigned int)` |
+| 0.00 | `float __cdecl vostok::ui::calc_string_length(class vostok::ui::ui_font const &, char const *)` |
+| 0.00 | `int __cdecl vostok::debug::unhandled_exception_filter(int, struct _EXCEPTION_POINTERS *const)` |
+| 0.00 | `int __cdecl vostok::detail::strcmp_s(char const *, char const *)` |
+| 0.00 | `int __cdecl vostok::render::compare(class vostok::render::res_declaration const &, class vostok::render::res_declaration const &)` |
+| 0.00 | `int __cdecl vostok::sound::ogg_utils::ov_seek_func(void *, __int64, int)` |
+| 0.00 | `int __cdecl vostok::sprintf(char *, unsigned int, char const *const, ...)` |
+| 0.00 | `invalid_parameter_handler` |
+| 0.00 | `load_function<void __stdcall(unsigned long)>` |
+| 0.00 | `load_library` |
+| 0.00 | `long __cdecl vostok::sound::ogg_utils::ov_tell_func(void *)` |
+| 0.00 | `message_processor` |
+| 0.00 | `on_error` |
+| 0.00 | `on_mounted_resources` |
+| 0.00 | `on_mounted_user_data` |
+| 0.00 | `output` |
+| 0.00 | `private: __thiscall survarium::double_barreled_weapon_core_idle_state::double_barreled_weapon_core_idle_state(class survarium::weapon_core &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *, unsigned int)` |
+| 0.00 | `private: __thiscall survarium::medkit::medkit(void)` |
+| 0.00 | `private: __thiscall survarium::pistol_weapon_core_idle_state::pistol_weapon_core_idle_state(class survarium::weapon_core &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *, unsigned int)` |
+| 0.00 | `private: __thiscall survarium::weapon_core_idle_state::weapon_core_idle_state(class survarium::weapon_core &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *, unsigned int)` |
+| 0.00 | `private: __thiscall vostok::ai::planning::base_lexeme::base_lexeme(enum vostok::ai::planning::base_lexeme::operation_type_enum, class vostok::ai::planning::base_lexeme const &, class vostok::ai::planning::base_lexeme const &, bool)` |
+| 0.00 | `private: __thiscall vostok::animation::cubic_spline_skeleton_animation::cubic_spline_skeleton_animation(class vostok::animation::bi_spline_skeleton_animation_baked const &)` |
+| 0.00 | `private: __thiscall vostok::render::res_geometry::~res_geometry(void)` |
+| 0.00 | `private: bool __thiscall survarium::breath_vibration_calculator::insufficient_breath(void) const` |
+| 0.00 | `private: bool __thiscall survarium::bullet::update_bullet_position(float, class vostok::math::float3const &)` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::AE_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::auto_reload_AE_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::can_reload(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::chamber_a_round_AE_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::fire_AE_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::fire_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::hide_AE_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::hide_break_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::hide_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::idle_AE_not_fire_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::idle_AE_or_reload_break_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::idle_AE_or_show_break_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::inactive_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::is_trying_to_reload(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::reload_AE_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::reload_break_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core::show_AE_pred(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core_shotgun_reload_state::finish_reload_predicate(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_core_shotgun_reload_state::player_wants_to_fire_predicate(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_user_animations_selector::broken_legs_predicate(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_user_animations_selector::crouch_predicate(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_user_animations_selector::is_trying_to_jump(void) const` |
+| 0.00 | `private: bool __thiscall survarium::weapon_user_animations_selector::is_trying_to_sprint(void) const` |
+| 0.00 | `private: bool __thiscall vostok::animation::mixing::n_ary_tree_comparer::new_time_scale(class vostok::animation::mixing::n_ary_tree_animation_node &)` |
+| 0.00 | `private: bool __thiscall vostok::console_impl::on_text_commit(struct vostok::ui::window *, int, int)` |
+| 0.00 | `private: bool __thiscall vostok::network::login_client_impl::verify_ssl_certificate(bool, class boost::asio::ssl::verify_context &)` |
+| 0.00 | `private: bool __thiscall vostok::network_core::http_client::add_result_content(void)` |
+| 0.00 | `private: bool __thiscall vostok::render::textures_handler<1>::set_overwrite(char const *, class vostok::render::res_texture *)` |
+| 0.00 | `private: bool __thiscall vostok::resources::base_of_intrusive_base::is_associated_with_fat(class vostok::resources::managed_resource *const) const` |
+| 0.00 | `private: bool __thiscall vostok::resources::base_of_intrusive_base::try_unregister_from_fat_or_from_name_registry<class vostok::resources::managed_resource>(class vostok::resources::managed_resource *const, unsigned int) const` |
+| 0.00 | `private: bool __thiscall vostok::resources::device_manager::do_async_operation(void **, class vostok::resources::query_result *, class vostok::fs_new::synchronous_device_interface const &, class vostok::mutable_buffer, unsigned __int64, bool)` |
+| 0.00 | `private: bool __thiscall vostok::resources::device_manager::open_file(void ***, class vostok::resources::query_result *, class vostok::fs_new::synchronous_device_interface const &)` |
+| 0.00 | `private: bool __thiscall vostok::resources::query_result::is_translate_query(void) const` |
+| 0.00 | `private: bool __thiscall vostok::resources::query_result::process_request_path(bool)` |
+| 0.00 | `private: bool __thiscall vostok::resources::query_result::retry_action_that_caused_out_of_memory(void)` |
+| 0.00 | `private: bool __thiscall vostok::resources::resource_base::try_unregister_from_fat_or_from_name_registry(unsigned int)` |
+| 0.00 | `private: bool __thiscall vostok::resources::resource_freeing_functionality::parents_can_be_freed(class vostok::resources::resource_base *, bool *, bool *)` |
+| 0.00 | `private: bool __thiscall vostok::resources::resource_freeing_functionality::try_collect_parents_to_free(class vostok::resources::resource_base *)` |
+| 0.00 | `private: bool __thiscall vostok::vfs::archive_mounter::read_sub_fat(class vostok::fs_new::synchronous_device_interface &)` |
+| 0.00 | `private: bool __thiscall vostok::vfs::virtual_file_system::try_reference_to_pending_mount_unsafe(class vostok::vfs::query_mount_arguments &, bool *)` |
+| 0.00 | `private: char __thiscall vostok::logging::log_file::read_next_char(void)` |
+| 0.00 | `private: class vostok::ai::planning::base_lexeme_ptr __thiscall vostok::ai::planning::base_lexeme::expand_brackets_as_and(class vostok::memory::stack_allocator &, class vostok::ai::planning::base_lexeme const &) const` |
+| 0.00 | `private: class vostok::ai::planning::base_lexeme_ptr __thiscall vostok::ai::planning::base_lexeme::expand_brackets_as_or(class vostok::memory::stack_allocator &) const` |
+| 0.00 | `private: class vostok::ai::planning::base_lexeme_ptr __thiscall vostok::ai::planning::base_lexeme::expand_brackets_as_or(class vostok::memory::stack_allocator &, class vostok::ai::planning::base_lexeme const &) const` |
+| 0.00 | `private: class vostok::ai::planning::base_lexeme_ptr __thiscall vostok::ai::planning::base_lexeme::generate_permutations_as_and(class vostok::memory::stack_allocator &, class vostok::ai::planning::base_lexeme const &) const` |
+| 0.00 | `private: class vostok::ai::planning::base_lexeme_ptr __thiscall vostok::ai::planning::base_lexeme::generate_permutations_as_or(class vostok::memory::stack_allocator &, class vostok::ai::planning::base_lexeme const &) const` |
+| 0.00 | `private: class vostok::animation::mixing::n_ary_tree_animation_node * __thiscall vostok::animation::mixing::n_ary_tree_transition_tree_constructor::add_animation(class vostok::animation::mixing::n_ary_tree_animation_node &, class vostok::animation::mixing::n_ary_tree_animation_node *const)` |
+| 0.00 | `private: class vostok::animation::mixing::n_ary_tree_animation_node * __thiscall vostok::animation::mixing::n_ary_tree_transition_tree_constructor::new_weight_driving_animation(class vostok::animation::mixing::n_ary_tree_animation_node &)` |
+| 0.00 | `private: class vostok::const_buffer __thiscall vostok::resources::query_result::pin_raw_buffer(void)` |
+| 0.00 | `private: class vostok::math::float3 __thiscall survarium::bullet::compute_parabolic_position(float, class vostok::math::float3const &)` |
+| 0.00 | `private: class vostok::math::float3 __thiscall survarium::bullet::compute_trajectory_position(float, class vostok::math::float3const &)` |
+| 0.00 | `private: class vostok::math::float3 __thiscall survarium::bullet::compute_trajectory_velocity(float, class vostok::math::float3const &)` |
+| 0.00 | `private: class vostok::math::float3 __thiscall survarium::weapon_core::get_dispersed_buckshot_direction(class vostok::math::float3const &)` |
+| 0.00 | `private: class vostok::math::float4x4 __thiscall vostok::animation::bone_matrices_computer::computed_local_bone_matrix(class vostok::animation::skeleton_bone const &, unsigned int) const` |
+| 0.00 | `private: class vostok::network_core::tcp_packet * __thiscall vostok::network_core::tcp_packet_socket<class boost::asio::basic_stream_socket<class boost::asio::ip::tcp, class boost::asio::stream_socket_service<class boost::asio::ip::tcp> > >::new_packet(void)` |
+| 0.00 | `private: class vostok::network_core::udp_match_packet * __thiscall vostok::network_core::udp_match_connection::new_low_level_packet(unsigned char)` |
+| 0.00 | `private: class vostok::sound::sound_collection * __thiscall vostok::sound::sound_collection_cook::create_collection(class vostok::configs::binary_config_value const &)` |
+| 0.00 | `private: class vostok::vfs::base_node<1> * __thiscall vostok::vfs::physical_path_mounter::add_physical_node(class vostok::fs_new::virtual_path_string const &, class vostok::fs_new::virtual_path_string const &, unsigned int, class vostok::fs_new::native_path_string const &, class vostok::vfs::base_node<1> *)` |
+| 0.00 | `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::jump_logic_state_landing::on_interval_end(struct vostok::animation::animation_callback_params &)` |
+| 0.00 | `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::jump_logic_state_start::on_interval_end(struct vostok::animation::animation_callback_params &)` |
+| 0.00 | `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::jump_logic_state_start::on_jump_event(struct vostok::animation::animation_callback_params &)` |
+| 0.00 | `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_core_shotgun_reload_finish_substate::on_animation_end(struct vostok::animation::animation_callback_params &)` |
+| 0.00 | `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_core_shotgun_reload_one_round_substate::on_animation_end(struct vostok::animation::animation_callback_params &)` |
+| 0.00 | `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_core_shotgun_reload_start_substate::on_animation_end(struct vostok::animation::animation_callback_params &)` |
+| 0.00 | `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_user_animations_selector::on_interval_ended(struct vostok::animation::animation_callback_params &)` |
+| 0.00 | `private: enum vostok::logging::verbosity __thiscall vostok::logging::node::get_verbosity(class vostok::logging::path_parts *, enum vostok::logging::verbosity) const` |
+| 0.00 | `private: enum vostok::math::intersection __thiscall vostok::collision::colliders::cuboid_object::intersects_aabb(class vostok::math::float3const &, class vostok::math::float3const &) const` |
+| 0.00 | `private: enum vostok::resources::allocation_result_enum __thiscall vostok::resources::query_result::allocate_final_managed_resource_if_needed(void)` |
+| 0.00 | `private: enum vostok::resources::decrease_is_possible_bool __thiscall vostok::resources::quality_decreasing_functionality::collect_quality_resources(class vostok::resources::resource_base *, class vostok::intrusive_list<class vostok::resources::resource_base, class vostok::resources::resource_base *, 184, class vostok::threading::single_threading_policy, class vostok::size_policy, class vostok::no_debug_policy> *)` |
+| 0.00 | `private: float __thiscall survarium::bullet::compute_max_error(float, float, class vostok::math::float3const &)` |
+| 0.00 | `private: float __thiscall survarium::bullet::get_check_time_in_vacuum(float, float, class vostok::math::float3const &)` |
+| 0.00 | `private: float __thiscall survarium::bullet::get_parabolic_time(void)` |
+| 0.00 | `private: float __thiscall survarium::weapon_core::computed_backward_recoil_time(float, float, unsigned int, unsigned int, unsigned int, float)` |
+| 0.00 | `private: float __thiscall survarium::weapon_core::computed_horizontal_recoil_time(float, float, unsigned int, unsigned int, unsigned int, float)` |
+| 0.00 | `private: float __thiscall survarium::weapon_core::computed_vertical_recoil_time(float, float, unsigned int, unsigned int, unsigned int, float)` |
+| 0.00 | `private: static void __cdecl vostok::animation::skeleton_animation_cook::on_cubic_spline_animation_cooked(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::animation::bi_spline_skeleton_animation_baked, class vostok::resources::unmanaged_intrusive_base>)` |
+| 0.00 | `private: static void __cdecl vostok::buffer_vector<class vostok::tasks::thread_tls>::destroy(class vostok::tasks::thread_tls *, class vostok::tasks::thread_tls *const &)` |
+| 0.00 | `private: struct survarium::game_action_descr * __thiscall survarium::key_binder::action_name_to_ptr(char const *)` |
+| 0.00 | `private: struct survarium::keyboard_key_descr * __thiscall survarium::key_binder::keyname_to_ptr(char const *)` |
+| 0.00 | `private: struct survarium::scheduler::record & __thiscall survarium::scheduler::register_object(struct survarium::scheduler::identifier *, class boost::function<void __cdecl (unsigned int, unsigned int)> const &, bool)` |
+| 0.00 | `private: struct vostok::ai::planning::operands_calculator __thiscall vostok::ai::planning::base_lexeme::count_operands_as_and(void) const` |
+| 0.00 | `private: struct vostok::ai::planning::operands_calculator __thiscall vostok::ai::planning::base_lexeme::count_operands_as_or(void) const` |
+| 0.00 | `private: struct vostok::ai::planning::operands_calculator __thiscall vostok::ai::planning::base_lexeme::count_operands_as_predicate(void) const` |
+| 0.00 | `private: struct vostok::animation::mixing::n_ary_tree_base_node * __thiscall vostok::animation::mixing::n_ary_tree_transition_tree_constructor::new_time_scale_transition(class vostok::animation::mixing::n_ary_tree_animation_node &, class vostok::animation::mixing::n_ary_tree_animation_node &, struct vostok::animation::mixing::n_ary_tree_base_node &, struct vostok::animation::mixing::n_ary_tree_base_node &)` |
+| 0.00 | `private: struct vostok::ui::text * __thiscall vostok::console_impl::get_item(void)` |
+| 0.00 | `private: unsigned int __thiscall vostok::resources::query_result::allocate_thread_id(void) const` |
+| 0.00 | `private: unsigned short __thiscall vostok::ui::ui_text_edit::calc_right_word_position(unsigned short) const` |
+| 0.00 | `private: virtual __thiscall survarium::medkit::~medkit(void)` |
+| 0.00 | `private: virtual __thiscall survarium::oxygen_tank::~oxygen_tank(void)` |
+| 0.00 | `private: virtual bool __thiscall survarium::breath_state_shortbreathing::is_ready_for_transition(void) const` |
+| 0.00 | `private: virtual bool __thiscall survarium::jump_logic_state_start::is_ready_for_transition(void) const` |
+| 0.00 | `private: virtual bool __thiscall survarium::ladder::ladder_occluder::use_execute(struct survarium::usable_object_user_data *)` |
+| 0.00 | `private: virtual bool __thiscall survarium::player_logic_jump_state::is_ready_for_transition(void) const` |
+| 0.00 | `private: virtual bool __thiscall survarium::weapon_core_shotgun_reload_start_substate::is_ready_for_transition(void) const` |
+| 0.00 | `private: virtual bool __thiscall vostok::sound::encoded_sound_with_qualities::is_increasing_quality(void) const` |
+| 0.00 | `private: virtual class vostok::math::aabb __thiscall vostok::collision::aabb_object::update_aabb(class vostok::math::float4x4const &)` |
+| 0.00 | `private: virtual class vostok::render::world & __thiscall vostok::engine::engine_world::get_renderer_world(void)` |
+| 0.00 | `private: virtual float __thiscall vostok::sound::encoded_sound_with_qualities::satisfaction_with(unsigned int, class vostok::resources::positional_unmanaged_resource const *, unsigned int) const` |
+| 0.00 | `private: virtual struct vostok::sound::world & __thiscall vostok::engine::engine_world::get_sound_world(void)` |
+| 0.00 | `private: virtual unsigned int __thiscall survarium::booby_trap_core_cook::get_derived_resource_size(void)` |
+| 0.00 | `private: virtual unsigned int __thiscall survarium::weapon_core_cook::cooked_object_size(class survarium::weapon_core &) const` |
+| 0.00 | `private: virtual unsigned int __thiscall vostok::memory::process_allocator::total_size(void) const` |
+| 0.00 | `private: virtual void __stdcall vostok::sound::voice_bridge::OnBufferEnd(void *)` |
+| 0.00 | `private: virtual void __stdcall vostok::sound::voice_bridge::OnVoiceError(void *, long)` |
+| 0.00 | `private: virtual void __thiscall binary_tree_weight_driving_animation_getter::visit(class vostok::animation::mixing::binary_tree_addition_node &)` |
+| 0.00 | `private: virtual void __thiscall survarium::booby_trap_core_cook::query_for_derived_resources(class vostok::resources::query_result_for_cook *, class survarium::booby_trap_core *, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>)` |
+| 0.00 | `private: virtual void __thiscall survarium::booby_trap_set_core_cook::query_for_derived_resources(class vostok::resources::query_result_for_cook *, class survarium::booby_trap_set_core *, struct survarium::booby_trap_set_cook_data const &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>)` |
+| 0.00 | `private: virtual void __thiscall survarium::jump_logic_state_landing::initialize(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::jump_logic_state_start::finalize(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::jump_logic_state_start::initialize(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::player_input_handler::on_after_processing(struct vostok::input::world *)` |
+| 0.00 | `private: virtual void __thiscall survarium::player_input_handler::on_focus(bool)` |
+| 0.00 | `private: virtual void __thiscall survarium::player_logic_crouch_state::finalize(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::player_logic_crouch_state::initialize(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::player_logic_jump_state::execute(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::rifle_scope_cook::delete_resource(class vostok::resources::resource_base *)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon::instant_aim_end(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon::instant_aim_start(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon::set_next_ammo_type(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon::set_next_fire_queue_type(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon_cook::on_weapon_config_loaded(class vostok::resources::queries_result &)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon_core::on_player_model_added(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon_core::on_player_model_removed(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon_core_hide_state_base::on_animation_end_impl(bool &)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state>::finalize(void)` |
+| 0.00 | `private: virtual void __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate>::finalize(void)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::binary_tree_expression_simplifier::visit(class vostok::animation::mixing::binary_tree_animation_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::binary_tree_expression_simplifier::visit(class vostok::animation::mixing::binary_tree_multiplication_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::binary_tree_expression_simplifier::visit(class vostok::animation::mixing::binary_tree_weight_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::binary_tree_initializer::visit(class vostok::animation::mixing::binary_tree_addition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::binary_tree_weight_node::accept(struct vostok::animation::mixing::binary_tree_visitor &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_animation_time_calculator::visit(class vostok::animation::mixing::n_ary_tree_time_scale_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_destroyer::visit(class vostok::animation::mixing::n_ary_tree_addition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_destroyer::visit(class vostok::animation::mixing::n_ary_tree_weight_transition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_multiplication_node::visit(struct vostok::animation::mixing::n_ary_tree_double_dispatcher &, class vostok::animation::mixing::n_ary_tree_multiplication_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_addition_node &, class vostok::animation::mixing::n_ary_tree_addition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_addition_node &, class vostok::animation::mixing::n_ary_tree_weight_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_time_scale_node &, class vostok::animation::mixing::n_ary_tree_time_scale_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_weight_node &, class vostok::animation::mixing::n_ary_tree_addition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_weight_node &, class vostok::animation::mixing::n_ary_tree_weight_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_weight_node &, class vostok::animation::mixing::n_ary_tree_weight_transition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_weight_transition_node &, class vostok::animation::mixing::n_ary_tree_weight_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_node_comparer::dispatch(class vostok::animation::mixing::n_ary_tree_weight_transition_node &, class vostok::animation::mixing::n_ary_tree_weight_transition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_size_calculator::visit(class vostok::animation::mixing::binary_tree_addition_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_time_scale_node::visit(struct vostok::animation::mixing::n_ary_tree_double_dispatcher &, class vostok::animation::mixing::n_ary_tree_time_scale_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_weaver::visit(class vostok::animation::mixing::binary_tree_animation_node &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::mixing::n_ary_tree_weight_node::accept(struct vostok::animation::mixing::n_ary_tree_visitor &)` |
+| 0.00 | `private: virtual void __thiscall vostok::animation::skeleton_animation_cook::translate_query(class vostok::resources::query_result_for_cook &)` |
+| 0.00 | `private: virtual void __thiscall vostok::engine::engine_world::load_level(char const *)` |
+| 0.00 | `private: virtual void __thiscall vostok::engine::engine_world::unload_level(void)` |
+| 0.00 | `private: virtual void __thiscall vostok::memory::doug_lea_mt_allocator::finalize_impl(void)` |
+| 0.00 | `private: virtual void __thiscall vostok::memory::doug_lea_mt_allocator::initialize_impl(void *, unsigned __int64, char const *)` |
+| 0.00 | `private: virtual void __thiscall vostok::memory::managed_allocator::initialize_impl(void *, unsigned __int64, char const *)` |
+| 0.00 | `private: virtual void __thiscall vostok::sound::encoded_sound_with_qualities::decrease_quality(unsigned int)` |
+| 0.00 | `private: virtual void __thiscall vostok::sound::encoded_sound_with_qualities::increase_quality_to_target(class vostok::resources::query_result_for_cook *)` |
+| 0.00 | `private: void __thiscall survarium::animated_model_instance_cook::on_config_loaded(class vostok::resources::queries_result &)` |
+| 0.00 | `private: void __thiscall survarium::application::preinitialize(void)` |
+| 0.00 | `private: void __thiscall survarium::body_part_parameters::apply_affects(class survarium::affects_threshold const *, unsigned int)` |
+| 0.00 | `private: void __thiscall survarium::body_part_parameters::update_affects(unsigned int)` |
+| 0.00 | `private: void __thiscall survarium::booby_trap_cook::on_models_ready(class vostok::resources::queries_result &, class survarium::booby_trap *)` |
+| 0.00 | `private: void __thiscall survarium::booby_trap_set_cook::on_models_ready(class vostok::resources::queries_result &, class survarium::booby_trap_set *)` |
+| 0.00 | `private: void __thiscall survarium::breath_vibration_calculator::initialize_logic(void)` |
+| 0.00 | `private: void __thiscall survarium::bullet::change_trajectory(class vostok::math::float3const &, class vostok::math::float3const &, float)` |
+| 0.00 | `private: void __thiscall survarium::bullet_manager::play_sound_impl(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::math::float3const &)` |
+| 0.00 | `private: void __thiscall survarium::bullet_manager::tick_bullets(unsigned int, unsigned int, unsigned int)` |
+| 0.00 | `private: void __thiscall survarium::damage_model::on_broken_limb_affect(char const *, enum survarium::hit_affects_type_enum, enum survarium::affect_event_type_enum)` |
+| 0.00 | `private: void __thiscall survarium::damage_model_cook::on_hit_params_received(class vostok::resources::queries_result &)` |
+| 0.00 | `private: void __thiscall survarium::game::set_network_client(class survarium::base_network_client *const, char const *, unsigned short, bool)` |
+| 0.00 | `private: void __thiscall survarium::game_material_manager::delete_pairs(void)` |
+| 0.00 | `private: void __thiscall survarium::game_options::apply_default_graphic(void)` |
+| 0.00 | `private: void __thiscall survarium::game_options::apply_key_bindings(void)` |
+| 0.00 | `private: void __thiscall survarium::game_options::assign_binding(enum survarium::game_action_id, char const *)` |
+| 0.00 | `private: void __thiscall survarium::game_options::on_resources_ready(class vostok::resources::queries_result &)` |
+| 0.00 | `private: void __thiscall survarium::game_options::reset_bindings(bool)` |
+| 0.00 | `private: void __thiscall survarium::game_world::switch_to_player_camera(bool)` |
+| 0.00 | `private: void __thiscall survarium::game_world_ui::create_slot_value(enum survarium::profile_slot_enum, struct survarium::inventory_item_props &, struct survarium::flash_value &)` |
+| 0.00 | `private: void __thiscall survarium::items_cook::create_item_and_finish_query(enum survarium::item_types_enum, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::query_result_for_cook *)` |
+| 0.00 | `private: void __thiscall survarium::jump_logic::initialize_logic(void)` |
+| 0.00 | `private: void __thiscall survarium::lobby_menu::request_status_from_server_impl(unsigned int, unsigned int)` |
+| 0.00 | `private: void __thiscall survarium::lobby_menu::show_disconnected_message(bool)` |
+| 0.00 | `private: void __thiscall survarium::lobby_menu::update_status(void)` |
+| 0.00 | `private: void __thiscall survarium::medkit::load(class vostok::configs::binary_config_value)` |
+| 0.00 | `private: void __thiscall survarium::messaging_client::on_disconnected(void)` |
+| 0.00 | `private: void __thiscall survarium::messaging_client::on_error(enum vostok::network_core::client_error_codes_enum, class boost::system::error_code)` |
+| 0.00 | `private: void __thiscall survarium::messaging_client::update_channel_subscriptions(void)` |
+| 0.00 | `private: void __thiscall survarium::network_client::on_http_error(class boost::system::error_code)` |
+| 0.00 | `private: void __thiscall survarium::network_client::on_match_disconnected(enum vostok::network_core::disconnect_event_types_enum)` |
+| 0.00 | `private: void __thiscall survarium::network_client::query_players(void)` |
+| 0.00 | `private: void __thiscall survarium::object_vegetation::on_grass_loaded(class vostok::resources::queries_result &, class boost::function<void __cdecl (class survarium::game_object_&)> &)` |
+| 0.00 | `private: void __thiscall survarium::oxygen_tank::load(class vostok::configs::binary_config_value)` |
+| 0.00 | `private: void __thiscall survarium::player::remove_models_from_scene(void)` |
+| 0.00 | `private: void __thiscall survarium::player_cook::on_hit_params_loaded(class vostok::resources::queries_result &, struct survarium::player_creation_params *)` |
+| 0.00 | `private: void __thiscall survarium::player_stamina::regenerate(unsigned int)` |
+| 0.00 | `private: void __thiscall survarium::project_cooker_simple::on_collision_and_visuals_loaded(class vostok::resources::queries_result &, class survarium::simple_game_project *)` |
+| 0.00 | `private: void __thiscall survarium::shotgun_weapon_reload_state_cook::on_substates_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)` |
+| 0.00 | `private: void __thiscall survarium::weapon::load_weapon(class vostok::resources::resource_ptr<class vostok::render::skeleton_model_instance, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::rifle_scope, class vostok::resources::unmanaged_resource> const &)` |
+| 0.00 | `private: void __thiscall survarium::weapon::update_pfx_transform(void)` |
+| 0.00 | `private: void __thiscall survarium::weapon_cook::on_weapon_subresources_ready(class vostok::resources::queries_result &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class survarium::weapon_core *)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core::check_for_no_ammo_message(void)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core::check_for_sprint_transition(void)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core::load_ammo(void)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core_cook::on_weapon_states_ready(class vostok::resources::queries_result &, struct survarium::weapon_state_creation_params const *, class survarium::weapon_core *)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core_shotgun_reload_state::initialize_logic(class survarium::weapon_core_shotgun_reload_base_substate *, class survarium::weapon_core_shotgun_reload_base_substate *, class survarium::weapon_core_shotgun_reload_base_substate *)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::double_barreled_weapon_core_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::pistol_weapon_core_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)` |
+| 0.00 | `private: void __thiscall survarium::weapon_core_state_cook_template<class survarium::weapon_core_idle_state>::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> >::config_params)` |
+| 0.00 | `private: void __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> >::on_subresources_ready(class vostok::resources::queries_result &, class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> >::config_params)` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::add_to_effects_as_and(class vostok::ai::planning::generalized_action &) const` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::add_to_preconditions_as_and(class vostok::ai::planning::generalized_action &) const` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::add_to_preconditions_as_or(class vostok::ai::planning::generalized_action &) const` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::add_to_target_world_state_as_and(class vostok::ai::planning::specified_problem &, unsigned int &) const` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::invert_value_as_and(void) const` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::invert_value_as_or(void) const` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::invert_value_as_predicate(void) const` |
+| 0.00 | `private: void __thiscall vostok::ai::planning::base_lexeme::reset_pointers(void) const` |
+| 0.00 | `private: void __thiscall vostok::animation::animation_collection_cook::request_items(class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::configs::binary_config_value const &, class vostok::resources::query_result_for_cook *const)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::binary_tree_expression_simplifier::process<class vostok::animation::mixing::binary_tree_addition_node, struct stlp_std::plus<float> >(class vostok::animation::mixing::binary_tree_addition_node &, struct stlp_std::plus<float> const &)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::binary_tree_expression_simplifier::process<class vostok::animation::mixing::binary_tree_multiplication_node, struct stlp_std::multiplies<float> >(class vostok::animation::mixing::binary_tree_multiplication_node &, struct stlp_std::multiplies<float> const &)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::binary_tree_expression_simplifier::process<class vostok::animation::mixing::binary_tree_subtraction_node, struct stlp_std::minus<float> >(class vostok::animation::mixing::binary_tree_subtraction_node &, struct stlp_std::minus<float> const &)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::binary_tree_expression_simplifier::process_null_weight(struct stlp_std::multiplies<float> const &, class vostok::animation::mixing::binary_tree_expression_simplifier const &, class vostok::animation::mixing::binary_tree_expression_simplifier const &)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree::accumulate_object_movement(class vostok::animation::mixing::n_ary_tree_animation_node &, float, unsigned int)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree::destroy(void)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree::remove_animations(unsigned int)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree::set_object_transform(class vostok::animation::mixing::n_ary_tree_animation_node &)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree::update_event_iterators(unsigned int)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree_comparer::new_time_scale_transition(struct vostok::animation::mixing::n_ary_tree_base_node &, struct vostok::animation::mixing::n_ary_tree_base_node &)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree_event_iterator::select_state(void)` |
+| 0.00 | `private: void __thiscall vostok::animation::mixing::n_ary_tree_size_calculator::propagate(class vostok::animation::mixing::binary_tree_binary_operation_node &)` |
+| 0.00 | `private: void __thiscall vostok::collision::colliders::aabb_geometry::add_triangle(unsigned int) const` |
+| 0.00 | `private: void __thiscall vostok::collision::colliders::aabb_geometry::test_primitive(unsigned int) const` |
+| 0.00 | `private: void __thiscall vostok::collision::colliders::cuboid_geometry::add_triangle(unsigned int) const` |
+| 0.00 | `private: void __thiscall vostok::collision::colliders::ray_query_geometry::test_primitive(unsigned int const &)` |
+| 0.00 | `private: void __thiscall vostok::collision::collision_cook::on_triangle_mesh_collision_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *)` |
+| 0.00 | `private: void __thiscall vostok::collision::collision_cook::query_triangle_mesh(class vostok::resources::query_result_for_cook *)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::enable_game_impl(bool)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::initialize_logic_thread(void)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::initialize_resources(void)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::initialize_sound_modules(void)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::logic(void)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::logic_clear_resources(void)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::network(void)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::sound(void)` |
+| 0.00 | `private: void __thiscall vostok::engine::engine_world::terminate_on_timeout(float)` |
+| 0.00 | `private: void __thiscall vostok::fs_new::asynchronous_device_interface::get_synchronous_access(class vostok::fs_new::synchronous_device_interface *, class vostok::memory::base_allocator *)` |
+| 0.00 | `private: void __thiscall vostok::fs_new::asynchronous_device_interface::push_query(class vostok::fs_new::asynchronous_device_query *)` |
+| 0.00 | `private: void __thiscall vostok::intrusive_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base, class vostok::threading::simple_lock>::dec(void)` |
+| 0.00 | `private: void __thiscall vostok::logging::filter_tree::build_tree(void)` |
+| 0.00 | `private: void __thiscall vostok::network::http_client::create_client_impl(void)` |
+| 0.00 | `private: void __thiscall vostok::network::http_client::get_impl(char const *, char const *)` |
+| 0.00 | `private: void __thiscall vostok::network::http_client::on_error(class boost::system::error_code)` |
+| 0.00 | `private: void __thiscall vostok::network::login_client_impl::close_connection(bool)` |
+| 0.00 | `private: void __thiscall vostok::network::login_client_impl::connect(enum vostok::resolve_error_types_enum, class boost::asio::ip::basic_resolver_iterator<class boost::asio::ip::tcp>, unsigned int, class boost::function<void __cdecl (enum vostok::connection_error_types_enum)> const &)` |
+| 0.00 | `private: void __thiscall vostok::network::login_client_impl::handshake(class boost::function<void __cdecl (enum vostok::handshaking_error_types_enum)> const &, unsigned int, bool)` |
+| 0.00 | `private: void __thiscall vostok::network::login_client_impl::on_connected(unsigned int, class boost::function<void __cdecl (enum vostok::connection_error_types_enum)> const &, class boost::asio::ip::basic_resolver_iterator<class boost::asio::ip::tcp>, class boost::system::error_code const &, class boost::asio::ip::basic_resolver_iterator<class boost::asio::ip::tcp>)` |
+| 0.00 | `private: void __thiscall vostok::network::login_client_impl::on_handshaked(class boost::system::error_code const &, class boost::function<void __cdecl (enum vostok::handshaking_error_types_enum)> const &, unsigned int, bool)` |
+| 0.00 | `private: void __thiscall vostok::network::login_client_impl::ping(unsigned int)` |
+| 0.00 | `private: void __thiscall vostok::network::login_client_impl::resolve(class boost::function<void __cdecl (enum vostok::resolve_error_types_enum, class boost::asio::ip::basic_resolver_iterator<class boost::asio::ip::tcp>)> const &, unsigned int)` |
+| 0.00 | `private: void __thiscall vostok::network::match_client::create_client(struct vostok::network_core::udp_network_flow_emulator_options const *)` |
+| 0.00 | `private: void __thiscall vostok::network::match_client::create_responses_packets_allocator(void)` |
+| 0.00 | `private: void __thiscall vostok::network::match_client::on_disconnect(enum vostok::network_core::disconnect_event_types_enum)` |
+| 0.00 | `private: void __thiscall vostok::network::match_client::on_disconnect_impl(enum vostok::network_core::disconnect_event_types_enum)` |
+| 0.00 | `private: void __thiscall vostok::network::match_client_impl::on_disconnect(enum vostok::network_core::disconnect_event_types_enum)` |
+| 0.00 | `private: void __thiscall vostok::network::tcp_packet_client::create_client(void)` |
+| 0.00 | `private: void __thiscall vostok::network::tcp_packet_client::on_connected(void)` |
+| 0.00 | `private: void __thiscall vostok::network::tcp_packet_client::on_connected_impl(void)` |
+| 0.00 | `private: void __thiscall vostok::network::tcp_packet_client::on_disconnected(void)` |
+| 0.00 | `private: void __thiscall vostok::network::tcp_packet_client::on_disconnected_impl(void)` |
+| 0.00 | `private: void __thiscall vostok::network::tcp_packet_client::on_error(enum vostok::network_core::client_error_codes_enum, class boost::system::error_code)` |
+| 0.00 | `private: void __thiscall vostok::network::tcp_packet_client::on_packet_received(class vostok::network_core::tcp_packet const &)` |
+| 0.00 | `private: void __thiscall vostok::network_core::http_client::close_connection(void)` |
+| 0.00 | `private: void __thiscall vostok::network_core::http_client::handle_connect(class boost::system::error_code const &, class boost::asio::ip::basic_resolver_iterator<class boost::asio::ip::tcp>)` |
+| 0.00 | `private: void __thiscall vostok::network_core::http_client::handle_read_content(class boost::system::error_code const &)` |
+| 0.00 | `private: void __thiscall vostok::network_core::http_client::handle_read_status_line(class boost::system::error_code const &)` |
+| 0.00 | `private: void __thiscall vostok::network_core::http_client::handle_resolve(class boost::system::error_code const &, class boost::asio::ip::basic_resolver_iterator<class boost::asio::ip::tcp>)` |
+- _...and 4126 more_
+
+### Added (4163)
+
+- `??__G@YGXPAX0IHP6EPAX00@Z@Z`
+- `?set_size@render_output_window@render@vostok@@QAEXII_N_N1@Z`
+- `?set_size@res_render_output@render@vostok@@QAEXII_N_N1@Z`
+- `_ogg_calloc_impl`
+- `_ogg_free_impl`
+- `_ogg_malloc_impl`
+- `_ogg_realloc_impl`
+- ``survarium::hit_animations_selector::selected_animations'::`2'::hit_body_part_greater::operator()`
+- ``vostok::particle::particle_world::get_render_emitter_instances'::`2'::emitters_sort_by_priority_pridicate::operator()`
+- ``vostok::render::render_particle_emitter_instance::sort_particles'::`4'::particle_sort_predicate::operator()`
+- ``vostok::render::scene::process_streaming'::`51'::remove_texture_predicate::operator()`
+- ``vostok::render::scene::process_streaming'::`6'::remove_requested_texture_predicate::operator()`
+- ``vostok::render::stage_visibility::filter_and_sort_ambient_lights'::`4'::sort_ambient_lights_by_size_predicate::operator()`
+- ``vostok::render::stage_visibility::filter_and_sort_env_probes'::`4'::sort_by_size_predicate::operator()`
+- `ag_zeroin2`
+- `animation_index`
+- `bool __cdecl survarium::are_different(struct survarium::player_input const &, struct survarium::player_input const &)`
+- `bool __cdecl survarium::load_quest_descriptor(struct survarium::quest_descriptor &, class vostok::configs::binary_config_value)`
+- `bool __cdecl survarium::operator==(struct survarium::player_input const &, struct survarium::player_input const &)`
+- `bool __cdecl vostok::console_commands::execute_console_commands(class vostok::fs_new::native_path_string, enum vostok::console_commands::execution_filter, unsigned int)`
+- `bool __cdecl vostok::platform::is_address_space_or_ram_under_2_gb(void)`
+- `bool __cdecl vostok::render::is_material_stages_index(unsigned int)`
+- `bool __cdecl vostok::render::operator==(struct vostok::render::hw_buffer_pool_range const &, struct vostok::render::hw_buffer_pool_range const &)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_render_output, 64>(class vostok::fixed_vector<class vostok::render::res_render_output *, 64> &, class vostok::render::res_render_output const *)`
+- `bool __cdecl vostok::resources::check_queries_result(class vostok::resources::queries_result &)`
+- `bool __cdecl vostok::strings::starts_with(char const *const, char const *const)`
+- `char * __cdecl vostok::strings::copy<16>(char (&)[16], char const *)`
+- `char * __cdecl vostok::strings::copy<260>(char (&)[260], char const *)`
+- `char * __cdecl vostok::strings::copy_n(char *const, unsigned int, char const *const, unsigned int)`
+- `char * __cdecl vostok::strings::duplicate<class vostok::memory::stack_allocator>(class vostok::memory::stack_allocator &, char const *const)`
+- `char const * __cdecl vostok::animation::get_locator_format_string(char const * (&)[2][3], class vostok::render::render_model_instance const &, unsigned int, enum vostok::animation::fingers_to_weapon_corrector::hands_enum, bool)`
+- `char const * __cdecl vostok::logging::verbosity_name(enum vostok::logging::verbosity)`
+- `char const * __cdecl vostok::render::game::`anonymous namespace'::const_cstr<class vostok::fixed_string<128> >(class vostok::fixed_string<128> const &)`
+- `checkMonotonic`
+- `class btBvhTriangleMeshShape * __cdecl vostok::physics::create_btBvhTriangleMeshShape(class vostok::math::float3*, unsigned int *, unsigned int, unsigned int, unsigned short const *const, class vostok::math::float3const &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)`
+- `class btCollisionShape * __cdecl vostok::physics::create_bt_primitive(enum vostok::collision::primitive_type, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::memory::base_allocator *)`
+- `class btVector3 __cdecl vostok::physics::capsule_bottom_to_center_position(class btVector3const &, class btCapsuleShape const &, class btVector3const &)`
+- `class btVector3 __cdecl vostok::physics::capsule_center_to_bottom_position(class btVector3const &, class btCapsuleShape const &, class btVector3const &)`
+- `class btVector3 __cdecl vostok::physics::normalized_safe(class btVector3const &, class btVector3const &)`
+- `class vostok::animation::mixing::addition_lexeme & __cdecl vostok::animation::mixing::operator+<class vostok::animation::mixing::animation_lexeme, class vostok::animation::mixing::animation_lexeme>(class vostok::animation::mixing::animation_lexeme &, class vostok::animation::mixing::animation_lexeme &)`
+- `class vostok::animation::mixing::expression __cdecl vostok::animation::mixing::operator*(class vostok::animation::mixing::expression &, class vostok::animation::mixing::expression &)`
+- `class vostok::animation::mixing::n_ary_tree_animation_node * __cdecl vostok::animation::mixing::find_animation(class boost::function<unsigned char __cdecl (void const *)> const &, class vostok::animation::mixing::n_ary_tree_animation_node *const, class vostok::animation::mixing::n_ary_tree_animation_node *const, class vostok::animation::mixing::n_ary_tree_animation_node &)`
+- `class vostok::fixed_string<128> __cdecl vostok::fs_new::file_open_flags_to_string(enum vostok::fs_new::file_mode::mode_enum, enum vostok::fs_new::file_access::access_enum)`
+- `class vostok::fixed_string<260> __cdecl vostok::render::make_effect_name(char const *, class vostok::resources::resource_ptr<class vostok::render::material, class vostok::resources::unmanaged_intrusive_base> const &, unsigned int)`
+- `class vostok::fixed_string<260> __cdecl vostok::render::make_shader_name(char const *, struct vostok::render::shader_configuration const &, enum vostok::render::enum_shader_type)`
+- `class vostok::logging::log_file * __cdecl vostok::logging::new_log_file(class vostok::logging::base_allocator &, class vostok::logging::base_fs_device &, char const *, enum vostok::logging::log_file_usage_enum)`
+- `class vostok::math::aabb __cdecl vostok::math::create_identity_aabb(void)`
+- `class vostok::math::aabb __cdecl vostok::math::create_invalid_aabb(void)`
+- `class vostok::math::aabb __cdecl vostok::math::operator*(class vostok::math::aabb const &, float)`
+- `class vostok::math::float3 __cdecl survarium::get_air_control_vector(struct survarium::player_input const &, float, enum survarium::jump_type_enum)`
+- `class vostok::math::float3 __cdecl vostok::math::abs(class vostok::math::float3const &)`
+- `class vostok::math::float3 __cdecl vostok::math::slerp(class vostok::math::float3const &, class vostok::math::float3const &, float, class vostok::math::float3const &)`
+- `class vostok::math::float3 __cdecl vostok::physics::dimensions_from_bullet_shape(class btCollisionShape const *)`
+- `class vostok::math::float3 __cdecl vostok::physics::get_box_random_surface_point(class vostok::math::random32&)`
+- `class vostok::math::float3 __cdecl vostok::physics::get_capsule_random_surface_point(class vostok::math::random32&, float, float)`
+- `class vostok::math::float3 __cdecl vostok::physics::get_cylinder_random_surface_point(class vostok::math::random32&)`
+- `class vostok::math::float3 __cdecl vostok::physics::get_sphere_random_surface_point(class vostok::math::random32&)`
+- `class vostok::math::float3_pod __cdecl vostok::math::cubic_interpolation<class vostok::math::float3_pod, float>(class vostok::math::float3_pod, class vostok::math::float3_pod, class vostok::math::float3_pod, class vostok::math::float3_pod, float)`
+- `class vostok::math::float4 __cdecl vostok::render::convert_to_linear_space(class vostok::math::float4const &)`
+- `class vostok::math::float4x4 __cdecl vostok::animation::get_bone_matrix_in_object_space(class vostok::animation::skeleton_bone const &, class vostok::animation::skeleton const &, class vostok::math::float4x4const *)`
+- `class vostok::math::float4x4 __cdecl vostok::animation::get_bone_matrix_in_object_space_impl(class vostok::animation::skeleton_bone const &, class vostok::math::float4x4const *, class vostok::animation::skeleton_bone const *)`
+- `class vostok::math::float4x4 __cdecl vostok::animation::mix_transformations(class vostok::math::float4x4const &, class vostok::math::float4x4const &, float, float)`
+- `class vostok::math::float4x4 __cdecl vostok::math::create_uniform_scale(float const &)`
+- `class vostok::math::quaternion __cdecl vostok::math::operator*(class vostok::math::quaternion const &, class vostok::math::quaternion const &)`
+- `class vostok::network_core::udp_match_packet * __cdecl vostok::network_core::new_udp_match_packet(class vostok::memory::single_size_buffer_allocator<1364, class vostok::threading::multi_threading_policy> &)`
+- `class vostok::physics::bt_dynamic_rigid_body * __cdecl vostok::physics::create_dynamic_rigid_body(struct vostok::physics::bt_rigid_body_construction_info const &, class vostok::physics::bt_collision_shape *)`
+- `class vostok::resources::resource_ptr<class survarium::server_game_project, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class survarium::server_game_project, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class survarium::weapon_core, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class survarium::weapon_core, class vostok::resources::unmanaged_intrusive_base>, class survarium::inventory_item, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class survarium::inventory_item, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class survarium::weapon_core_base_state, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class survarium::weapon_core_shotgun_reload_base_substate, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class survarium::weapon_core_shotgun_reload_base_substate, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class vostok::render::grass_render_model, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class vostok::render::grass_render_model, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class vostok::render::scene, class vostok::resources::unmanaged_resource> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class vostok::render::scene, class vostok::resources::unmanaged_resource>, struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<struct vostok::render::base_scene, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `convert_channels_ids`
+- `disabled_channel_ids`
+- `engineBezierCreate`
+- `engineBezierEvaluate`
+- `enum survarium::hit_type_enum __cdecl survarium::hit_type(char const *const)`
+- `enum survarium::move_direction_enum __cdecl survarium::get_move_direction(struct survarium::player_input const &)`
+- `enum vostok::journaling::journal_usage_enum __cdecl vostok::core::journal_usage(void)`
+- `evaluateInfinities`
+- `find`
+- `float __cdecl survarium::read_value_if_exists<float>(class vostok::configs::binary_config_value const &, char const *, float)`
+- `float __cdecl vostok::animation::engineAnimEvaluate(struct vostok::animation::EtCurve *, float)`
+- `float __cdecl vostok::math::smoothstep(float, float, float)`
+- `float __cdecl vostok::particle::fractalsum1(float, float, unsigned int, unsigned int)`
+- `float __cdecl vostok::particle::noise1(float, int, unsigned int)`
+- `float __cdecl vostok::physics::get_surface_area(class btCollisionShape const *)`
+- `float __cdecl vostok::render::fast_log2(float)`
+- `int __cdecl CanLaunchMultiplayerGameA(char *)`
+- `int __cdecl CanLaunchMultiplayerGameW(wchar_t *)`
+- `int __cdecl sprintf_s<4096>(char (&)[4096], char const *, ...)`
+- `int __cdecl sprintf_s<512>(char (&)[512], char const *, ...)`
+- `int __cdecl vostok::console_commands::bool_from_string(char const *, bool &)`
+- `int __cdecl vostok::operator-(class vostok::circular_buffer<class vostok::network_core::sequence_number<unsigned short>, 8>::iterator const &, class vostok::circular_buffer<class vostok::network_core::sequence_number<unsigned short>, 8>::iterator const &)`
+- `int __cdecl vostok::operator-(class vostok::circular_buffer<struct stlp_std::pair<enum survarium::game_action_id, enum survarium::action_state_enum>, 64>::const_iterator const &, class vostok::circular_buffer<struct stlp_std::pair<enum survarium::game_action_id, enum survarium::action_state_enum>, 64>::const_iterator const &)`
+- `int __cdecl vostok::operator-(class vostok::circular_buffer<struct survarium::fx_history_item, 10>::iterator const &, class vostok::circular_buffer<struct survarium::fx_history_item, 10>::iterator const &)`
+- `int __cdecl vostok::particle::initNoise(void)`
+- `int __cdecl vostok::particle::read_config_value<int, class vostok::configs::binary_config_value>(class vostok::configs::binary_config_value const &, char const *, int const &)`
+- `polyZeroes`
+- `private: __thiscall survarium::artefact<class survarium::artefact_lifebone_core>::artefact<class survarium::artefact_lifebone_core>(class vostok::configs::binary_config_value const &, class vostok::resources::resource_ptr<class survarium::game_effect_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::base_game_scene *)`
+- `private: __thiscall survarium::artefact<class survarium::artefact_onyx_core>::artefact<class survarium::artefact_onyx_core>(class vostok::configs::binary_config_value const &, class vostok::resources::resource_ptr<class survarium::game_effect_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::base_game_scene *)`
+- `private: __thiscall survarium::artefact<class survarium::artefact_rattle_core>::artefact<class survarium::artefact_rattle_core>(class vostok::configs::binary_config_value const &, class vostok::resources::resource_ptr<class survarium::game_effect_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::base_game_scene *)`
+- `private: __thiscall survarium::artefact<class survarium::artefact_spring_core>::artefact<class survarium::artefact_spring_core>(class vostok::configs::binary_config_value const &, class vostok::resources::resource_ptr<class survarium::game_effect_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::base_game_scene *)`
+- `private: __thiscall survarium::booby_trap::booby_trap(class survarium::base_game_scene &, struct vostok::physics::world &)`
+- `private: __thiscall survarium::booby_trap_set::booby_trap_set(class survarium::base_game_scene &, struct vostok::physics::world &, class vostok::resources::resource_ptr<class survarium::game_material_manager, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `private: __thiscall survarium::composite_game_effect::composite_game_effect(class vostok::resources::resource_ptr<class survarium::pure_game_effect_emitter_base, class vostok::resources::unmanaged_intrusive_base>, float)`
+- `private: __thiscall survarium::game_effect_emitter::game_effect_emitter(class vostok::resources::resource_ptr<class survarium::pure_game_effect_emitter, class vostok::resources::unmanaged_intrusive_base>)`
+- `private: __thiscall survarium::gather_victory_items_rule::gather_victory_items_rule(unsigned int)`
+- `private: __thiscall survarium::generic_anomaly::generic_anomaly(class survarium::base_game_scene &, class vostok::resources::resource_ptr<class survarium::artefact_base, class vostok::resources::unmanaged_intrusive_base> const *, unsigned int, unsigned int)`
+- `private: __thiscall survarium::grenade::grenade(class survarium::base_game_scene &)`
+- `private: __thiscall survarium::hud_game_effect::hud_game_effect(class vostok::resources::resource_ptr<class survarium::pure_game_effect_emitter_base, class vostok::resources::unmanaged_intrusive_base>, enum survarium::hud_effects_enum, unsigned char, class survarium::value_animation<float, class survarium::hud_game_effect_emitter_cook> const *)`
+- `private: __thiscall survarium::particle_game_effect::particle_game_effect(class vostok::resources::resource_ptr<class survarium::pure_game_effect_emitter_base, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &, float, class survarium::value_animation<float, class survarium::particle_game_effect_emitter_cook> const *)`
+- `private: __thiscall survarium::player_respawn_rule::player_respawn_rule(unsigned int, class vostok::configs::binary_config const &, struct vostok::physics::world &)`
+- `private: __thiscall survarium::post_process_game_effect::post_process_game_effect(class vostok::resources::resource_ptr<class survarium::pure_game_effect_emitter_base, class vostok::resources::unmanaged_intrusive_base>, class survarium::value_animation<struct vostok::render::environment_properties, class survarium::post_process_game_effect_emitter_cook> const *)`
+- `private: __thiscall survarium::pvp_match_core::pvp_match_core(bool, bool, struct survarium::match_options const &, class vostok::resources::resource_ptr<class survarium::server_game_project, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::game_material_manager, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::bullet_manager_engine &, struct vostok::physics::world &, class vostok::resources::resource_ptr<class survarium::base_player, class vostok::resources::unmanaged_intrusive_base> const *, class vostok::resources::resource_ptr<class survarium::base_player, class vostok::resources::unmanaged_intrusive_base> const *, class vostok::resources::resource_ptr<class survarium::game_match_rule_base, class vostok::resources::unmanaged_intrusive_base> const *, class vostok::resources::resource_ptr<class survarium::game_match_rule_base, class vostok::resources::unmanaged_intrusive_base> const *)`
+- `private: __thiscall survarium::sound_game_effect::sound_game_effect(class vostok::resources::resource_ptr<class survarium::pure_game_effect_emitter_base, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::resource_ptr<class vostok::sound::sound_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::sound::sound_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::value_animation<struct survarium::sound_game_effect::properties, class survarium::sound_game_effect_emitter_cook> const *)`
+- `private: __thiscall survarium::sound_game_effect_emitter::sound_game_effect_emitter(class vostok::resources::resource_ptr<class vostok::sound::sound_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::sound::sound_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::value_animation<struct survarium::sound_game_effect::properties, class survarium::sound_game_effect_emitter_cook> const *)`
+- `private: __thiscall survarium::victory_item::victory_item(class survarium::game_world &, struct vostok::physics::world &)`
+- `private: __thiscall survarium::victory_items_container::victory_items_container(struct vostok::physics::world &, class survarium::gather_victory_items_rule &, class vostok::configs::binary_config_value const &, struct survarium::victory_items_container::victory_item_transform const *, unsigned int)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state>::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state>::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state>::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state>::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state>::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state>::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate>::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate>::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate>::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state>::weapon_sound_events_handler_state<class survarium::weapon_core_show_state>(class survarium::weapon &, enum survarium::weapon_fx_enum, class survarium::base_game_scene &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall vostok::resources::pinned_ptr_mutable<struct vostok::render::texture_data_resource>::pinned_ptr_mutable<struct vostok::render::texture_data_resource>(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>)`
+- `private: __thiscall vostok::resources::queries_result::queries_result(unsigned int, class boost::function<void __cdecl (class vostok::resources::queries_result &)> const &, class vostok::memory::base_allocator *, unsigned int, class vostok::resources::query_result_for_cook *, float *, bool const *, unsigned int const *, enum vostok::resources::query_type_enum, enum vostok::resources::autoselect_quality_bool const *, enum assert_on_fail_bool)`
+- `private: __thiscall vostok::sound::voice_bridge::voice_bridge(struct vostok::sound::voice_bridge::creation_parametrs &, unsigned int)`
+- `private: bool __thiscall character_step_down_sweep_test_callback::is_side_contact(class btVector3const &, class btVector3const &) const`
+- `private: bool __thiscall survarium::booby_trap_set_core::try_to_place_trap(void)`
+- `private: bool __thiscall survarium::breath_vibration_calculator::can_hold_breath(void) const`
+- `private: bool __thiscall survarium::breath_vibration_calculator::not_holding_breath(void) const`
+- `private: bool __thiscall survarium::bullet::try_pierce(struct vostok::physics::closest_ray_result const &, class vostok::math::float3const &, struct survarium::hit_receiver *const, enum survarium::triangle_orientation)`
+- `private: bool __thiscall survarium::bullet::try_reflect(struct vostok::physics::closest_ray_result const &, class vostok::math::float3const &)`
+- `private: bool __thiscall survarium::game_world_core::erase_impl(unsigned char, enum survarium::game_event_history_item::events_enum, unsigned int, bool)`
+- `private: bool __thiscall survarium::messaging_client::read_found_players(class vostok::network_core::buffer_reader &)`
+- `private: bool __thiscall survarium::messaging_client::read_friend_list(class vostok::network_core::buffer_reader &)`
+- `private: bool __thiscall survarium::messaging_client::read_friend_status(class vostok::network_core::buffer_reader &)`
+- `private: bool __thiscall survarium::messaging_client::read_ignore_list(class vostok::network_core::buffer_reader &)`
+- `private: bool __thiscall survarium::player_input_handler::action_present(enum survarium::game_action_id, enum survarium::action_state_enum &) const`
+- `private: bool __thiscall survarium::victory_item_core::put_predicate(void) const`
+- `private: bool __thiscall survarium::weapon_core::is_going_to_jump(void) const`
+- `private: bool __thiscall survarium::weapon_core::is_going_to_sprint(void) const`
+- `private: bool __thiscall survarium::weapon_core::melee_pred(void) const`
+- `private: bool __thiscall survarium::weapon_core::throw_grenade_pred(void) const`
+- `private: bool __thiscall survarium::weapon_user_animations_selector::alive_predicate(void) const`
+- `private: bool __thiscall survarium::weapon_user_animations_selector::dead_predicate(void) const`
+- `private: bool __thiscall survarium::weapon_user_animations_selector::is_trying_to_aim(void) const`
+- `private: bool __thiscall vostok::animation::animation_player::tick_impl(unsigned int, unsigned int, bool)`
+- `private: bool __thiscall vostok::animation::mixing::n_ary_tree::process_event(class vostok::animation::mixing::n_ary_tree_animation_node &, unsigned int)`
+- `private: bool __thiscall vostok::animation::mixing::n_ary_tree::update_event_iterators_and_dispatch_callbacks(unsigned int, struct vostok::animation::subscribed_channel *&, bool &, unsigned int)`
+- `private: bool __thiscall vostok::network_core::udp_match_connection::update_acknowledgements(class vostok::network_core::sequence_number<unsigned short>, class vostok::network_core::sequence_number<unsigned short>, unsigned __int64)`
+- `private: bool __thiscall vostok::physics::bullet_character_controller::can_straighten(class btVector3const &, float, class btVector3&) const`
+- `private: bool __thiscall vostok::physics::bullet_character_controller::impassable_slope(class btVector3const &, class btVector3const &, class btVector3const &) const`
+- `private: bool __thiscall vostok::physics::bullet_character_controller::on_steep_slope(void) const`
+- `private: bool __thiscall vostok::physics::bullet_character_controller::side_slide_on_low_ceiling(class btVector3const &, class btVector3const &, class btVector3const &, float, float, class btVector3const &, class btVector3&, float &)`
+- `private: bool __thiscall vostok::physics::bullet_character_controller::side_slide_on_slope(class btVector3const &, class btVector3const &, class btVector3const &, float, float, class btVector3&, float &)`
+- `private: bool __thiscall vostok::physics::bullet_character_controller::slide_in_impassable_case_impl(class btVector3const &, class btVector3const &, class btVector3const &, float, float, class btVector3&, float &)`
+- `private: bool __thiscall vostok::physics::bullet_character_controller::step_down_sweep_test_impl(float, float, class btVector3const &, float, class btVector3const &, class btVector3&, class btVector3&, float &)`
+- `private: bool __thiscall vostok::physics::character_controller_move_step_tester::complex_sweep_test(class btVector3const &, class btVector3const &, class btVector3const &, float, class btVector3&, class btVector3&, float &)`
+- `private: bool __thiscall vostok::physics::old_bullet_character_controller::convex_sweep_test(class btTransform const &, class btTransform const &, class btVector3const &, float, float, class btVector3&, class btVector3&, float &)`
+- `private: bool __thiscall vostok::render::bake_decal_cook::process_baking(struct vostok::render::result_struct &, class vostok::resources::queries_result &, struct vostok::render::render_surface_instance *, struct vostok::render::bake_decal_parameters const &)`
+- `private: bool __thiscall vostok::render::buffers_handler<1>::set_overwrite(char const *, class vostok::render::shader_buffer *)`
+- `private: bool __thiscall vostok::render::renderer::do_stages_profiling(void)`
+- `private: bool __thiscall vostok::render::renderer::is_ready_for_render(class vostok::render::render_output_window *, class vostok::render::scene *const, class boost::function<void __cdecl (bool)> const &)`
+- `private: bool __thiscall vostok::render::stage_lights::has_models_for_shadow_pass(class vostok::render::light *, class vostok::buffer_vector<struct vostok::render::render_surface_instance *> const &)`
+- `private: bool __thiscall vostok::render::textures_handler<0>::set_overwrite(char const *, class vostok::render::res_texture *)`
+- `private: char const * __thiscall survarium::game_world_core::profile_name(unsigned char) const`
+- `private: class boost::function<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl (unsigned short)> __thiscall survarium::player::first_third_person_animations_resolver(void) const`
+- `private: class boost::function<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl (unsigned short)> __thiscall survarium::player::third_person_animations_resolver(void) const`
+- `private: class btVector3 __thiscall character_step_down_sweep_test_callback::get_normal_for_impassable_slope(class btVector3const &)`
+- `private: class btVector3 __thiscall character_step_down_sweep_test_callback::get_normal_via_ray_test(struct btCollisionWorld::LocalConvexResult &, class btVector3const &) const`
+- `private: class btVector3 __thiscall vostok::physics::bullet_character_controller::get_corrected_walk_vector(void) const`
+- `private: class btVector3 __thiscall vostok::physics::bullet_character_controller::get_slide_acceleration(void) const`
+- `private: class btVector3 __thiscall vostok::physics::character_move_sweep_callback::get_normal_via_ray_test(struct btCollisionWorld::LocalConvexResult &, class btVector3const &) const`
+- `private: class btVector3 __thiscall vostok::physics::character_move_sweep_callback::perform_ray_test(class btVector3const &, struct btCollisionWorld::LocalConvexResult &, class btVector3const &, class btVector3const &) const`
+- `private: class btVector3 __thiscall vostok::physics::old_bullet_character_controller::updateTargetPositionBasedOnCollision(class btVector3const &, class btVector3const &, float, float)`
+- `private: class survarium::booby_trap_core * __thiscall survarium::booby_trap_set_core::find_disarmed_trap(void)`
+- `private: class survarium::booby_trap_core * __thiscall survarium::booby_trap_set_core::find_inactive_trap(void)`
+- `private: class survarium::booby_trap_core * __thiscall survarium::booby_trap_set_core::find_oldest_placed_trap(void)`
+- `private: class survarium::game_event_history_item * __thiscall survarium::game_world_core::insert_impl(unsigned char, enum survarium::game_event_history_item::events_enum, unsigned int, bool, bool)`
+- `private: class survarium::game_event_history_item * __thiscall survarium::game_world_core::new_game_event_history_item(void)`
+- `private: class survarium::game_state_history_item & __thiscall survarium::game_world_core::event_horizon_history_item(void)`
+- `private: class survarium::game_state_history_item * __thiscall survarium::game_world_core::new_game_state_history_item(void)`
+- `private: class survarium::weapon * __thiscall survarium::weapon_cook::allocate_weapon(class survarium::base_game_scene &, unsigned int, unsigned char, unsigned char)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate> >::config_params const &)`
+- `private: class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> * __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> >::new_state(class vostok::mutable_buffer, struct survarium::weapon_state_creation_params const *const, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, struct survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state> >::config_params const &)`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::double_barreled_weapon_core_reload_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::jump_logic_state_landing::get_look_lexeme(class vostok::mutable_buffer &, class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> const &, class vostok::animation::mixing::animation_lexeme &)`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::jump_logic_state_prepare::get_look_lexeme(class vostok::mutable_buffer &, class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> const &, class vostok::animation::mixing::animation_lexeme &)`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::jump_logic_state_prepare::get_main_lexeme(class vostok::mutable_buffer &, enum vostok::animation::body_part_masks_enum)`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::jump_logic_state_start::get_look_lexeme(class vostok::mutable_buffer &, class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> const &, class vostok::animation::mixing::animation_lexeme &)`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::pistol_weapon_core_fire_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::pistol_weapon_core_reload_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::player_logic_crouch_state::get_look_lexeme(class vostok::mutable_buffer &, unsigned int, bool, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::player_logic_crouch_state::movement_lexeme(class vostok::mutable_buffer &, unsigned int, enum vostok::animation::body_part_masks_enum, bool, bool) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::player_logic_sprint_state::get_look_lexeme(class vostok::mutable_buffer &, unsigned int, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::player_logic_sprint_state::get_movement_lexeme(class vostok::mutable_buffer &, unsigned int, enum vostok::animation::body_part_masks_enum) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::player_logic_stand_state::look_lexeme(class vostok::mutable_buffer &, unsigned int, bool, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::player_logic_stand_state::movement_lexeme(class vostok::mutable_buffer &, unsigned int, enum vostok::animation::body_part_masks_enum, bool, bool) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::short_jump_landing_state::get_look_lexeme(class vostok::mutable_buffer &, class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> const &, class vostok::animation::mixing::animation_lexeme &)`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::weapon_core::get_recoil_animation_lexeme(class vostok::mutable_buffer &, enum survarium::recoil_animation_container::recoil_component_enum, bool, float, unsigned int, class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> const &, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::weapon_core_chamber_a_round_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::weapon_core_idle_state::get_user_hands_lexeme(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::weapon_core_reload_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::weapon_core_shotgun_reload_base_substate::get_hands_lexeme(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: class vostok::animation::mixing::animation_lexeme __thiscall survarium::weapon_core_shotgun_reload_base_substate::get_weapon_lexeme(class vostok::mutable_buffer &, float) const`
+- `private: class vostok::animation::mixing::expression __thiscall survarium::weapon_core::get_recoil_expression(class vostok::mutable_buffer &, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: class vostok::animation::mixing::n_ary_tree_animation_node * __thiscall vostok::animation::mixing::n_ary_tree_transition_tree_constructor::new_animation(class vostok::animation::mixing::n_ary_tree_animation_node &, class vostok::animation::mixing::n_ary_tree_animation_node &, class vostok::animation::mixing::n_ary_tree_animation_node *, unsigned int, unsigned int &, unsigned int &, unsigned int &, unsigned int &, float &, bool, bool)`
+- `private: class vostok::intrusive_ptr<class vostok::render::res_texture, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> __thiscall vostok::render::bake_decal_cook::occlusion(class vostok::math::float4x4&, struct vostok::render::render_surface_instance *, struct vostok::render::bake_decal_parameters const &, unsigned int, unsigned int, enum DXGI_FORMAT)`
+- `private: class vostok::intrusive_ptr<class vostok::sound::sound_instance_proxy, class vostok::sound::sound_instance_proxy, class vostok::threading::single_threading_policy> __thiscall survarium::damage_sound_effect::play_sound_impl(class vostok::resources::resource_ptr<class vostok::sound::sound_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::math::float3const &, class boost::function<void __cdecl (void)> const &)`
+- `private: class vostok::math::float3 __thiscall survarium::weapon_core::get_dispersed_bullet_direction(class vostok::math::float4x4const &)`
+- `private: class vostok::math::float4x4 __thiscall survarium::base_player::get_transform_for_animation_player(void const *const) const`
+- `private: class vostok::math::float4x4 __thiscall survarium::weapon::calculate_locator(struct vostok::render::model_locator_item const &, class vostok::math::float4x4const &, class vostok::math::float4x4const *, unsigned int)`
+- `private: class vostok::math::float4x4 __thiscall vostok::animation::hand_to_weapon_ik_solver::get_hand_target_transform(struct vostok::animation::hand_to_weapon_ik_solver::hand const &, unsigned int, class vostok::math::float4x4const &, class vostok::math::float4x4const *, class vostok::math::float4x4const *, bool) const`
+- `private: class vostok::math::float4x4 __thiscall vostok::animation::hand_to_weapon_ik_solver::get_locator_transform_in_item_space(struct vostok::animation::hand_to_weapon_ik_solver::hand const &, enum vostok::animation::hand_to_weapon_ik_solver::ik_locator_id_enum, class vostok::math::float4x4const *, bool) const`
+- `private: class vostok::math::float4x4 __thiscall vostok::animation::legs_ik_solver::get_foot_fixed_transform(struct vostok::animation::legs_ik_solver::leg_params const &, class vostok::math::float4x4const &, class vostok::math::float4x4const *, float &) const`
+- `private: class vostok::math::float4x4 __thiscall vostok::render::stage_shadow_direct::get_texture_space_transform(void) const`
+- `private: class vostok::render::res_shader_technique * __thiscall vostok::render::effect_manager::create_effect_technique(class vostok::render::res_shader_technique const &)`
+- `private: class vostok::render::res_xs_hw<struct vostok::render::gs_data> * __thiscall vostok::render::resource_manager::create_xs_hw_impl<struct vostok::render::gs_data>(char const *, struct vostok::render::shader_configuration, struct vostok::render::shader_include_getter *, class vostok::render::map<struct vostok::render::binary_shader_key_type, class vostok::resources::resource_ptr<struct vostok::render::binary_shader_source, class vostok::resources::unmanaged_intrusive_base>, struct stlp_std::less<struct vostok::render::binary_shader_key_type> > *)`
+- `private: class vostok::render::res_xs_hw<struct vostok::render::ps_data> * __thiscall vostok::render::resource_manager::create_xs_hw_impl<struct vostok::render::ps_data>(char const *, struct vostok::render::shader_configuration, struct vostok::render::shader_include_getter *, class vostok::render::map<struct vostok::render::binary_shader_key_type, class vostok::resources::resource_ptr<struct vostok::render::binary_shader_source, class vostok::resources::unmanaged_intrusive_base>, struct stlp_std::less<struct vostok::render::binary_shader_key_type> > *)`
+- `private: class vostok::render::res_xs_hw<struct vostok::render::vs_data> * __thiscall vostok::render::resource_manager::create_xs_hw_impl<struct vostok::render::vs_data>(char const *, struct vostok::render::shader_configuration, struct vostok::render::shader_include_getter *, class vostok::render::map<struct vostok::render::binary_shader_key_type, class vostok::resources::resource_ptr<struct vostok::render::binary_shader_source, class vostok::resources::unmanaged_intrusive_base>, struct stlp_std::less<struct vostok::render::binary_shader_key_type> > *)`
+- `private: class vostok::resources::resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base> __thiscall vostok::render::effect_manager::create_new_effect(class vostok::render::effect_descriptor &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &, struct vostok::render::surface_effect_parameters const &)`
+- `private: enum survarium::collision_result __thiscall survarium::bullet::check_collision(class vostok::math::float3, float &, float &, float &)`
+- `private: enum survarium::game_team_id __thiscall survarium::shared_statistics::team(struct survarium::player_shared_statistics const &) const`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::jump_logic_state_prepare::on_interval_end(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::player_logic_dead_state::on_animation_end(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::player_logic_preview_state::on_animation_end(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::portable_interactive_object_with_finger_correction::on_hand_correction_event(struct vostok::animation::animation_callback_params &, enum vostok::animation::fingers_to_weapon_corrector::hands_enum)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::short_jump_landing_state::on_landing_event(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::short_jump_start_state::on_animation_end(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::victory_item_core_animation_end_aware_state::on_animation_end(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_core_melee_state::on_animation_end(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::animation::callback_return_type_enum __thiscall survarium::weapon_core_melee_state::on_shot_event(struct vostok::animation::animation_callback_params &)`
+- `private: enum vostok::input::mouse_button __thiscall vostok::input::platform::mouse::convert_to_binder_mouse_button(int)`
+- `private: float __thiscall survarium::damage_zone_core::effect_intensity(class survarium::base_player const &) const`
+- `private: float __thiscall survarium::dispersion_calculator::get_character_skill_influence(enum survarium::weapon_user_state_enum, bool, float) const`
+- `private: float __thiscall survarium::hit_animations_selector::hit_body_part::hit_time_factor_calculator(float, float, unsigned int, unsigned int, unsigned int, float) const`
+- `private: float __thiscall survarium::weapon_core::get_dispersion_amount(float, float)`
+- `private: float __thiscall survarium::weapon_core::horizontal_recoil_value(unsigned int) const`
+- `private: float __thiscall survarium::weapon_core::vertical_recoil_value(unsigned int) const`
+- `private: float __thiscall survarium::weapon_recoil_calculator::get_side_value_impl(unsigned int, float, float) const`
+- `private: float __thiscall vostok::math::curve_line_ranged_base::evaluate(float, float, enum vostok::math::enum_evaluate_type, enum vostok::math::enum_evaluate_time_type, unsigned int)`
+- `private: float __thiscall vostok::particle::base_particle::get_linear_lifetime_impl(float) const`
+- `private: float __thiscall vostok::physics::bullet_character_controller::update_slide_velocity(class btVector3const &, class btVector3const &, float)`
+- `private: float __thiscall vostok::physics::old_bullet_character_controller::recover_from_penetration(int)`
+- `private: static class vostok::animation::mixing::callback_generator_info * __cdecl vostok::animation::mixing::n_ary_tree::generate_animation_lexeme_end_events(class boost::function<unsigned char __cdecl (void const *)> const &, class vostok::animation::mixing::n_ary_tree const &, class vostok::animation::mixing::n_ary_tree const &, class vostok::animation::mixing::callback_generator_info *, class vostok::animation::mixing::callback_generator_info *, struct vostok::animation::subscribed_channel *)`
+- `private: static void __cdecl vostok::buffer_vector<class survarium::fixed_history<struct survarium::player_input_history_item, 27> >::construct(class survarium::fixed_history<struct survarium::player_input_history_item, 27> *, class survarium::fixed_history<struct survarium::player_input_history_item, 27> *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class survarium::fixed_history<struct survarium::player_input_history_item, 27> >::destroy(class survarium::fixed_history<struct survarium::player_input_history_item, 27> *, class survarium::fixed_history<struct survarium::player_input_history_item, 27> *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::collision::bone_collision_data>::construct(class vostok::collision::bone_collision_data *, class vostok::collision::bone_collision_data const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::fixed_vector<class vostok::math::frustum, 1024> >::construct(class vostok::fixed_vector<class vostok::math::frustum, 1024> *, class vostok::fixed_vector<class vostok::math::frustum, 1024> *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::fixed_vector<class vostok::render::culling::aab_rect, 1024> >::construct(class vostok::fixed_vector<class vostok::render::culling::aab_rect, 1024> *, class vostok::fixed_vector<class vostok::render::culling::aab_rect, 1024> *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::intrusive_ptr<class vostok::render::res_shader_technique, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> >::destroy(class vostok::intrusive_ptr<class vostok::render::res_shader_technique, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> *, class vostok::intrusive_ptr<class vostok::render::res_shader_technique, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::intrusive_ptr<class vostok::render::shader_constant_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> >::destroy(class vostok::intrusive_ptr<class vostok::render::shader_constant_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> *, class vostok::intrusive_ptr<class vostok::render::shader_constant_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::render::buffer_slot>::construct(class vostok::render::buffer_slot *, class vostok::render::buffer_slot *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::render::sampler_slot>::construct(class vostok::render::sampler_slot *, class vostok::render::sampler_slot *const &)`
+- `private: static void __cdecl vostok::buffer_vector<class vostok::render::texture_slot>::construct(class vostok::render::texture_slot *, class vostok::render::texture_slot *const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct survarium::animations_registry::animations_tuple>::destroy(struct survarium::animations_registry::animations_tuple *, struct survarium::animations_registry::animations_tuple *const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct survarium::particle_game_effect_presenter::effect_data>::construct(struct survarium::particle_game_effect_presenter::effect_data *, struct survarium::particle_game_effect_presenter::effect_data *const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct survarium::particle_game_effect_presenter::effect_data>::destroy(struct survarium::particle_game_effect_presenter::effect_data *, struct survarium::particle_game_effect_presenter::effect_data *const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct survarium::sound_game_effect_presenter::effect_data>::destroy(struct survarium::sound_game_effect_presenter::effect_data *, struct survarium::sound_game_effect_presenter::effect_data *const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct vostok::render::effect_compiler::texture_query_desc>::construct(struct vostok::render::effect_compiler::texture_query_desc *, struct vostok::render::effect_compiler::texture_query_desc const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct vostok::render::effect_manager::effect_holder_struct>::construct(struct vostok::render::effect_manager::effect_holder_struct *, struct vostok::render::effect_manager::effect_holder_struct const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct vostok::render::grass_template>::construct(struct vostok::render::grass_template *, struct vostok::render::grass_template const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct vostok::render::light_data>::destroy(struct vostok::render::light_data *, struct vostok::render::light_data *const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct vostok::render::requested_streamable_texture>::construct(struct vostok::render::requested_streamable_texture *, struct vostok::render::requested_streamable_texture const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct vostok::render::streaming_ready_texture>::destroy(struct vostok::render::streaming_ready_texture *, struct vostok::render::streaming_ready_texture *const &)`
+- `private: static void __cdecl vostok::buffer_vector<struct vostok::render::ui::vertex>::construct(struct vostok::render::ui::vertex *, struct vostok::render::ui::vertex const &)`
+- `private: struct ID3D11RasterizerState * __thiscall vostok::render::state_cache<struct ID3D11RasterizerState, struct D3D11_RASTERIZER_DESC, 32>::find(struct D3D11_RASTERIZER_DESC const &, unsigned int)`
+- `private: struct ID3D11Resource * __thiscall vostok::render::texture_pool::add_texture(struct vostok::render::texture_pool_key const &, bool, bool)`
+- `private: struct ID3D11SamplerState * __thiscall vostok::render::state_cache<struct ID3D11SamplerState, struct D3D11_SAMPLER_DESC, 32>::find(struct D3D11_SAMPLER_DESC const &, unsigned int)`
+- `private: struct stlp_std::pair<class vostok::animation::mixing::expression, class vostok::animation::mixing::animation_lexeme> __thiscall survarium::jump_logic_state_landing::get_main_expression(class vostok::mutable_buffer &)`
+- `private: struct stlp_std::pair<class vostok::animation::mixing::expression, class vostok::animation::mixing::animation_lexeme> __thiscall survarium::jump_logic_state_start::get_main_expression(class vostok::mutable_buffer &, enum vostok::animation::body_part_masks_enum)`
+- `private: struct stlp_std::pair<class vostok::animation::mixing::expression, class vostok::animation::mixing::animation_lexeme> __thiscall survarium::short_jump_landing_state::get_main_expression(class vostok::mutable_buffer &)`
+- `private: struct stlp_std::pair<class vostok::animation::mixing::expression, class vostok::animation::mixing::animation_lexeme> __thiscall survarium::short_jump_start_state::get_main_expression(class vostok::mutable_buffer &, enum vostok::animation::body_part_masks_enum)`
+- `private: struct survarium::anomaly_state * __thiscall survarium::generic_anomaly_core::select_state(void)`
+- `private: struct survarium::game_effect_time __thiscall survarium::artefact_base::effect_calculator(struct survarium::game_effect_node const &, unsigned int, unsigned int)`
+- `private: struct survarium::game_effect_time __thiscall survarium::body_part_parameters::effect_calculator(struct survarium::game_effect_node const &, unsigned int, unsigned int)`
+- `private: struct survarium::game_effect_time __thiscall survarium::body_part_parameters::threshold_effect_calculator(class survarium::affects_threshold *, struct survarium::game_effect_node const &, unsigned int, unsigned int)`
+- `private: struct survarium::game_effect_time __thiscall survarium::damage_zone_core::effect_calculator(class survarium::base_player const *, struct survarium::game_effect_node const &, unsigned int, unsigned int) const`
+- `private: struct vostok::animation::base_interpolator const & __thiscall vostok::animation::mixing::n_ary_tree_deserializer::get_interpolator(void)`
+- `private: struct vostok::animation::mixing::n_ary_tree_base_node & __thiscall vostok::animation::mixing::n_ary_tree_deserializer::get_operand(void)`
+- `private: struct vostok::collision::oct_node * __thiscall vostok::collision::loose_oct_tree::new_node(void)`
+- `private: struct vostok::render::material_effects * __thiscall vostok::render::material_effects_instance::get_material_effects_or_new(enum vostok::render::enum_vertex_input_type)`
+- `private: struct vostok::render::result_struct __thiscall vostok::render::bake_decal_cook::accumulate_decals(struct vostok::render::render_surface_instance *, struct vostok::render::bake_decal_parameters const &, unsigned int, unsigned int, unsigned int, enum DXGI_FORMAT, enum DXGI_FORMAT)`
+- `private: struct vostok::render::result_struct __thiscall vostok::render::bake_decal_cook::composition(struct vostok::render::result_struct const &, struct vostok::render::render_surface_instance *, struct vostok::render::bake_decal_parameters const &, unsigned int, unsigned int, enum DXGI_FORMAT)`
+- `private: unsigned __int64 __thiscall vostok::timing::floating_timer::get_elapsed_ticks_impl(unsigned __int64&) const`
+- `private: unsigned __int64 __thiscall vostok::timing::floating_timer::get_time_with_factor(unsigned __int64, float) const`
+- `private: unsigned int __thiscall survarium::network_client::try_send_all(unsigned int, bool)`
+- `private: unsigned int __thiscall survarium::player_respawn_rule::get_available_spawn_point(enum survarium::game_team_id)`
+- `private: unsigned int __thiscall vostok::animation::mixing::n_ary_tree_deserializer::r(unsigned int)`
+- `private: unsigned int __thiscall vostok::math::curve_line_ranged_base::save_binary(class vostok::mutable_buffer &, bool)`
+- `private: unsigned int __thiscall vostok::render::res_render_output::select_presentation_interval(bool)`
+- `private: virtual __thiscall survarium::artefact<class survarium::artefact_lifebone_core>::~artefact<class survarium::artefact_lifebone_core>(void)`
+- `private: virtual __thiscall survarium::artefact<class survarium::artefact_onyx_core>::~artefact<class survarium::artefact_onyx_core>(void)`
+- `private: virtual __thiscall survarium::artefact<class survarium::artefact_rattle_core>::~artefact<class survarium::artefact_rattle_core>(void)`
+- `private: virtual __thiscall survarium::artefact<class survarium::artefact_spring_core>::~artefact<class survarium::artefact_spring_core>(void)`
+- `private: virtual __thiscall survarium::game_effect_emitter::~game_effect_emitter(void)`
+- `private: virtual __thiscall survarium::generic_anomaly::~generic_anomaly(void)`
+- `private: virtual __thiscall survarium::grenade::~grenade(void)`
+- `private: virtual __thiscall survarium::player_respawn_rule::~player_respawn_rule(void)`
+- `private: virtual __thiscall survarium::pvp_match_core::~pvp_match_core(void)`
+- `private: virtual __thiscall survarium::single_player_respawn_rule::~single_player_respawn_rule(void)`
+- `private: virtual __thiscall survarium::weapon_core_melee_state::~weapon_core_melee_state(void)`
+- `private: virtual bool __thiscall survarium::artefact_lifebone_core::active_effect_ended(void)`
+- `private: virtual bool __thiscall survarium::artefact_onyx_core::active_effect_ended(void)`
+- `private: virtual bool __thiscall survarium::artefact_spring_core::active_effect_ended(void)`
+- `private: virtual bool __thiscall survarium::jump_logic_state_prepare::is_ready_for_transition(void) const`
+- `private: virtual bool __thiscall survarium::match_client::is_connected(void) const`
+- `private: virtual bool __thiscall survarium::match_client::is_disconnected(void) const`
+- `private: virtual bool __thiscall survarium::victory_item_core::can_use(struct survarium::usable_object_user_data const *) const`
+- `private: virtual bool __thiscall survarium::victory_item_core::is_ready_to_be_deactivated(void) const`
+- `private: virtual bool __thiscall survarium::victory_item_core::need_to_select_animations(void) const`
+- `private: virtual bool __thiscall survarium::victory_item_core_put_state::is_ready_for_transition(void) const`
+- `private: virtual bool __thiscall survarium::victory_items_container_core::can_use(struct survarium::usable_object_user_data const *) const`
+- `private: virtual bool __thiscall survarium::victory_items_container_core::use_execute(struct survarium::usable_object_user_data *)`
+- `private: virtual bool __thiscall survarium::weapon_core::need_to_select_animations(void) const`
+- `private: virtual bool __thiscall survarium::weapon_core_throw_grenade_state::is_ready_for_transition(void) const`
+- `private: virtual bool __thiscall vostok::engine::engine_world::render_has_been_created(void) const`
+- `private: virtual bool __thiscall vostok::input::platform::keyboard::check_modifier(enum vostok::input::enum_modifiers) const`
+- `private: virtual bool __thiscall vostok::input::platform::keyboard::get_dik_name(int, char *, int) const`
+- `private: virtual bool __thiscall vostok::input::platform::keyboard::is_key_down(enum vostok::input::enum_keyboard) const`
+- `private: virtual bool __thiscall vostok::input::platform::keyboard::translate_text(int, wchar_t &)`
+- `private: virtual bool __thiscall vostok::journaling::input_handler::on_gamepad_action(struct vostok::input::world *, enum vostok::input::gamepad_button, enum vostok::input::enum_gamepad_action)`
+- `private: virtual bool __thiscall vostok::journaling::input_handler::on_keyboard_action(struct vostok::input::world *, enum vostok::input::enum_keyboard, enum vostok::input::enum_keyboard_action)`
+- `private: virtual bool __thiscall vostok::journaling::input_handler::on_mouse_key_action(struct vostok::input::world *, enum vostok::input::mouse_button, enum vostok::input::enum_mouse_key_action)`
+- `private: virtual bool __thiscall vostok::journaling::input_handler::on_mouse_move(struct vostok::input::world *, int, int, int)`
+- `private: virtual bool __thiscall vostok::render::stage_ambient_occlusion::is_effects_ready(void) const`
+- `private: virtual bool __thiscall vostok::render::stage_lights::is_effects_ready(void) const`
+- `private: virtual bool __thiscall vostok::render::stage_postprocess::is_effects_ready(void) const`
+- `private: virtual bool __thiscall vostok::render::stage_pre_rain::is_effects_ready(void) const`
+- `private: virtual bool __thiscall vostok::render::stage_rain::is_effects_ready(void) const`
+- `private: virtual bool __thiscall vostok::render::stage_shadow_direct::is_effects_ready(void) const`
+- `private: virtual bool __thiscall vostok::render::stage_view_mode::is_effects_ready(void) const`
+- `private: virtual bool __thiscall vostok::render::stage_volume_fog::is_effects_ready(void) const`
+- `private: virtual char const * __thiscall survarium::ladder::ladder_occluder::use_info(struct survarium::usable_object_user_data const *) const`
+- `private: virtual char const * __thiscall survarium::victory_item_core::use_info(struct survarium::usable_object_user_data const *) const`
+- `private: virtual char const * __thiscall survarium::victory_items_container_core::use_info(struct survarium::usable_object_user_data const *) const`
+- `private: virtual class btCollisionObject * __thiscall vostok::physics::bullet_character_controller::get_bt_collision_obect(void)`
+- `private: virtual class btCollisionObject * __thiscall vostok::physics::old_bullet_character_controller::get_bt_collision_obect(void)`
+- `private: virtual class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> __thiscall survarium::victory_item_core::time_calculator(unsigned char)`
+- `private: virtual class survarium::booby_trap_core * __thiscall survarium::booby_trap_cook::new_derived_resource(struct vostok::physics::world &, void *const)`
+- `private: virtual class survarium::booby_trap_core * __thiscall survarium::booby_trap_core_cook::new_derived_resource(struct vostok::physics::world &, void *const)`
+- `private: virtual class survarium::booby_trap_set_core * __thiscall survarium::booby_trap_set_cook::new_derived_resource(struct vostok::physics::world &, class vostok::resources::resource_ptr<class survarium::game_material_manager, class vostok::resources::unmanaged_intrusive_base> const &, void *const)`
+- `private: virtual class survarium::booby_trap_set_core * __thiscall survarium::booby_trap_set_core_cook::new_derived_resource(struct vostok::physics::world &, class vostok::resources::resource_ptr<class survarium::game_material_manager, class vostok::resources::unmanaged_intrusive_base> const &, void *const)`
+- `private: virtual class survarium::damage_zone_core * __thiscall survarium::damage_zone_cook::construct_resource(class vostok::memory::base_allocator &) const`
+- `private: virtual class survarium::damage_zone_core * __thiscall survarium::damage_zone_core_cook::construct_resource(class vostok::memory::base_allocator &) const`
+- `private: virtual class survarium::generic_anomaly & __thiscall survarium::generic_anomaly_cook::construct_derived_resource(void *, class vostok::resources::resource_ptr<class survarium::artefact_base, class vostok::resources::unmanaged_intrusive_base> const *, unsigned int) const`
+- `private: virtual class survarium::generic_anomaly_core & __thiscall survarium::generic_anomaly_core_cook::construct_derived_resource(void *, class vostok::resources::resource_ptr<class survarium::artefact_base, class vostok::resources::unmanaged_intrusive_base> const *, unsigned int) const`
+- `private: virtual class survarium::grenade_core * __thiscall survarium::grenade_cook::new_derived_resource(void *const)`
+- `private: virtual class survarium::grenade_core * __thiscall survarium::grenade_core_cook::new_derived_resource(void *const)`
+- `private: virtual class survarium::items_dictionary const & __thiscall survarium::generic_anomaly_cook::items_dictionary(void) const`
+- `private: virtual class survarium::spottable_object * __thiscall survarium::victory_item_core::cast_to_spottable(void)`
+- `private: virtual class survarium::victory_item * __thiscall survarium::victory_item_cook::create_resource(struct vostok::physics::world &)`
+- `private: virtual class vostok::animation::mixing::animation_lexeme __thiscall survarium::double_barreled_weapon_core_idle_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: virtual class vostok::animation::mixing::animation_lexeme __thiscall survarium::pistol_weapon_core_idle_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: virtual class vostok::animation::mixing::animation_lexeme __thiscall survarium::weapon_core_idle_state::get_weapon_lexeme(class vostok::mutable_buffer &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::double_barreled_weapon_core_reload_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::empty_hands::selected_animations(class vostok::mutable_buffer &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::pistol_weapon_core_fire_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::pistol_weapon_core_reload_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::victory_item_core::selected_animations(class vostok::mutable_buffer &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::victory_item_core_carry_state::item_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::weapon_core_chamber_a_round_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::weapon_core_hide_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::weapon_core_idle_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::weapon_core_melee_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::weapon_core_reload_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::animation::mixing::expression __thiscall survarium::weapon_core_shotgun_reload_state::weapon_and_hands_expression(class vostok::mutable_buffer &, enum survarium::weapon_user_state_enum, class vostok::animation::mixing::animation_lexeme &) const`
+- `private: virtual class vostok::math::float4x4 __thiscall survarium::empty_hands::get_transform(void) const`
+- `private: virtual class vostok::mutable_buffer __thiscall survarium::victory_items_container_cook::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)`
+- `private: virtual class vostok::mutable_buffer __thiscall survarium::weapon_core_melee_state_cook::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)`
+- `private: virtual class vostok::mutable_buffer __thiscall survarium::weapon_core_state_cook_template<class survarium::double_barreled_weapon_core_idle_state>::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)`
+- `private: virtual class vostok::mutable_buffer __thiscall survarium::weapon_core_state_cook_template<class survarium::weapon_core_idle_state>::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)`
+- `private: virtual class vostok::mutable_buffer __thiscall survarium::weapon_core_throw_grenade_state_cook::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)`
+- `private: virtual class vostok::mutable_buffer __thiscall survarium::weapon_preview_state_cook::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)`
+- `private: virtual class vostok::mutable_buffer __thiscall survarium::weapon_sound_events_handler_state_cook<class survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state> >::allocate_resource(class vostok::resources::query_result_for_cook &, class vostok::const_buffer, bool)`
+- `private: virtual class vostok::network_core::udp_match_packet * __thiscall survarium::match_client::new_packet(enum vostok::match::client::messages_enum)`
+- `private: virtual class vostok::network_core::udp_match_packet * __thiscall vostok::journaling::match_client::new_packet(enum vostok::match::client::messages_enum)`
+- `private: virtual class vostok::resources::resource_ptr<class vostok::animation::skeleton, class vostok::resources::unmanaged_intrusive_base> __thiscall survarium::empty_hands::get_skeleton(void) const`
+- `private: virtual enum survarium::player_stances_enum __thiscall survarium::victory_item_core::player_stance(void) const`
+- `private: virtual float __thiscall vostok::input::platform::gamepad::get_vibration(enum vostok::input::gamepad_vibrators) const`
+- `private: virtual struct stlp_std::pair<class vostok::animation::mixing::expression, class vostok::animation::mixing::animation_lexeme> __thiscall survarium::jump_logic_state_landing::selected_animations(class vostok::mutable_buffer &, class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> const &, struct survarium::weapon_animation_parameters const &)`
+- `private: virtual struct stlp_std::pair<class vostok::animation::mixing::expression, class vostok::animation::mixing::animation_lexeme> __thiscall survarium::jump_logic_state_prepare::selected_animations(class vostok::mutable_buffer &, class fastdelegate::FastDelegate<float __cdecl (float, float, unsigned int, unsigned int, unsigned int, float)> const &, struct survarium::weapon_animation_parameters const &)`
+- _...and 3763 more_
+
+### Deleted (6812)
+
+- `??0doug_lea_mt_allocator@memory@vostok@@QAE@_N0_N1@Z`
+- `FLoadedAtPreferredAddress`
+- `OverlayIAT`
+- `PinhFromImageBase`
+- `TimeStampOfImage`
+- `__aligned_free`
+- `__aligned_malloc`
+- `__int64 __cdecl vostok::threading::interlocked_compare_exchange(__int64volatile &, __int64, __int64)`
+- `__memcpy`
+- `_destroy_mspace`
+- `_initialize_virtual_alloc_arena`
+- `_vostok_mspace_memalign`
+- ``vostok::logging::log_file::skip_next_line'::`2'::processor::dummy`
+- ``vostok::math::curve_line_points<vostok::math::float3_pod,0>::sort_points_by_time'::`5'::predicate::compare`
+- ``vostok::math::curve_line_points<vostok::math::float4_pod,0>::sort_points_by_time'::`5'::predicate::compare`
+- ``vostok::particle::curve_line_points<float,0>::sort_points_by_time'::`5'::predicate::compare`
+- ``vostok::particle::curve_line_points<vostok::math::float4_pod,1>::sort_points_by_time'::`5'::predicate::compare`
+- ``vostok::physics::bullet_physics_world::object_query'::`2'::object_query_callback::object_query_callback`
+- ``vostok::render::res_effect::push_texture_unique'::`2'::find_texture_predicate::find_texture_predicate`
+- ``vostok::render::res_effect::push_texture_unique'::`2'::find_texture_predicate::operator()`
+- ``vostok::render::scene::dump_scene_statistics'::`2'::sort_predicate::operator()`
+- ``vostok::render::scene::gather_streamable_textures'::`2'::find_texture_predicate::find_texture_predicate`
+- ``vostok::render::scene::gather_streamable_textures'::`2'::find_texture_predicate::operator()`
+- ``vostok::render::scene::process_streaming'::`16'::ready_texture_comparer::operator()`
+- ``vostok::render::scene::process_streaming'::`2'::remove_texture_predicate::operator()`
+- ``vostok::render::scene::process_streaming'::`3'::remove_requested_texture_predicate::operator()`
+- ``vostok::render::shadow_batched_geometry::build'::`9'::sort_predicate::operator()`
+- ``vostok::render::sort_by_crc<vostok::configs::binary_config_value>'::`5'::predicate::compare`
+- ``vostok::render::sort_by_crc<vostok::render::custom_config_value>'::`5'::predicate::compare`
+- ``vostok::render::stage_ambient_lighting::execute'::`5'::sort_by_size_predicate::operator()`
+- ``vostok::render::stage_lights::execute'::`15'::sort_by_size_predicate::operator()`
+- ``vostok::render::stage_shadow_direct::render_models'::`4'::int4::int4`
+- ``vostok::render::static_render_surface::create_shadow_pass_geometry'::`3'::colored_opt_static_vertex::set`
+- ``vostok::tasks::task_manager::grab_next_task'::`4'::grabbing_next_task_thread_count_raii_helper::grabbing_next_task_thread_count_raii_helper`
+- ``vostok::tasks::task_manager::grab_next_task'::`4'::grabbing_next_task_thread_count_raii_helper::~grabbing_next_task_thread_count_raii_helper`
+- `bool __cdecl check_presence_mutex(void)`
+- `bool __cdecl show_dialog_for_unhandled_exceptions(void)`
+- `bool __cdecl stlp_std::operator!=<unsigned int *>(class stlp_std::reverse_iterator<unsigned int *> const &, class stlp_std::reverse_iterator<unsigned int *> const &)`
+- `bool __cdecl survarium::operator!=(struct survarium::animation_space_vertex_id const &, struct survarium::animation_space_vertex_id const &)`
+- `bool __cdecl survarium::operator!=(struct survarium::movement_animation_controller_parameters const &, struct survarium::movement_animation_controller_parameters const &)`
+- `bool __cdecl survarium::operator!=(struct survarium::simple_animation_controller_parameters const &, struct survarium::simple_animation_controller_parameters const &)`
+- `bool __cdecl survarium::operator==(struct survarium::movement_animation_controller_parameters const &, struct survarium::movement_animation_controller_parameters const &)`
+- `bool __cdecl survarium::operator==(struct survarium::simple_animation_controller_parameters const &, struct survarium::simple_animation_controller_parameters const &)`
+- `bool __cdecl survarium::true_predicate(void)`
+- `bool __cdecl vostok::ai::planning::is_block_on_block(struct vostok::ai::planning::block const *const, struct vostok::ai::planning::block const *const)`
+- `bool __cdecl vostok::ai::planning::is_clear_predicate(struct vostok::ai::planning::block const *const)`
+- `bool __cdecl vostok::ai::planning::is_disk_clear(struct vostok::ai::planning::disk const *const)`
+- `bool __cdecl vostok::ai::planning::is_disk_on_disk(struct vostok::ai::planning::disk const *const, struct vostok::ai::planning::disk const *const)`
+- `bool __cdecl vostok::ai::planning::is_disk_on_peg(struct vostok::ai::planning::disk const *const, struct vostok::ai::planning::peg const *const)`
+- `bool __cdecl vostok::ai::planning::is_disk_smaller(struct vostok::ai::planning::disk const *const, struct vostok::ai::planning::disk const *const)`
+- `bool __cdecl vostok::ai::planning::is_hand_empty_predicate(void)`
+- `bool __cdecl vostok::ai::planning::is_holding_predicate(struct vostok::ai::planning::block const *const)`
+- `bool __cdecl vostok::ai::planning::is_on_table_predicate(struct vostok::ai::planning::block const *const)`
+- `bool __cdecl vostok::ai::planning::is_peg_clear(struct vostok::ai::planning::peg const *const)`
+- `bool __cdecl vostok::ai::planning::operator<(struct stlp_std::pair<unsigned int const, struct stlp_std::pair<class vostok::ai::planning::pddl_predicate const *, unsigned int> > const &, struct stlp_std::pair<unsigned int const, struct stlp_std::pair<class vostok::ai::planning::pddl_predicate const *, unsigned int> > const &)`
+- `bool __cdecl vostok::ai::planning::predicate_binder<class vostok::ai::brain_unit const *, struct vostok::ai::animation_item const *, struct vostok::ai::sound_item const *, class vostok::ai::brain_unit const *, struct vostok::ai::animation_item const *, struct vostok::ai::sound_item const *>(class vostok::ai::planning::pddl_predicate const &, class vostok::fixed_vector<void const *, 4> const &)`
+- `bool __cdecl vostok::ai::planning::predicate_binder<class vostok::ai::brain_unit const *, struct vostok::ai::npc const *, class vostok::ai::brain_unit const *, struct vostok::ai::npc const *>(class vostok::ai::planning::pddl_predicate const &, class vostok::fixed_vector<void const *, 4> const &)`
+- `bool __cdecl vostok::ai::planning::predicate_binder<struct vostok::ai::npc const *, struct vostok::ai::npc const *>(class vostok::ai::planning::pddl_predicate const &, class vostok::fixed_vector<void const *, 4> const &)`
+- `bool __cdecl vostok::animation::mixing::operator<(class vostok::animation::mixing::animation_interval const &, class vostok::animation::mixing::animation_interval const &)`
+- `bool __cdecl vostok::animation::mixing::operator>(class vostok::animation::mixing::animation_interval const &, class vostok::animation::mixing::animation_interval const &)`
+- `bool __cdecl vostok::apc::is_same_thread(enum vostok::apc::threads_enum)`
+- `bool __cdecl vostok::build::print_build_id_command_line(void)`
+- `bool __cdecl vostok::collision::bresenham<struct vostok::collision::terrain_data>(struct vostok::collision::terrain_data const &, int, int, int, int, class vostok::math::float3const &, class vostok::math::float3const &, float, float &, bool)`
+- `bool __cdecl vostok::collision::get_row_col(float, int, class vostok::math::float3const &, int &, int &)`
+- `bool __cdecl vostok::collision::line_line_intersect_non_parallel(class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3&, class vostok::math::float3&, float &, float &)`
+- `bool __cdecl vostok::collision::ray_test_quad(class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, float, float &)`
+- `bool __cdecl vostok::collision::segment_segment_intersect(class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, float)`
+- `bool __cdecl vostok::collision::terrain_ray_test<struct vostok::collision::terrain_data>(struct vostok::collision::terrain_data const &, class vostok::math::float3const &, class vostok::math::float3const &, float, float &)`
+- `bool __cdecl vostok::command_line::initialized(void)`
+- `bool __cdecl vostok::command_line::key_is_set(char const *)`
+- `bool __cdecl vostok::command_line::show_help(void)`
+- `bool __cdecl vostok::console_commands::execute_console_commands(class vostok::fs_new::native_path_string, enum vostok::console_commands::execution_filter, bool)`
+- `bool __cdecl vostok::core::initialized(void)`
+- `bool __cdecl vostok::core::use_console_for_logging(void)`
+- `bool __cdecl vostok::debug::bugtrap::initialized(void)`
+- `bool __cdecl vostok::debug::platform::error_after_dialog(void)`
+- `bool __cdecl vostok::engine::command_line_editor(void)`
+- `bool __cdecl vostok::engine::command_line_no_splash_screen(void)`
+- `bool __cdecl vostok::fs_new::is_absolute_path<class vostok::fs_new::native_path_string>(class vostok::fs_new::native_path_string const &)`
+- `bool __cdecl vostok::math::is_similar(class vostok::math::float3const &, class vostok::math::float3const &, float)`
+- `bool __cdecl vostok::math::is_zero<float>(float const &, float const &)`
+- `bool __cdecl vostok::math::operator<(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `bool __cdecl vostok::math::operator<(class vostok::math::float4_pod const &, class vostok::math::float4_pod const &)`
+- `bool __cdecl vostok::math::operator<=(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `bool __cdecl vostok::math::operator>(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `bool __cdecl vostok::math::operator>(class vostok::math::float4_pod const &, class vostok::math::float4_pod const &)`
+- `bool __cdecl vostok::math::operator>=(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `bool __cdecl vostok::memory::try_lock_process_heap(void)`
+- `bool __cdecl vostok::network_core::get_connection_info_from_string(char const *, char *const, unsigned short &)`
+- `bool __cdecl vostok::operator<(class vostok::buffer_string const &, class vostok::buffer_string const &)`
+- `bool __cdecl vostok::operator==(class vostok::buffer_string const &, char const *)`
+- `bool __cdecl vostok::operator==(class vostok::buffer_string const &, class vostok::buffer_string const &)`
+- `bool __cdecl vostok::particle::is_playing(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `bool __cdecl vostok::platform::unload_delay_loaded_library(char const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_declaration, struct vostok::render::resource_manager::compare_predicate<class vostok::render::res_declaration> >(class vostok::render::set<class vostok::render::res_declaration *, struct vostok::render::resource_manager::compare_predicate<class vostok::render::res_declaration> > &, class vostok::render::res_declaration const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_geometry, struct vostok::render::resource_manager::compare_member_predicate<class vostok::render::res_geometry> >(class vostok::render::set<class vostok::render::res_geometry *, struct vostok::render::resource_manager::compare_member_predicate<class vostok::render::res_geometry> > &, class vostok::render::res_geometry const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_input_layout, struct vostok::render::resource_manager::compare_predicate<class vostok::render::res_input_layout> >(class vostok::render::set<class vostok::render::res_input_layout *, struct vostok::render::resource_manager::compare_predicate<class vostok::render::res_input_layout> > &, class vostok::render::res_input_layout const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_pass, struct vostok::render::effect_manager::compare_predicate<class vostok::render::res_pass> >(class vostok::render::set<class vostok::render::res_pass *, struct vostok::render::effect_manager::compare_predicate<class vostok::render::res_pass> > &, class vostok::render::res_pass const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_sampler_list, struct vostok::render::resource_manager::compare_member_predicate<class vostok::render::res_sampler_list> >(class vostok::render::set<class vostok::render::res_sampler_list *, struct vostok::render::resource_manager::compare_member_predicate<class vostok::render::res_sampler_list> > &, class vostok::render::res_sampler_list const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_shader_technique, struct vostok::render::effect_manager::compare_predicate<class vostok::render::res_shader_technique> >(class vostok::render::set<class vostok::render::res_shader_technique *, struct vostok::render::effect_manager::compare_predicate<class vostok::render::res_shader_technique> > &, class vostok::render::res_shader_technique const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_signature, struct vostok::render::resource_manager::compare_predicate<class vostok::render::res_signature> >(class vostok::render::set<class vostok::render::res_signature *, struct vostok::render::resource_manager::compare_predicate<class vostok::render::res_signature> > &, class vostok::render::res_signature const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_state>(class vostok::render::vector<class vostok::render::res_state *> &, class vostok::render::res_state const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::res_texture_list, struct vostok::render::resource_manager::compare_member_predicate<class vostok::render::res_texture_list> >(class vostok::render::set<class vostok::render::res_texture_list *, struct vostok::render::resource_manager::compare_member_predicate<class vostok::render::res_texture_list> > &, class vostok::render::res_texture_list const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::shader_constant_buffer, struct vostok::render::resource_manager::constant_buffer_predicate>(class vostok::render::set<class vostok::render::shader_constant_buffer *, struct vostok::render::resource_manager::constant_buffer_predicate> &, class vostok::render::shader_constant_buffer const *)`
+- `bool __cdecl vostok::render::reclaim<class vostok::render::shader_constant_table, struct vostok::render::resource_manager::constant_table_predicate>(class vostok::render::set<class vostok::render::shader_constant_table *, struct vostok::render::resource_manager::constant_table_predicate> &, class vostok::render::shader_constant_table const *)`
+- `bool __cdecl vostok::render::set_client_rect(struct HWND__*, int, int, int, int)`
+- `bool __cdecl vostok::render::state_utils::operator==(struct D3D11_RASTERIZER_DESC const &, struct D3D11_RASTERIZER_DESC const &)`
+- `bool __cdecl vostok::render::state_utils::operator==(struct D3D11_SAMPLER_DESC const &, struct D3D11_SAMPLER_DESC const &)`
+- `bool __cdecl vostok::render::utils::calc_lists_diff_range<class vostok::render::res_sampler_list>(class vostok::render::res_sampler_list const &, class vostok::render::res_sampler_list const &, unsigned int &, unsigned int &)`
+- `bool __cdecl vostok::render::utils::calc_lists_diff_range<class vostok::render::res_texture_list>(class vostok::render::res_texture_list const &, class vostok::render::res_texture_list const &, unsigned int &, unsigned int &)`
+- `bool __cdecl vostok::render::utils::calc_lists_diff_range<class vostok::render::vector<class vostok::intrusive_ptr<class vostok::render::shader_constant_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> > >(class vostok::render::vector<class vostok::intrusive_ptr<class vostok::render::shader_constant_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> > const &, class vostok::render::vector<class vostok::intrusive_ptr<class vostok::render::shader_constant_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy> > const &, unsigned int &, unsigned int &)`
+- `bool __cdecl vostok::resources::convert_virtual_to_physical_path(class vostok::fs_new::native_path_string *, class vostok::fs_new::virtual_path_string const &, char const *)`
+- `bool __cdecl vostok::resources::cook_must_be_registered(enum vostok::resources::class_id_enum)`
+- `bool __cdecl vostok::resources::is_fs_iterator_class(enum vostok::resources::class_id_enum)`
+- `bool __cdecl vostok::resources::vfs_sub_fat_resource_is_created(class vostok::vfs::vfs_iterator const &)`
+- `bool __cdecl vostok::strings::compare_with_wildcards(char const *, char const *)`
+- `bool __cdecl vostok::strings::equal(char const *, char const *)`
+- `bool __cdecl vostok::strings::mbstowcs(wchar_t *, unsigned int, char const *)`
+- `bool __cdecl vostok::strings::set_multibyte(char *, unsigned int, wchar_t const *)`
+- `bool __cdecl vostok::tasks::zero_tasks(void)`
+- `bool __cdecl vostok::testing::is_testing(void)`
+- `bool __cdecl vostok::vfs::folders_connected_by_overlap(class vostok::vfs::base_node<1> *, class vostok::vfs::base_node<1> *)`
+- `bool __cdecl vostok::vfs::need_physical_mount(bool *, class vostok::vfs::base_node<1> *, enum vostok::vfs::find_enum, enum vostok::vfs::traverse_enum, class vostok::memory::base_allocator *)`
+- `char * __cdecl vostok::strings::append<512>(char (&)[512], char const *)`
+- `char __cdecl vostok::math::sign(float)`
+- `char const * __cdecl vostok::build::build_date(void)`
+- `char const * __cdecl vostok::core::user_data_directory(void)`
+- `char const * __cdecl vostok::logging::verbosity_to_string(enum vostok::logging::verbosity)`
+- `char const * __cdecl vostok::particle::read_config_value<char const *, class vostok::configs::binary_config_value>(class vostok::configs::binary_config_value const &, char const *, char const *const &)`
+- `char const * __cdecl vostok::render::decl_utils::ConvertSemantic(enum _D3DDECLUSAGE)`
+- `char const * __cdecl vostok::render::get_textures_path2(void)`
+- `char const * __cdecl vostok::resources::test_allocator_name(enum vostok::resources::class_id_enum)`
+- `char const * __cdecl vostok::vfs::get_mount_log_type(class vostok::vfs::base_node<1> *, class vostok::vfs::mount_root_node_base<1> *)`
+- `class SpeedTree::Mat4x4 __cdecl vostok::render::vostok_to_speedtree(class vostok::math::float4x4const &)`
+- `class SpeedTree::Vec3 __cdecl vostok::render::vostok_to_speedtree(class vostok::math::float3const &)`
+- `class boost::asio::const_buffers_1 __cdecl vostok::network_core::buffer_to_send(class vostok::network_core::tcp_packet &)`
+- `class boost::asio::mutable_buffers_1 __cdecl vostok::network_core::buffer_to_receive_into(class vostok::network_core::tcp_packet &)`
+- `class boost::function<void __cdecl (class vostok::resources::query_result *, class vostok::resources::memory_usage_type const &, enum vostok::resources::class_id_enum)> __cdecl vostok::resources::get_resource_freed_callback(void)`
+- `class btBvhTriangleMeshShape * __cdecl vostok::physics::create_btBvhTriangleMeshShape(class vostok::math::float3*, unsigned int *, unsigned int, unsigned int, unsigned short *, class vostok::math::float3const &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)`
+- `class btCollisionShape * __cdecl vostok::physics::create_bt_primitive(enum vostok::collision::primitive_type, class vostok::math::float3const &, class vostok::math::float3const &)`
+- `class btVector3 __cdecl vostok::physics::computeReflectionDirection(class btVector3const &, class btVector3const &)`
+- `class btVector3 __cdecl vostok::physics::parallelComponent(class btVector3const &, class btVector3const &)`
+- `class btVector3 __cdecl vostok::physics::perpindicularComponent(class btVector3const &, class btVector3const &)`
+- `class vostok::animation::mixing::expression __cdecl vostok::animation::mixing::operator+(class vostok::animation::mixing::expression &, class vostok::animation::mixing::expression &)`
+- `class vostok::animation::mixing::n_ary_tree_animation_node * __cdecl vostok::animation::mixing::find_animation(class vostok::animation::mixing::n_ary_tree_animation_node *const, class vostok::animation::mixing::n_ary_tree_animation_node *const, class vostok::animation::mixing::n_ary_tree_animation_node &)`
+- `class vostok::collision::geometry * __cdecl vostok::collision::new_triangle_mesh_geometry(class vostok::memory::base_allocator *, class vostok::math::float3const *, unsigned int, unsigned int const *, unsigned int, unsigned int const *, unsigned int)`
+- `class vostok::debug::detail::string_helper __cdecl vostok::debug::detail::make_fail_message<unsigned int, unsigned int>(unsigned int const &, unsigned int const &)`
+- `class vostok::fs_new::device_file_system_interface * __cdecl vostok::core::get_core_device_file_system(void)`
+- `class vostok::fs_new::physical_path_info __cdecl vostok::resources::get_physical_path_info(class vostok::fs_new::native_path_string const &, bool)`
+- `class vostok::fs_new::synchronous_device_interface & __cdecl vostok::core::get_core_synchronous_device(void)`
+- `class vostok::intrusive_list<class vostok::tasks::task_type, class vostok::tasks::task_type *, 104, class vostok::threading::mutex_tasks_unaware, class vostok::size_policy, class vostok::no_debug_policy> * __cdecl vostok::tasks::get_task_type_list(void)`
+- `class vostok::intrusive_list<struct vostok::vfs::mount_referer_base, struct vostok::vfs::mount_referer *, 0, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy> * __cdecl vostok::vfs::get_ready_referers_list(class vostok::memory::base_allocator *)`
+- `class vostok::intrusive_ptr<struct vostok::render::custom_config, struct vostok::render::custom_config, class vostok::threading::simple_lock> __cdecl vostok::render::create_custom_config(class vostok::configs::binary_config_value const &, unsigned int &, bool)`
+- `class vostok::intrusive_ptr<struct vostok::render::custom_config, struct vostok::render::custom_config, class vostok::threading::simple_lock> __cdecl vostok::render::create_custom_config(class vostok::render::custom_config_value const &, unsigned int &, bool)`
+- `class vostok::intrusive_ptr<struct vostok::render::custom_config, struct vostok::render::custom_config, class vostok::threading::simple_lock> __cdecl vostok::render::create_custom_config(struct vostok::render::effect_options_descriptor const &, class vostok::mutable_buffer &, unsigned int &, bool)`
+- `class vostok::intrusive_ptr<struct vostok::render::custom_config, struct vostok::render::custom_config, class vostok::threading::simple_lock> __cdecl vostok::render::create_custom_config(struct vostok::render::effect_options_descriptor const &, unsigned int &, bool)`
+- `class vostok::logging::filter_tree * __cdecl vostok::logging::new_filter_tree(class vostok::memory::base_allocator &)`
+- `class vostok::logging::log_file * __cdecl vostok::logging::new_log_file(class vostok::memory::base_allocator &, class vostok::fs_new::device_file_system_no_watcher_proxy &, char const *, enum vostok::logging::log_file_usage_enum)`
+- `class vostok::math::float2 __cdecl vostok::math::operator-(class vostok::math::float2_pod const &, class vostok::math::float2_pod const &)`
+- `class vostok::math::float3 __cdecl vostok::collision::closest_point_on_segment(class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &)`
+- `class vostok::math::float3 __cdecl vostok::math::cross_product(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `class vostok::math::float3 __cdecl vostok::math::normalize(class vostok::math::float3_pod const &)`
+- `class vostok::math::float3 __cdecl vostok::math::operator*(class vostok::math::float3_pod const &, float const &)`
+- `class vostok::math::float3 __cdecl vostok::math::operator*(float const &, class vostok::math::float3_pod const &)`
+- `class vostok::math::float3 __cdecl vostok::math::operator+(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `class vostok::math::float3 __cdecl vostok::math::operator-(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `class vostok::math::float3 __cdecl vostok::math::operator^(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `class vostok::math::float3 __cdecl vostok::math::pow(class vostok::math::float3_pod const &, float)`
+- `class vostok::math::float3 __cdecl vostok::particle::linear_interpolation<class vostok::math::float3>(class vostok::math::float3, class vostok::math::float3, float)`
+- `class vostok::math::float3 __cdecl vostok::render::speedtree_to_vostok(class SpeedTree::Vec3const &)`
+- `class vostok::math::float3_pod __cdecl vostok::particle::cubic_interpolation<class vostok::math::float3_pod, float>(class vostok::math::float3_pod, class vostok::math::float3_pod, class vostok::math::float3_pod, class vostok::math::float3_pod, float)`
+- `class vostok::math::float3_pod __cdecl vostok::particle::linear_interpolation<class vostok::math::float3_pod>(class vostok::math::float3_pod, class vostok::math::float3_pod, float)`
+- `class vostok::math::float4 __cdecl vostok::math::operator*(class vostok::math::float4_pod const &, float const &)`
+- `class vostok::math::float4 __cdecl vostok::math::operator+(class vostok::math::float4_pod const &, class vostok::math::float4_pod const &)`
+- `class vostok::math::float4 __cdecl vostok::math::pow(class vostok::math::float4_pod const &, float)`
+- `class vostok::math::float4 __cdecl vostok::render::speedtree_to_vostok(class SpeedTree::Vec4const &)`
+- `class vostok::math::float4_pod __cdecl vostok::particle::cubic_interpolation<class vostok::math::float4_pod, float>(class vostok::math::float4_pod, class vostok::math::float4_pod, class vostok::math::float4_pod, class vostok::math::float4_pod, float)`
+- `class vostok::math::float4_pod __cdecl vostok::particle::linear_interpolation<class vostok::math::float4_pod>(class vostok::math::float4_pod, class vostok::math::float4_pod, float)`
+- `class vostok::math::float4x4 __cdecl survarium::get_bone_matrix_in_object_space(class vostok::animation::skeleton_bone const &, class vostok::animation::skeleton const &, class vostok::math::float4x4const *)`
+- `class vostok::math::float4x4 __cdecl survarium::get_bone_matrix_in_object_space_impl(class vostok::animation::skeleton_bone const &, class vostok::math::float4x4const *, class vostok::animation::skeleton_bone const *)`
+- `class vostok::math::float4x4 __cdecl survarium::mix_transformations(class vostok::math::float4x4const &, class vostok::math::float4x4const &, float)`
+- `class vostok::math::float4x4 __cdecl survarium::mix_transformations(class vostok::math::float4x4const &, class vostok::math::float4x4const &, float, float)`
+- `class vostok::math::float4x4 __cdecl vostok::math::invert4x4(class vostok::math::float4x4const &)`
+- `class vostok::math::float4x4 __cdecl vostok::math::lerp(class vostok::math::float4x4const &, class vostok::math::float4x4const &, float)`
+- `class vostok::math::float4x4 __cdecl vostok::render::speedtree_to_vostok(class SpeedTree::Mat4x4const &)`
+- `class vostok::math::plane __cdecl vostok::math::create_plane_normalized(class vostok::math::float3const &, class vostok::math::float3const &)`
+- `class vostok::math::quaternion __cdecl vostok::math::create_quaternion_from_direction_vector(class vostok::math::float3const &)`
+- `class vostok::memory::base_allocator * __cdecl vostok::resources::helper_allocator(void)`
+- `class vostok::memory::base_allocator * __cdecl vostok::resources::unmanaged_allocator(void)`
+- `class vostok::memory::doug_lea_allocator & __cdecl survarium::game_module::allocator(void)`
+- `class vostok::mutable_buffer __cdecl vostok::operator+(class vostok::mutable_buffer const &, unsigned int)`
+- `class vostok::network_core::udp_match_packet * __cdecl vostok::network_core::new_udp_match_packet(class vostok::memory::single_size_buffer_allocator<300, class vostok::threading::single_threading_policy> &)`
+- `class vostok::physics::bt_character_controller * __cdecl vostok::physics::create_character_controller(class vostok::memory::base_allocator &, struct vostok::physics::world *)`
+- `class vostok::physics::bt_collision_shape * __cdecl vostok::physics::create_static_triangle_mesh_shape(class vostok::math::float3*, unsigned int *, unsigned int, unsigned int, unsigned short *, class vostok::math::float3const &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)`
+- `class vostok::render::culling::aab_rect __cdecl vostok::render::culling::get_intersection_rect(class vostok::render::culling::aab_rect const &, class vostok::render::culling::aab_rect const &)`
+- `class vostok::render::engine::world * __cdecl vostok::render::engine::create_world(class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &, bool)`
+- `class vostok::render::world * __cdecl vostok::render::create_world(class vostok::memory::base_allocator &, class vostok::memory::base_allocator *, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &, bool)`
+- `class vostok::resources::cook_base * __cdecl vostok::resources::unregister_cook(enum vostok::resources::class_id_enum)`
+- `class vostok::resources::resource_base * __cdecl vostok::resources::cast_resource_base(struct vostok::vfs::vfs_association *const)`
+- `class vostok::resources::resource_ptr<class survarium::artefact_base, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class survarium::artefact_base, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class vostok::animation::skeleton, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class vostok::animation::skeleton, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::configs::create_binary_config(class vostok::mutable_buffer const &, class vostok::memory::base_allocator &)`
+- `class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>, class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<class vostok::sound::panning_lut, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<class vostok::sound::panning_lut, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::resource_ptr<struct vostok::resources::unmanaged_allocation_resource, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::static_cast_resource_ptr<class vostok::resources::resource_ptr<struct vostok::resources::unmanaged_allocation_resource, class vostok::resources::unmanaged_intrusive_base>, class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base>(class vostok::resources::resource_ptr<class vostok::resources::unmanaged_resource, class vostok::resources::unmanaged_intrusive_base> const &)`
+- `class vostok::resources::vfs_sub_fat_cook * __cdecl vostok::resources::get_vfs_sub_fat_cook(void)`
+- `class vostok::tasks::task * __cdecl vostok::tasks::grab_next_task(void)`
+- `class vostok::tasks::thread_pool * __cdecl vostok::tasks::get_thread_pool(void)`
+- `class vostok::vfs::archive_compressed_file_node<1> * __cdecl vostok::vfs::cast_archive_compressed_file<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::archive_compressed_file_node<1> const * __cdecl vostok::vfs::cast_archive_compressed_file<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::archive_compressed_file_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_compressed_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::archive_file_node<1> * __cdecl vostok::vfs::cast_archive_file<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::archive_file_node<1> const * __cdecl vostok::vfs::cast_archive_file<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::archive_file_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::archive_folder_mount_root_node<1> * __cdecl vostok::vfs::cast_archive_folder_mount_root<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::archive_inline_compressed_file_node<1> * __cdecl vostok::vfs::cast_archive_inline_compressed_file<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::archive_inline_compressed_file_node<1> const * __cdecl vostok::vfs::cast_archive_inline_compressed_file<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::archive_inline_compressed_file_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_inline_compressed_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::archive_inline_file_node<1> * __cdecl vostok::vfs::cast_archive_inline_file<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::archive_inline_file_node<1> const * __cdecl vostok::vfs::cast_archive_inline_file<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::archive_inline_file_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::archive_inline_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::base_folder_node<1> * __cdecl vostok::vfs::cast_folder<1>(class vostok::vfs::physical_folder_mount_root_node<1> *)`
+- `class vostok::vfs::base_folder_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_folder_node, class vostok::vfs::archive_folder_mount_root_node, 1>(class vostok::vfs::archive_folder_mount_root_node<1> *)`
+- `class vostok::vfs::base_folder_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_folder_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::base_folder_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_folder_node, class vostok::vfs::mount_helper_node, 1>(class vostok::vfs::mount_helper_node<1> *)`
+- `class vostok::vfs::base_folder_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_folder_node, class vostok::vfs::physical_folder_mount_root_node, 1>(class vostok::vfs::physical_folder_mount_root_node<1> *)`
+- `class vostok::vfs::base_folder_node<1> const * __cdecl vostok::vfs::cast_folder<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::base_folder_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_folder_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::cast_node<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::cast_node<1>(class vostok::vfs::hard_link_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::cast_node<1>(class vostok::vfs::physical_file_mount_root_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::cast_node<1>(class vostok::vfs::physical_folder_mount_root_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::find_overlapped_by_mount_id(class vostok::vfs::base_node<1> *, unsigned int)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::get_attach_node(class vostok::vfs::mount_root_node_base<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::archive_folder_mount_root_node, 1>(class vostok::vfs::archive_folder_mount_root_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::base_folder_node, 1>(class vostok::vfs::base_folder_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::hard_link_node, 1>(class vostok::vfs::hard_link_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::mount_helper_node, 1>(class vostok::vfs::mount_helper_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::mount_root_node_base, 1>(class vostok::vfs::mount_root_node_base<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::physical_file_mount_root_node, 1>(class vostok::vfs::physical_file_mount_root_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::physical_folder_mount_root_node, 1>(class vostok::vfs::physical_folder_mount_root_node<1> *)`
+- `class vostok::vfs::base_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::base_node, class vostok::vfs::physical_folder_node, 1>(class vostok::vfs::physical_folder_node<1> *)`
+- `class vostok::vfs::erased_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::erased_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::external_subfat_node<1> * __cdecl vostok::vfs::cast_external_node<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::external_subfat_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::external_subfat_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::external_subfat_node<1> const * __cdecl vostok::vfs::cast_external_node<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::external_subfat_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::external_subfat_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::hard_link_node<1> * __cdecl vostok::vfs::cast_hard_link<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::hard_link_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::hard_link_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::hard_link_node<1> const * __cdecl vostok::vfs::cast_hard_link<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::hard_link_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::hard_link_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::mount_helper_node<1> * __cdecl vostok::vfs::cast_mount_helper_node<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::mount_root_node_base<1> * __cdecl vostok::vfs::cast_mount_root_node_base<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::physical_file_mount_root_node<1> * __cdecl vostok::vfs::cast_physical_file_mount_root<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::physical_file_mount_root_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::physical_file_mount_root_node, class vostok::vfs::mount_root_node_base, 1>(class vostok::vfs::mount_root_node_base<1> *)`
+- `class vostok::vfs::physical_file_node<1> const * __cdecl vostok::vfs::cast_physical_file<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::physical_file_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::physical_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::physical_folder_mount_root_node<1> * __cdecl vostok::vfs::cast_physical_folder_mount_root<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::physical_folder_mount_root_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::physical_folder_mount_root_node, class vostok::vfs::mount_root_node_base, 1>(class vostok::vfs::mount_root_node_base<1> *)`
+- `class vostok::vfs::physical_folder_node<1> * __cdecl vostok::vfs::cast_physical_folder<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::physical_folder_node<1> * __cdecl vostok::vfs::cast_physical_folder<1>(class vostok::vfs::physical_folder_mount_root_node<1> *)`
+- `class vostok::vfs::physical_folder_node<1> * __cdecl vostok::vfs::node_cast<class vostok::vfs::physical_folder_node, class vostok::vfs::physical_folder_mount_root_node, 1>(class vostok::vfs::physical_folder_mount_root_node<1> *)`
+- `class vostok::vfs::universal_file_node<1> * __cdecl vostok::vfs::cast_universal_file_node<1>(class vostok::vfs::base_node<1> *)`
+- `class vostok::vfs::universal_file_node<1> const * __cdecl vostok::vfs::cast_universal_file_node<1>(class vostok::vfs::base_node<1> const *)`
+- `class vostok::vfs::universal_file_node<1> const * __cdecl vostok::vfs::node_cast<class vostok::vfs::universal_file_node, class vostok::vfs::base_node, 1>(class vostok::vfs::base_node<1> const *)`
+- `clean<vostok::animation::mixing::binary_tree_addition_node>`
+- `clean<vostok::animation::mixing::binary_tree_animation_node>`
+- `clean<vostok::animation::mixing::binary_tree_multiplication_node>`
+- `clean<vostok::animation::mixing::binary_tree_subtraction_node>`
+- `closest_point_on_segment`
+- `compute_gaussian_value`
+- `convert_stick_values`
+- `convert_to_unicode_if_needed<214>`
+- `convert_to_unicode_if_needed<260>`
+- `convert_to_unicode_if_needed<64>`
+- `destroy<vostok::animation::mixing::n_ary_tree_addition_node>`
+- `destroy<vostok::animation::mixing::n_ary_tree_animation_node>`
+- `destroy<vostok::animation::mixing::n_ary_tree_multiplication_node>`
+- `destroy<vostok::animation::mixing::n_ary_tree_subtraction_node>`
+- `destroy<vostok::animation::mixing::n_ary_tree_time_scale_node>`
+- `destroy<vostok::animation::mixing::n_ary_tree_time_scale_transition_node>`
+- `destroy<vostok::animation::mixing::n_ary_tree_weight_node>`
+- `destroy<vostok::animation::mixing::n_ary_tree_weight_transition_node>`
+- `empty_function`
+- `enqueue_impl`
+- `enum DXGI_FORMAT __cdecl vostok::render::decl_utils::ConvertVertexFormat(enum _D3DDECLTYPE)`
+- `enum vostok::particle::enum_evaluate_type __cdecl vostok::particle::string_to_evaluate_type(char const *)`
+- `enum vostok::threading::lock_type_enum __cdecl vostok::vfs::to_threading_lock_type(enum vostok::vfs::lock_type_enum)`
+- `enum vostok::vfs::result_enum __cdecl vostok::vfs::find_async_and_wait(class vostok::vfs::virtual_file_system &, class vostok::fs_new::virtual_path_string const &, class vostok::vfs::vfs_locked_iterator *, enum vostok::vfs::find_enum, class vostok::memory::base_allocator *, class boost::function<void __cdecl (void)> const &)`
+- `enum vostok::vfs::vfs_iterator::type_enum __cdecl vostok::vfs::iterator_type(enum vostok::vfs::find_enum)`
+- `execute_handler_filter`
+- `extrapolated_slerp`
+- `float __cdecl sqrt_safe(float)`
+- `float __cdecl survarium::always_unit_timescale_calculator(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const &, struct survarium::weapon_state_creation_params const &)`
+- `float __cdecl survarium::get_additional_length(class vostok::math::float3const &, class vostok::math::float3const &, float)`
+- `float __cdecl survarium::get_angle(float, float, float)`
+- `float __cdecl survarium::get_booster_value(enum survarium::boosters_enum, struct survarium::player_profile const &)`
+- `float __cdecl vostok::math::abs(float)`
+- `float __cdecl vostok::math::acos(float)`
+- `float __cdecl vostok::math::atan2(float, float)`
+- `float __cdecl vostok::math::clamp_r<float>(float, float, float)`
+- `float __cdecl vostok::math::cos(float)`
+- `float __cdecl vostok::math::cubic_interpolation<float, float>(float, float, float, float, float)`
+- `float __cdecl vostok::math::deg2rad(float)`
+- `float __cdecl vostok::math::get_tangent_from_2d_vector(class vostok::math::float2const &)`
+- `float __cdecl vostok::math::length(class vostok::math::float3const &)`
+- `float __cdecl vostok::math::lerp<float>(float const &, float const &, float)`
+- `float __cdecl vostok::math::max(float, float)`
+- `float __cdecl vostok::math::min(float, float)`
+- `float __cdecl vostok::math::operator|(class vostok::math::float3_pod const &, class vostok::math::float3_pod const &)`
+- `float __cdecl vostok::math::pow(float, float)`
+- `float __cdecl vostok::math::pow_impl(float, unsigned int)`
+- `float __cdecl vostok::math::segment_to_segment_distance(class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &, class vostok::math::float3const &)`
+- `float __cdecl vostok::math::sin(float)`
+- `float __cdecl vostok::math::sqr<float>(float const &)`
+- `float __cdecl vostok::math::sqrt(float)`
+- `float __cdecl vostok::math::tan(float)`
+- `float __cdecl vostok::memory::uninitialized_value<float>(void)`
+- `float __cdecl vostok::particle::cubic_interpolation<float, float>(float, float, float, float, float)`
+- `float __cdecl vostok::particle::get_tangent_from_2d_vector(class vostok::math::float2const &)`
+- `float __cdecl vostok::particle::linear_interpolation<float>(float, float, float)`
+- `float __cdecl vostok::render::select_model_orientation(void)`
+- `float __cdecl vostok::render::select_model_scale(float, float)`
+- `float __cdecl vostok::resources::max_satisfaction_of_unreferenced_resource(void)`
+- `float __cdecl vostok::resources::min_satisfaction_of_unreferenced_resource(void)`
+- `free_region_impl`
+- `get_current_process`
+- `guess_exact_memory_size`
+- `has_segment_link`
+- `init_bins`
+- `int __cdecl vostok::engine::get_exit_code(void)`
+- `int __cdecl vostok::math::abs(int)`
+- `int __cdecl vostok::math::max(int, int)`
+- `int __cdecl vostok::math::min(int, int)`
+- `int __cdecl vostok::memory::compare(class vostok::const_buffer const &, class vostok::const_buffer const &)`
+- `int __cdecl vostok::render::calculate_needed_texture_mip_levels(class vostok::math::float4x4const &, class vostok::math::float3const &, class vostok::math::sphere const &, unsigned int, unsigned int, float, float &)`
+- `int __cdecl vostok::render::compare(class vostok::render::res_xs<struct vostok::render::gs_data> const &, class vostok::render::res_xs<struct vostok::render::gs_data> const &)`
+- `int __cdecl vostok::render::compare(class vostok::render::shader_constant_host const &, class vostok::render::shader_constant_host const &)`
+- `int __cdecl vostok::sound::ogg_utils::ov_close_func(void *)`
+- `int __cdecl vostok::sprintf<256>(char (&)[256], char const *const, ...)`
+- `int __cdecl vostok::sprintf<4096>(char (&)[4096], char const *const, ...)`
+- `int __cdecl vostok::sprintf<512>(char (&)[512], char const *const, ...)`
+- `int __cdecl vostok::sprintf<64>(char (&)[64], char const *const, ...)`
+- `int __cdecl vostok::strings::compare_insensitive(char const *, char const *)`
+- `int __cdecl vostok::vsnprintf(char *const, unsigned int, unsigned int, char const *const, char *const)`
+- `int __cdecl vostok::vsprintf(char *const, unsigned int, char const *const, char *const)`
+- `interlockedexchange`
+- `is_terminal_character`
+- `is_unique_animation_lexeme`
+- `line_line_intersect_non_parallel`
+- `load_function<long (__stdcall*__stdcall(void))(_EXCEPTION_POINTERS *)>`
+- `load_function<void __cdecl(void)>`
+- `load_function<void __stdcall(char const *)>`
+- `load_function<void __stdcall(enum BUGTRAP_ACTIVITY_tag)>`
+- `load_function<void __stdcall(enum BUGTRAP_DIALOGMESSAGE_tag,char const *)>`
+- `load_function<void __stdcall(enum BUGTRAP_REPORTFORMAT_tag)>`
+- `long __cdecl vostok::debug::interlocked_compare_exchange(long &, long, long)`
+- `long __cdecl vostok::debug::interlocked_decrement(long &)`
+- `long __cdecl vostok::debug::interlocked_exchange(long &, long)`
+- `long __cdecl vostok::debug::interlocked_increment(long &)`
+- `long __cdecl vostok::threading::interlocked_and(long volatile &, long)`
+- `long __cdecl vostok::threading::interlocked_compare_exchange(long volatile &, long, long)`
+- `long __cdecl vostok::threading::interlocked_decrement(long volatile &)`
+- `long __cdecl vostok::threading::interlocked_exchange(long volatile &, long)`
+- `long __cdecl vostok::threading::interlocked_exchange_add(long volatile &, long)`
+- `long __cdecl vostok::threading::interlocked_increment(long volatile &)`
+- `long __cdecl vostok::threading::interlocked_or(long volatile &, long)`
+- `lut_id`
+- `mix_scales`
+- `mmap_resize`
+- `network_flow_emulator_options`
+- `private: __thiscall survarium::booby_trap::booby_trap(class survarium::game_world &)`
+- `private: __thiscall survarium::booby_trap_set::booby_trap_set(class survarium::game_world &)`
+- `private: __thiscall survarium::double_barreled_weapon_core_aimed_idle_state::double_barreled_weapon_core_aimed_idle_state(class survarium::weapon_core &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *, unsigned int)`
+- `private: __thiscall survarium::empty_hands::empty_hands(class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> *, unsigned int)`
+- `private: __thiscall survarium::pistol_weapon_core_aimed_idle_state::pistol_weapon_core_aimed_idle_state(class survarium::weapon_core &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *, unsigned int)`
+- `private: __thiscall survarium::weapon_core_aimed_state::weapon_core_aimed_state(class survarium::weapon_core &, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *, unsigned int)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_aimed_fire_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_aimed_fire_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_fire_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_hide_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_hide_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_reload_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_show_state>::weapon_sound_events_handler_state<class survarium::double_barreled_weapon_core_show_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_aimed_fire_state>::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_aimed_fire_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state>::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_fire_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_hide_state>::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_hide_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state>::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_reload_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_show_state>::weapon_sound_events_handler_state<class survarium::pistol_weapon_core_show_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_aimed_fire_state>::weapon_sound_events_handler_state<class survarium::weapon_core_aimed_fire_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_aimed_state>::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_aimed_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state>::weapon_sound_events_handler_state<class survarium::weapon_core_chamber_a_round_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state>::weapon_sound_events_handler_state<class survarium::weapon_core_fire_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state>::weapon_sound_events_handler_state<class survarium::weapon_core_hide_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state>::weapon_sound_events_handler_state<class survarium::weapon_core_reload_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate>::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_finish_substate>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate>::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_one_round_substate>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate>::weapon_sound_events_handler_state<class survarium::weapon_core_shotgun_reload_start_substate>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall survarium::weapon_sound_events_handler_state<class survarium::weapon_core_show_state>::weapon_sound_events_handler_state<class survarium::weapon_core_show_state>(class survarium::weapon &, float, class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> const *const, unsigned char, void *const, unsigned char, bool, unsigned char)`
+- `private: __thiscall vostok::render::debug::renderer::renderer(class vostok::render::one_way_render_channel &, class vostok::memory::base_allocator &, class vostok::render::engine::world &)`
+- _...and 6412 more_
+
+---
+
+## v0.20e-build1916 → v0.20f-build1923
+_2014-03-20 → 2014-04-01 · +1 / -3 / ~11_
+
+### Changed (11)
+
+| match % | function |
+| ---: | --- |
+| 0.00 | `private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)` |
+| 0.00 | `protected: virtual void __thiscall vostok::particle::particle_system::add_action_to_guid_list(char const *, class vostok::particle::particle_action *)` |
+| 0.00 | `public: __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >(class boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > > const &)` |
+| 0.00 | `public: __thiscall survarium::affect_subscriber::~affect_subscriber(void)` |
+| 0.00 | `public: __thiscall vostok::intrusive_list<struct survarium::affect_subscriber, struct survarium::affect_subscriber *, 32, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct survarium::affect_subscriber, struct survarium::affect_subscriber *, 32, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)` |
+| 0.00 | `public: __thiscall vostok::resources::resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>(void)` |
+| 0.00 | `public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const` |
+| 0.00 | `public: virtual struct vostok::ui::window * __thiscall vostok::ui::ui_image::w(void)` |
+| 0.00 | `public: virtual void __thiscall survarium::game_camera::on_focus(bool)` |
+| 99.97 | `public: virtual void __thiscall vostok::network::network_world::dispatch_callbacks(void)` |
+| 99.97 | `public: void __thiscall vostok::render::stage_shadow_direct::prepare_visibile_objects(class vostok::fixed_vector<struct vostok::render::caster_model, 2048> *, class vostok::memory::base_allocator *, class vostok::math::float3const &, unsigned int, unsigned int, unsigned int)` |
+
+### Added (1)
+
+- ``vostok::render::stage_lights::accumulate_particle_lighting'::`6'::sort_probes_by_size_predicate::operator()`
+
+### Deleted (3)
+
+- ``vostok::render::stage_visibility::filter_and_sort_env_probes'::`4'::sort_by_size_predicate::operator()`
+- `public: __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf3<void, class survarium::game_world, class vostok::resources::queries_result &, unsigned int, class boost::function<void __cdecl (class vostok::resources::queries_result &)> const &>, class boost::_bi::list4<class boost::_bi::value<class survarium::game_world *>, struct boost::arg<1>, class boost::_bi::value<unsigned int>, class boost::_bi::value<class boost::function<void __cdecl (class vostok::resources::queries_result &)> > > >::bind_t<void, class boost::_mfi::mf3<void, class survarium::game_world, class vostok::resources::queries_result &, unsigned int, class boost::function<void __cdecl (class vostok::resources::queries_result &)> const &>, class boost::_bi::list4<class boost::_bi::value<class survarium::game_world *>, struct boost::arg<1>, class boost::_bi::value<unsigned int>, class boost::_bi::value<class boost::function<void __cdecl (class vostok::resources::queries_result &)> > > >(class boost::_bi::bind_t<void, class boost::_mfi::mf3<void, class survarium::game_world, class vostok::resources::queries_result &, unsigned int, class boost::function<void __cdecl (class vostok::resources::queries_result &)> const &>, class boost::_bi::list4<class boost::_bi::value<class survarium::game_world *>, struct boost::arg<1>, class boost::_bi::value<unsigned int>, class boost::_bi::value<class boost::function<void __cdecl (class vostok::resources::queries_result &)> > > > const &)`
+- `public: __thiscall vostok::fixed_vector<class vostok::intrusive_ptr<class vostok::render::shader_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, 32>::~fixed_vector<class vostok::intrusive_ptr<class vostok::render::shader_buffer, class vostok::render::resource_intrusive_base, class vostok::threading::single_threading_policy>, 32>(void)`

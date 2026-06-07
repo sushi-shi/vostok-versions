@@ -1,0 +1,204 @@
+{
+  "base": "v0.20e-build1916",
+  "target": "v0.20f-build1923",
+  "scope": {
+    "generated": false,
+    "third_party": false
+  },
+  "counts": {
+    "identical": {
+      "engine": 9986,
+      "generated": 1645,
+      "third_party": 6697
+    },
+    "changed": {
+      "engine": 2,
+      "generated": 0,
+      "third_party": 0
+    },
+    "new": {
+      "engine": 39,
+      "generated": 118,
+      "third_party": 300
+    }
+  },
+  "removed_units": {
+    "engine": [
+      "vostok/engine/sources/apc.h"
+    ],
+    "third_party": [
+      "_msvc_internal/character_step_down_sweep_test_callback",
+      "_msvc_internal/jump_vertical_test_callback"
+    ]
+  },
+  "top_changed": [
+    {
+      "pct": 99.96667,
+      "unit": "vostok/network/sources/network_world.cpp",
+      "fn": "public: virtual void __thiscall vostok::network::network_world::dispatch_callbacks(void)"
+    },
+    {
+      "pct": 99.96722,
+      "unit": "vostok/render/engine/sources/stage_shadow_direct.cpp",
+      "fn": "public: void __thiscall vostok::render::stage_shadow_direct::prepare_visibile_objects(class vostok::fixed_vector<struct vostok::render::caster_model, 2048> *, class vostok::memory::base_allocator *, class vostok::math::float3const &, unsigned int, unsigned int, unsigned int)"
+    }
+  ],
+  "new_or_rewritten": [
+    {
+      "unit": "vostok/game/sources/damage_sound_effect.cpp",
+      "fn": "public: __thiscall survarium::affect_subscriber::~affect_subscriber(void)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu.h",
+      "fn": "public: __thiscall vostok::intrusive_list<struct survarium::affect_subscriber, struct survarium::affect_subscriber *, 32, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>::~intrusive_list<struct survarium::affect_subscriber, struct survarium::affect_subscriber *, 32, class vostok::threading::mutex, class vostok::size_policy, class vostok::no_debug_policy>(void)"
+    },
+    {
+      "unit": "vostok/game/sources/player.cpp",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game/sources/weapon_sound_events_handler_state_cook_inline.h",
+      "fn": "private: virtual void __thiscall survarium::weapon_preview_state_cook::deallocate_resource(void *)"
+    },
+    {
+      "unit": "vostok/game_core/interactive_object.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game_core/interactive_object.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game_core/interactive_object.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game_core/interactive_object.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game_core/interactive_object.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game_core/interactive_object.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game_core/interactive_object.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >(class boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > > const &)"
+    },
+    {
+      "unit": "vostok/math_float4x4_inline.h",
+      "fn": "public: __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >(class boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > > const &)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/render_engine_world_pc_dx11.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/render_engine_world_pc_dx11.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/render_model_cooker.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/render_model_cooker.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/render/engine/sources/stage_lights.cpp",
+      "fn": "`vostok::render::stage_lights::accumulate_particle_lighting'::`6'::sort_probes_by_size_predicate::operator()"
+    },
+    {
+      "unit": "vostok/render/engine/sources/stage_visibility.cpp",
+      "fn": "`vostok::render::stage_lights::accumulate_particle_lighting'::`6'::sort_probes_by_size_predicate::operator()"
+    },
+    {
+      "unit": "vostok/render/engine/sources/tracer_model_instance_cook.cpp",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/render/facade/model.h",
+      "fn": "protected: virtual void __thiscall vostok::particle::particle_system::add_action_to_guid_list(char const *, class vostok::particle::particle_action *)"
+    },
+    {
+      "unit": "vostok/render/facade/model.h",
+      "fn": "protected: virtual void __thiscall vostok::particle::particle_system::add_action_to_guid_list(char const *, class vostok::particle::particle_action *)"
+    },
+    {
+      "unit": "vostok/resources_resource_ptr_inline.h",
+      "fn": "public: __thiscall vostok::resources::resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>::~resource_ptr<class vostok::render::res_effect, class vostok::resources::unmanaged_intrusive_base>(void)"
+    },
+    {
+      "unit": "vostok/ui/sources/ui_text.h",
+      "fn": "public: virtual struct vostok::ui::window * __thiscall vostok::ui::ui_image::w(void)"
+    },
+    {
+      "unit": "vostok/ui/sources/ui_text.h",
+      "fn": "public: virtual struct vostok::ui::window * __thiscall vostok::ui::ui_image::w(void)"
+    }
+  ]
+}
