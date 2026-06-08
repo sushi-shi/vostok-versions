@@ -35,7 +35,7 @@ _All other 25 engine libs are **LTCG in every build** (game_core, network_core, 
 ## Optimization & floating-point notes
 
 - **Only these engine libs are non-LTCG** (so a per-TU opt level is recorded): `vostok_core-static-gold`, `vostok_sound-static-gold`, `vostok_vorbisfile-static-gold`. Every other engine lib (game_core, network_core, logging, …) is whole-program **LTCG** — optimized at link, with no per-TU opt level recorded (so it is *not* unoptimized; the level just isn't visible). The only genuinely unoptimized code is the audio path: `vostok_sound` (`-Od`) until v0.20, and `vostok_vorbisfile` (no `-O`) throughout.
-- **`/fp:fast` was not removed** — it appears in no recorded cmdline in every build. (LTCG libs record no command line, so their fp model isn't visible either way — we can't see whether game_core etc. use fp:fast.)
+- **`/fp:fast` was not removed** — it appears in `vostok_core-static-gold`, `vostok_sound-static-gold`, `zlib` in every build. (LTCG libs record no command line, so their fp model isn't visible either way — we can't see whether game_core etc. use fp:fast.)
 
 ## Raw per-step tool labels (incl. file-count-only diffs)
 

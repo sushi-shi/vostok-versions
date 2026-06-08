@@ -61,6 +61,20 @@ def project_configs(tool: str, pdb: Path) -> dict[str, str]:
     return cfg
 
 
+def full_flag_projects(tool: str, pdb: Path, needle: str) -> set[str]:
+    """Projects whose FULL command line (`--full`, not the CRT/opt summary)
+    contains `needle` - e.g. '-fp:fast', which the default summary omits."""
+    out = subprocess.run([tool, "--pdb", str(pdb), "--full"], capture_output=True, text=True, check=True).stdout
+    proj, hits = None, set()
+    for line in out.splitlines():
+        m = re.match(r"^project : (.+)$", line)
+        if m:
+            proj = m.group(1).strip()
+        elif proj and line.lstrip().startswith("cmd") and needle in line:
+            hits.add(proj)
+    return hits
+
+
 def changed_projects(tool: str, base_pdb: Path, target_pdb: Path) -> list[tuple[str, str]]:
     out = subprocess.run([tool, "--pdb", str(target_pdb), "--compare", str(base_pdb)],
                          capture_output=True, text=True, check=True).stdout
@@ -146,7 +160,10 @@ def main() -> None:
     # Optimization landscape + fp model, computed from the data.
     noltcg = [p for p in all_projs if p.startswith("vostok_")
               and any(configs[lab].get(p) and "LTCG" not in configs[lab][p] for lab in labels)]
-    fp = sorted({p for cfg in configs.values() for p, cf in cfg.items() if "fp:fast" in cf})
+    fp = set()
+    for lab in labels:
+        fp |= full_flag_projects(tool, pdbs[lab], "-fp:fast")
+    fp = sorted(fp)
     md += ["## Optimization & floating-point notes", "",
            "- **Only these engine libs are non-LTCG** (so a per-TU opt level is recorded): "
            + (", ".join(f"`{p}`" for p in noltcg) or "none")
