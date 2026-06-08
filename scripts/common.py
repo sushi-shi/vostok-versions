@@ -9,8 +9,8 @@ objdiff then diffs one version's objects against another's. No PDB -> no symbols
 no clean per-function objects, and this whole approach does not apply.
 
 The toolchain (vostok-delinker, pdb_parser, objdiff-cli, innoextract) is provided
-by the sibling vostok-review Nix devShell. Run these scripts inside its
-`nix develop`, or point the *_BIN env vars at the binaries.
+by this repo's Nix devShell. Run these scripts inside `nix develop`, or point the
+*_BIN env vars at the binaries.
 """
 
 from __future__ import annotations
@@ -69,7 +69,7 @@ def require_tool(binary: str) -> str:
     if shutil.which(binary) is None:
         sys.exit(
             f"error: {binary!r} not found on PATH.\n"
-            "  Run inside vostok-review's `nix develop` (it provides "
+            "  Run inside this repo's `nix develop` (it provides "
             "vostok-delinker, pdb_parser, objdiff-cli, innoextract),\n"
             "  or set the matching *_BIN / VOSTOK_DELINKER env var."
         )
@@ -100,8 +100,8 @@ def sha256_file(path: Path) -> str:
 def find_exe_pdb(root: Path) -> tuple[Path, Path]:
     """Locate the game survarium.exe + survarium.pdb under `root`.
 
-    Picks the largest non-uninstaller survarium.exe (mirrors vostok-review's
-    flake heuristic), then the .pdb sitting beside it.
+    Picks the largest non-uninstaller survarium.exe (mirrors the flake's
+    extraction heuristic), then the .pdb sitting beside it.
     """
     exes = sorted(
         (p for p in root.rglob("*.exe")
@@ -295,7 +295,7 @@ def fetch_from_flake(label: str) -> Path:
     return Path(out.stdout.strip().splitlines()[-1])
 
 
-# --- objdiff config emission (vendored from vostok-review) ------------------
+# --- objdiff config emission ------------------------------------------------
 
 def write_dummy_obj(path: Path) -> None:
     """A minimal valid empty COFF .obj, used as the base side for a unit that

@@ -4,29 +4,30 @@ Cross-version analysis of **Survarium** (Vostok Engine / X-Ray 2.0) builds: unpa
 several game versions, delink each into per-function COFF objects, and diff one
 version against another so we can see exactly how the engine binary evolved.
 
-The **oldest** build is the canonical **base** — the one we match from in the
-sibling [`vostok-review`](../vostok-review) project. Diffs (base → newer) show
-which functions are unchanged, which churned, and which are new, so matching
-effort can be prioritized and forward-ported.
+The **oldest** build is the canonical **base** — every diff is computed
+base → newer. Diffs show which functions are unchanged, which churned, and which
+are new, so matching effort can be prioritized and forward-ported.
 
 ## Hard requirement: every build needs a PDB
 
 This only works on builds that shipped **`survarium.exe` + `survarium.pdb`**
-(internal/dev builds, e.g. the leaked archive.org ones). The PDB gives
+(internal/dev builds — the publicly distributed closed-alpha builds archived on
+archive.org). The PDB gives
 `vostok-delinker` the symbol names and function boundaries it splits the EXE on;
 objdiff then matches functions by name across versions. A symbol-less retail
 `survarium.exe` cannot be processed this way.
 
-## Toolchain comes from vostok-review's Nix devShell
+## Toolchain: the Nix devShell
 
 The binaries — `vostok-delinker`, `pdb_parser`, `objdiff-cli`, `innoextract` —
-are provided by vostok-review. Run everything here from inside that devShell:
+are built by this repo's flake. `nix develop` puts them all on PATH:
 
-    cd ../vostok-review && nix develop      # puts the tools on PATH
-    cd ../vostok-versions
+    nix develop      # puts the tools on PATH
 
-(or point `VOSTOK_DELINKER` / `PDB_PARSER` / `OBJDIFF_CLI` / `INNOEXTRACT` at the
-binaries yourself.)
+`vostok-delinker` and `vostok-pdb-parser` are built from their public source repos
+(`github:srp-survarium/*`); `objdiff-cli` is the upstream prebuilt binary;
+`innoextract`/`p7zip` come from nixpkgs. (Or point `VOSTOK_DELINKER` / `PDB_PARSER`
+/ `OBJDIFF_CLI` / `INNOEXTRACT` at binaries yourself.)
 
 ## Where versions come from: `versions.json` + the flake
 
@@ -83,18 +84,10 @@ end-to-end check of the delink + objdiff wiring before trusting real diffs:
 
 ## The base: v0.100b build 802 (May 2013)
 
-vostok-review already matches this build (the oldest known PDB-bearing Survarium,
-from archive.org). It is version #1 / base here too, and the one entry already in
-`versions.json`. Bootstrap it straight from the flake:
+The oldest known PDB-bearing Survarium build (from archive.org) is version #1 /
+base, and the first entry in `versions.json`. Bootstrap it straight from the flake:
 
     python3 scripts/add_version.py v0.100b-build802
 
-(fetches the archive.org installer, extracts, delinks. Same build vostok-review
-uses — `$SURVARIUM_BIN` — so an explicit `add_version.py v0.100b-build802 "$SURVARIUM_BIN"`
-works too.)
-
-## Status
-
-Scaffold is in place; the pipeline is **unvalidated until the first real delink
-run inside the devShell**. Drop in the oldest installer (or bootstrap from
-`$SURVARIUM_BIN`) to shake it out.
+(fetches the archive.org installer, extracts, delinks). You can also pass an
+explicit installer `.exe` or extracted dir as a second arg to bypass the registry.

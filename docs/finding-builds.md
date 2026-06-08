@@ -36,8 +36,8 @@ Vostok Engine v0.20e build 1916 (internal id 804), Mar 20 2014
 ```
 
 A site-wide archive.org search (all uploaders) returns **no 0.11–0.19 build**. So
-0.14h was never on archive.org under any obvious tag — it came from a different leak
-channel. Search **off** archive.org.
+0.14h was never on archive.org under any obvious tag — it was distributed through a
+different channel. Search **off** archive.org.
 
 ## 1. Naming conventions to grep/search for
 
@@ -67,11 +67,11 @@ survarium_alpha_setup_v0.14h.exe   survarium_alpha_setup_v014h.exe
 survarium_full_014h.7z      014h.exe   (what the user's torrent named it)
 ```
 
-**Free-text terms** (EN + RU — these leaks circulated on Russian sites):
+**Free-text terms** (EN + RU — these alpha builds circulated on Russian sites):
 ```
 survarium  "vostok engine"  "internal id"  "closed alpha"  "development engine"
 survarium 0.14  survarium v0.14  survarium build 13xx
-Сурвариум  Восток  "внутренняя сборка"  альфа  сборка 13xx  слив  утечка
+Сурвариум  Восток  "внутренняя сборка"  альфа  "закрытая альфа"  сборка 13xx
 ```
 
 ## 2. Search avenues (with commands)
@@ -105,7 +105,7 @@ Old Russian file hosts to look for in those results (2013-era):
 `rghost.ru`, `narod.ru`. If a dead link appears, try fetching it *through* Wayback
 (`http://web.archive.org/web/2013*/​<url>`).
 
-### c. Russian trackers & forums (origin of the leaks)
+### c. Russian trackers & forums (where these builds circulated)
 Search these directly (site search or Google `site:`):
 ```
 rutracker.org   nnmclub.to / nnm-club.me   rutor / kinozal   pizdetz / cs.rin.ru

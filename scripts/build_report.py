@@ -15,7 +15,7 @@ grouped by owning class/namespace and each group is labelled:
   REWORKED  scope kept, but functions added and/or removed
 
 Reuses chain_report's per-pair diff machinery (reverse diff for deletions).
-Run inside vostok-review's `nix develop` (needs objdiff-cli) the first time;
+Run inside this repo's `nix develop` (needs objdiff-cli) the first time;
 re-runs reuse existing reports.
 """
 

@@ -23,7 +23,7 @@ base's folded-group names instead of choosing its own.
 If <source> is omitted, the label is looked up in versions.json and the build is
 fetched + extracted from archive.org via the flake (`nix build .#version-<label>`).
 
-Run inside vostok-review's `nix develop` (provides the tools).
+Run inside this repo's `nix develop` (provides the tools).
 """
 
 from __future__ import annotations
