@@ -1,17 +1,18 @@
 # Survarium build evolution — interpreted changes (May 2013)
 
 What the team was most likely working on, **inferred only from added and deleted
-hand-written engine functions** across the consecutive internal builds
-802 → 816 → 826 → 870 → 884 (9–28 May 2013). Added/deleted are unambiguous
-"a function/class appeared or vanished" events, unlike fuzzy match-% drift.
+hand-written engine functions** across the consecutive internal versions
+v0.100b → v0.1.1a → v0.1.1b → v0.1.1c → v0.1.1e (9–28 May 2013). Added/deleted are
+unambiguous "a function/class appeared or vanished" events, unlike fuzzy match-%
+drift.
 
 ## How to read this (and where it lies)
 
 Three ways add/del can mislead, accounted for below:
 
-- **Same-day refactors look like add-then-remove.** 816 and 826 are the same day
-  (14 May). A class added in 816 and "removed" in 826 was almost certainly
-  *renamed/restructured*, not introduced and deleted.
+- **Same-day refactors look like add-then-remove.** v0.1.1a and v0.1.1b are the
+  same day (14 May). A class added in v0.1.1a and "removed" in v0.1.1b was almost
+  certainly *renamed/restructured*, not introduced and deleted.
 - **Offset-parameterized templates are layout drift, not features.** Containers
   like `intrusive_list<…,608,…>` or `single_size_buffer_allocator<108>` bake a
   struct's member offset / object size into a template argument. When a member
@@ -22,7 +23,7 @@ Three ways add/del can mislead, accounted for below:
 
 ---
 
-## 802 → 816 (9 → 14 May): weapons, streamed rendering, sound trim
+## v0.100b → v0.1.1a (9 → 14 May): weapons, streamed rendering, sound trim
 
 - **A major weapon state-machine buildout.** `weapon_core` alone gained 44
   functions and lost 20 — a wave of aim/fire/reload predicates (`aimed_fire_pred`,
@@ -39,9 +40,9 @@ Three ways add/del can mislead, accounted for below:
   `sound_rms_pinned` and its resource pointers) — an RMS/loudness analysis path
   dropped.
 
-## 816 → 826 (14 May, same day): a streaming-texture refactor
+## v0.1.1a → v0.1.1b (14 May, same day): a streaming-texture refactor
 
-Nearly everything "new" in 816's renderer — `streaming_ready_texture`,
+Nearly everything "new" in v0.1.1a's renderer — `streaming_ready_texture`,
 `requested_streamable_texture`, `streamable_texture_info`, `speedtree_data`,
 `animated_model_instance` — appears as **removed** the same day, while
 `render::backend`, `shader_constant_buffer` and the `constants_handler` templates
@@ -49,7 +50,7 @@ are reworked. This is **not a feature reversal but a same-day refactor** of the
 just-landed streaming-texture code (renamed or folded into other types).
 `weapon_core` keeps churning; `particle::lod_entry` reappears.
 
-## 826 → 870 (14 → 24 May): a sound-engine rearchitecture
+## v0.1.1b → v0.1.1c (14 → 24 May): a sound-engine rearchitecture
 
 The 10-day gap is the largest change in the window (101 reworked scopes), and the
 dominant theme is **sound**:
@@ -64,7 +65,7 @@ dominant theme is **sound**:
 - Breadth elsewhere: `booby_trap_set_core` (mines/traps), `game_world_ui`,
   `network_client`, physics collision shapes as resources, a shader cache.
 
-## 870 → 884 (24 → 28 May): resource/query layout + shadows
+## v0.1.1c → v0.1.1e (24 → 28 May): resource/query layout + shadows
 
 - Most add/del here is **layout drift, not features**: a cluster of
   `intrusive_list<resources::query_result, …, 600/608/616/624, …>` instantiations
@@ -81,13 +82,13 @@ dominant theme is **sound**:
 
 # Part II — into 2014 (v0.20+)
 
-The 10-month gap from build 884 (28 May 2013) to build 1916 (20 Mar 2014) is the
+The 10-month gap from v0.1.1e (28 May 2013) to v0.20e (20 Mar 2014) is the
 hinge of the dataset. One caveat first: across this jump the add/del counts carry
 more noise than the 2013 steps — aligning a v0.20 build's folded symbols to the
-year-older base 802 falls back heavily — so treat the **magnitude and the named
+year-older base v0.100b falls back heavily — so treat the **magnitude and the named
 classes** as solid and the exact integers as approximate.
 
-## 884 → 1916 (28 May 2013 → 20 Mar 2014): the pivot — AI shooter → PvP
+## v0.1.1e → v0.20e (28 May 2013 → 20 Mar 2014): the pivot — AI shooter → PvP
 
 Near-total rewrite: only **172 functions byte-identical** (+4163 / −6812 / ~4526).
 The named-class signal is unambiguous and matches Survarium's real history:
@@ -107,12 +108,12 @@ captured in which functions vanished and appeared. Build flags track it too (see
 `BUILD_FLAGS.md`): `vostok_sound` flipped `-Od` → LTCG and `vostok_core` went
 full-LTCG → explicit `-O1` — otherwise the toolchain/flags were unchanged.
 
-## 1916 → 1923 (20 Mar → 1 Apr 2014): a hotfix
+## v0.20e → v0.20f (20 Mar → 1 Apr 2014): a hotfix
 
 Essentially nothing: +1 / −3 / ~11, 8847 identical. A point release of the same
 v0.20 engine; no flag changes.
 
-## 1923 → 2010 (1 → 24 Apr 2014): netcode & match statistics
+## v0.20f → v0.21d (1 → 24 Apr 2014): netcode & match statistics
 
 A normal ~3-week delta within v0.2x (+605 / −383 / ~2566 — not a rewrite),
 concentrated on multiplayer plumbing:
@@ -143,5 +144,5 @@ polish on the new PvP base, plus a physics character-controller swap.
 From a S.T.A.L.K.E.R.2-style AI shooter to a free-to-play PvP match game, traced
 function by function.
 
-_Covers all ingested builds (802 → 2010). v0.23h-build2285 is stripped (no PDB),
+_Covers all ingested versions (v0.100b → v0.21d). v0.23h is stripped (no PDB),
 so it stays out of the function-level diff._
