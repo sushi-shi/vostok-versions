@@ -77,15 +77,71 @@ dominant theme is **sound**:
 
 ---
 
-## The arc (three weeks, late May 2013)
+---
 
-Two sustained pushes dominate: **weapon mechanics** (recoil/dispersion tied to a
-skill, reload/chambering state machines) and **the sound engine** (RMS analysis
-removed → codec "cooks" removed → a new propagation model introduced). In
-parallel the **renderer** churned through a streaming-texture + SpeedTree
-introduction and same-day refactor and began **shadow/culling** work. Underneath,
-**memory pools and resource/query structures** were being resized — visible as
-add/del noise, but really layout tuning rather than features.
+# Part II — into 2014 (v0.20+)
 
-_Covers the ingested 2013 builds. The 2014 jumps (v0.20e+) will extend this once
-ingested — expect far larger, genuinely structural change there._
+The 10-month gap from build 884 (28 May 2013) to build 1916 (20 Mar 2014) is the
+hinge of the dataset. One caveat first: across this jump the add/del counts carry
+more noise than the 2013 steps — aligning a v0.20 build's folded symbols to the
+year-older base 802 falls back heavily — so treat the **magnitude and the named
+classes** as solid and the exact integers as approximate.
+
+## 884 → 1916 (28 May 2013 → 20 Mar 2014): the pivot — AI shooter → PvP
+
+Near-total rewrite: only **172 functions byte-identical** (+4163 / −6812 / ~4526).
+The named-class signal is unambiguous and matches Survarium's real history:
+
+- **Removed — the single-player AI/NPC combat system:** `human_npc` (with
+  `attack`, `attack_from_cover`, `attack_melee`, `move_to_position`,
+  `is_target_in_melee_range`), `ai::brain_unit`, `ai::ai_world`, `ai::planning`;
+  also the `light_propagation_volumes` GI stage and the collision double-dispatchers.
+- **Added — PvP match infrastructure:** `game_world_core`, `game_statistics_handler`,
+  `player_respawn_rule`, `gather_victory_items_rule` (game-mode win rules),
+  `artefact_spring_core`, an animation `n_ary_tree_serializer`.
+- **Reworked broadly:** `render::effect_manager`, `weapon_core`, `player` /
+  `base_player`, `memory`, `vfs`, `lobby_menu`, `game_world_ui`.
+
+This is the cancelled-S.T.A.L.K.E.R.2 → free-to-play PvP shooter transition,
+captured in which functions vanished and appeared. Build flags track it too (see
+`BUILD_FLAGS.md`): `vostok_sound` flipped `-Od` → LTCG and `vostok_core` went
+full-LTCG → explicit `-O1` — otherwise the toolchain/flags were unchanged.
+
+## 1916 → 1923 (20 Mar → 1 Apr 2014): a hotfix
+
+Essentially nothing: +1 / −3 / ~11, 8847 identical. A point release of the same
+v0.20 engine; no flag changes.
+
+## 1923 → 2010 (1 → 24 Apr 2014): netcode & match statistics
+
+A normal ~3-week delta within v0.2x (+605 / −383 / ~2566 — not a rewrite),
+concentrated on multiplayer plumbing:
+
+- **New — a network telemetry subsystem:** `network_stats_packets`,
+  `network_stats_ports`, `network_stats_sent_messages` / `_received_messages` /
+  `_rejected_messages`, `network_stats_packets_sequence`,
+  `network_stats_orders_channel`, `udp_match_stats`, `base_game_statistics_handler`
+  — packet-loss / match-stats instrumentation.
+- **Reworked:** `lobby_menu`, `lobby_client`, and a physics character-controller
+  swap (`old_bullet_character_controller` removed, `bullet_character_controller`
+  reworked).
+- **Removed:** the debug renderer (`render::debug::renderer`, `draw_lines_command`,
+  `draw_triangles_command`) and `jump_logic`.
+
+---
+
+## The full arc (May 2013 → Apr 2014)
+
+**2013 (v0.1):** three weeks of iteration — weapon mechanics (dispersion-skill,
+reload/chambering state machines) and a sound-engine rearchitecture (RMS → codec
+cooks → new propagation), with renderer streaming-texture/SpeedTree churn.
+**Early 2014 (v0.20):** the pivot — the single-player AI/NPC system torn out, PvP
+match infrastructure (game modes, lobby, respawn rules, statistics) added, and the
+audio path moved to LTCG. **Spring 2014 (v0.2x):** netcode and match-statistics
+polish on the new PvP base, plus a physics character-controller swap.
+
+From a S.T.A.L.K.E.R.2-style AI shooter to a free-to-play PvP match game, traced
+function by function.
+
+_Covers all ingested builds (802 → 2010). v0.23h-build2285 is stripped (no PDB),
+so it stays out of the function-level diff._
