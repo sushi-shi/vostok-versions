@@ -1,0 +1,1106 @@
+{
+  "base": "v0.20f-build1923",
+  "target": "v0.21d-build2010",
+  "scope": {
+    "generated": false,
+    "third_party": false
+  },
+  "counts": {
+    "identical": {
+      "engine": 6941,
+      "generated": 1526,
+      "third_party": 6216
+    },
+    "changed": {
+      "engine": 2516,
+      "generated": 12,
+      "third_party": 202
+    },
+    "new": {
+      "engine": 815,
+      "generated": 299,
+      "third_party": 890
+    }
+  },
+  "removed_units": {
+    "engine": [
+      "vostok/animation/fingers_to_weapon_corrector.h",
+      "vostok/animation/sources/legs_ik_drawer.cpp",
+      "vostok/core_debug_engine.h",
+      "vostok/game/sources/base_match_client.h",
+      "vostok/game_core/sources/artefact_base_config.cpp",
+      "vostok/game_core/sources/artefact_rattle_core_config.cpp",
+      "vostok/game_core/sources/jump_logic.cpp",
+      "vostok/game_core/sources/weapon_ammunition_cook.cpp",
+      "vostok/network_core/udp_match_packets_allocator.h",
+      "vostok/physics/sources/old_bullet_character_controller.cpp",
+      "vostok/physics/sources/old_bullet_character_controller.h",
+      "vostok/render/core/dx11/sources/manager_common_inline.h",
+      "vostok/render/facade/one_way_render_channel.h",
+      "vostok/render/facade/sources/debug_draw_lines_command.cpp",
+      "vostok/render/facade/sources/debug_draw_lines_command_inline.h",
+      "vostok/render/facade/sources/debug_draw_triangles_command.cpp",
+      "vostok/render/facade/sources/debug_draw_triangles_command_inline.h",
+      "vostok/render/facade/sources/debug_renderer.cpp",
+      "vostok/scaleform/sources/d3d1x_events.h"
+    ],
+    "third_party": [
+      "scaleform/src/kernel/sf_ampinterface.h",
+      "scaleform/src/render/render_cxform.h"
+    ]
+  },
+  "top_changed": [
+    {
+      "pct": 2.2222223,
+      "unit": "vostok/game/sources/player_tick.cpp",
+      "fn": "public: virtual void __thiscall survarium::player::tick(unsigned int)"
+    },
+    {
+      "pct": 3.2222223,
+      "unit": "vostok/network/sources/match_client_impl.h",
+      "fn": "public: void __thiscall vostok::network::match_client_impl::set_connection_ports(unsigned char, unsigned int, unsigned short, unsigned short)"
+    },
+    {
+      "pct": 3.487805,
+      "unit": "vostok/game_core/sources/jump_logic_state_landing.cpp",
+      "fn": "private: virtual void __thiscall survarium::jump_logic_state_landing::initialize(void)"
+    },
+    {
+      "pct": 4.6,
+      "unit": "vostok/game_core/sources/player_logic_sprint_state.cpp",
+      "fn": "private: virtual void __thiscall survarium::player_logic_sprint_state::finalize(void)"
+    },
+    {
+      "pct": 5.714286,
+      "unit": "vostok/game_core/artefact_core_cook.h",
+      "fn": "private: virtual void __thiscall survarium::artefact_core_cook::query_for_derived_resources(class vostok::resources::query_result_for_cook &, class survarium::artefact_base &, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "pct": 7.7674417,
+      "unit": "vostok/game_core/sources/base_player.cpp",
+      "fn": "public: void __thiscall survarium::base_player::end_jump(void)"
+    },
+    {
+      "pct": 8.4375,
+      "unit": "vostok/game/sources/game_statistics_handler.cpp",
+      "fn": "private: virtual void __thiscall survarium::game_statistics_handler::on_victory_item_event(unsigned char, enum survarium::victory_item_event_type, class survarium::victory_item_core const &)"
+    },
+    {
+      "pct": 9.054054,
+      "unit": "vostok/render/core/dx11/sources/texture_cook_wrapper.cpp",
+      "fn": "public: virtual void __thiscall vostok::render::texture_cook_wrapper::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 9.789157,
+      "unit": "vostok/render/core/dx11/sources/resource_manager.cpp",
+      "fn": "public: void __thiscall vostok::render::resource_manager::initialize_texture_pools(void)"
+    },
+    {
+      "pct": 11.112069,
+      "unit": "vostok/render/engine/sources/stage_decals_accumulate.cpp",
+      "fn": "public: virtual void __thiscall vostok::render::stage_decals_accumulate::execute(void)"
+    },
+    {
+      "pct": 11.460318,
+      "unit": "vostok/render/engine/sources/stage_rain.cpp",
+      "fn": "public: __thiscall vostok::render::stage_rain::stage_rain(class vostok::render::renderer *, class vostok::render::renderer_context *)"
+    },
+    {
+      "pct": 11.75862,
+      "unit": "vostok/game_core/sources/items_dictionary_cook.cpp",
+      "fn": "public: virtual void __thiscall survarium::items_dictionary_cook::delete_resource(class vostok::resources::resource_base *)"
+    },
+    {
+      "pct": 12.014706,
+      "unit": "vostok/input/sources/input_world.cpp",
+      "fn": "public: virtual void __thiscall vostok::input::input_world::add_handler(struct vostok::input::handler &)"
+    },
+    {
+      "pct": 14.476191,
+      "unit": "vostok/game_core/sources/weapon_user_animations_selector.cpp",
+      "fn": "public: float __thiscall survarium::weapon_user_animations_selector::look_time_factor(void) const"
+    },
+    {
+      "pct": 15.054545,
+      "unit": "vostok/render/core/dx11/backend_inline.h",
+      "fn": "public: void __thiscall vostok::render::backend::flush_rt_views(void)"
+    },
+    {
+      "pct": 15.151786,
+      "unit": "vostok/game_core/sources/player_logic_jump_state.cpp",
+      "fn": "private: virtual void __thiscall survarium::player_logic_jump_state::initialize(void)"
+    },
+    {
+      "pct": 16.0,
+      "unit": "vostok/game/sources/match_client.h",
+      "fn": "private: virtual class vostok::network_core::udp_match_packet * __thiscall survarium::match_client::new_packet(enum vostok::match::client::messages_enum)"
+    },
+    {
+      "pct": 16.75,
+      "unit": "vostok/game/sources/player.cpp",
+      "fn": "public: virtual void __thiscall survarium::player::serialize(class vostok::network_core::buffer_writer const &, class vostok::network_core::buffer_writer const *, unsigned char (&)[32768], class vostok::intrusive_ptr<class vostok::animation::mixing::n_ary_tree_intrusive_base, class vostok::animation::mixing::n_ary_tree_intrusive_base, class vostok::threading::single_threading_policy> &, unsigned int)"
+    },
+    {
+      "pct": 17.352942,
+      "unit": "vostok/game/sources/portable_interactive_object.cpp",
+      "fn": "public: virtual void __thiscall survarium::portable_interactive_object::deserialize(class vostok::network_core::buffer_reader &, class vostok::network_core::buffer_reader *, unsigned int)"
+    },
+    {
+      "pct": 17.370235,
+      "unit": "vostok/game/sources/player_cook.cpp",
+      "fn": "private: void __thiscall survarium::profile_skin_visual_cook::on_configs_loaded(class vostok::resources::queries_result &, class vostok::resources::query_result_for_cook *, struct survarium::player_profile const *)"
+    },
+    {
+      "pct": 18.331379,
+      "unit": "vostok/network_core/udp_match_connection_inline.h",
+      "fn": "private: void __thiscall vostok::network_core::udp_match_connection::add_ordered_packet<class vostok::network_core::process_packet_predicate>(struct vostok::network_core::udp_match_connection::channel &, class vostok::network_core::udp_match_packet &, class vostok::network_core::process_packet_predicate const &)"
+    },
+    {
+      "pct": 18.378132,
+      "unit": "vostok/network_core/udp_match_connection_inline.h",
+      "fn": "private: void __thiscall vostok::network_core::udp_match_connection::call_predicate<class vostok::network_core::process_packet_predicate>(class vostok::network_core::process_packet_predicate const &, class vostok::network_core::buffer_reader &)"
+    },
+    {
+      "pct": 18.847458,
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::on_stats_message_arrived(char const *, char const *, enum vostok::messaging::message_channel_enum)"
+    },
+    {
+      "pct": 19.612904,
+      "unit": "vostok/game/sources/network_client_processing.cpp",
+      "fn": "private: void __thiscall survarium::network_client::process_static_match_info(class vostok::network_core::buffer_reader &)"
+    },
+    {
+      "pct": 20.469248,
+      "unit": "vostok/network_core/sources/udp_match_connection.cpp",
+      "fn": "private: void __thiscall vostok::network_core::udp_match_connection::process_low_level_message(class vostok::network_core::buffer_reader &, unsigned int)"
+    },
+    {
+      "pct": 22.138075,
+      "unit": "vostok/network_core/sources/udp_match_connection.cpp",
+      "fn": "public: bool __thiscall sequence_id_predicate::operator()(class vostok::network_core::udp_match_packet *) const"
+    },
+    {
+      "pct": 22.4,
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<struct vostok::render::ray>::assign<struct vostok::render::ray const *>(struct vostok::render::ray const *, struct vostok::render::ray const *const &)"
+    },
+    {
+      "pct": 22.7,
+      "unit": "vostok/game_core/sources/weapon_core.cpp",
+      "fn": "private: float __thiscall survarium::weapon_core::vertical_recoil_value(unsigned int) const"
+    },
+    {
+      "pct": 22.809525,
+      "unit": "vostok/render/engine/sources/render_model_skeleton.h",
+      "fn": "public: virtual class vostok::math::aabb __thiscall vostok::render::skeleton_render_model_instance::get_aabb(void)"
+    },
+    {
+      "pct": 22.832335,
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: __thiscall survarium::game_world_ui::game_world_ui(class survarium::game_world &)"
+    },
+    {
+      "pct": 23.276922,
+      "unit": "vostok/game_core/sources/artefact_core_cook.cpp",
+      "fn": "protected: virtual class survarium::artefact_base & __thiscall survarium::artefact_core_cook::construct_derived_resource(void *, class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> const &, class vostok::resources::resource_ptr<class survarium::game_effect_emitter, class vostok::resources::unmanaged_intrusive_base> const &, void *const) const"
+    },
+    {
+      "pct": 23.283464,
+      "unit": "vostok/game_core/sources/items_dictionary_cook.cpp",
+      "fn": "private: void __thiscall survarium::items_dictionary_cook::on_subresources_loaded(class vostok::resources::queries_result &, class survarium::items_dictionary *)"
+    },
+    {
+      "pct": 23.93204,
+      "unit": "vostok/network_core/sources/udp_network_flow_emulator.cpp",
+      "fn": "public: __thiscall vostok::network_core::udp_network_flow_emulator::~udp_network_flow_emulator(void)"
+    },
+    {
+      "pct": 24.347826,
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<class vostok::render::shader_constant>::assign<class vostok::render::shader_constant const *>(class vostok::render::shader_constant const *, class vostok::render::shader_constant const *const &)"
+    },
+    {
+      "pct": 24.441177,
+      "unit": "vostok/network_core/sources/udp_match_connection.cpp",
+      "fn": "private: void __thiscall vostok::network_core::udp_match_connection::fill_packet_header(class vostok::network_core::udp_match_packet &)"
+    },
+    {
+      "pct": 24.442749,
+      "unit": "vostok/render/engine/sources/stage_screen_space_reflections.cpp",
+      "fn": "public: virtual void __thiscall vostok::render::stage_screen_space_reflections::execute(void)"
+    },
+    {
+      "pct": 24.588236,
+      "unit": "vostok/game/sources/artefact_inline.h",
+      "fn": "private: __thiscall survarium::artefact<class survarium::artefact_lifebone_core>::artefact<class survarium::artefact_lifebone_core>(class vostok::configs::binary_config_value const &, class vostok::resources::resource_ptr<class survarium::game_effect_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::base_game_scene *)"
+    },
+    {
+      "pct": 24.588236,
+      "unit": "vostok/game/sources/artefact_inline.h",
+      "fn": "private: __thiscall survarium::artefact<class survarium::artefact_spring_core>::artefact<class survarium::artefact_spring_core>(class vostok::configs::binary_config_value const &, class vostok::resources::resource_ptr<class survarium::game_effect_emitter, class vostok::resources::unmanaged_intrusive_base> const &, class survarium::base_game_scene *)"
+    },
+    {
+      "pct": 24.902325,
+      "unit": "vostok/game_core/sources/inventory_cook.cpp",
+      "fn": "public: virtual void __thiscall survarium::inventory_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "pct": 25.714285,
+      "unit": "vostok/render/engine/sources/effect_material_base.cpp",
+      "fn": "public: void __thiscall vostok::render::effect_material_base::compile_end(class vostok::render::effect_compiler &)"
+    },
+    {
+      "pct": 26.539131,
+      "unit": "vostok/network_core/udp_match_connection_inline.h",
+      "fn": "public: static void __cdecl vostok::network_core::udp_match_connection::construct_packet(struct vostok::network_core::udp_match_packets_orderer &, class vostok::network_core::udp_match_packet &, unsigned char, char const *const)"
+    },
+    {
+      "pct": 26.827381,
+      "unit": "vostok/engine/sources/engine_world_win.cpp",
+      "fn": "message_processor"
+    },
+    {
+      "pct": 27.043478,
+      "unit": "vostok/game_core/sources/base_player.cpp",
+      "fn": "protected: void __thiscall survarium::base_player::activate_physics(void)"
+    },
+    {
+      "pct": 28.125,
+      "unit": "vostok/engine/sources/engine_world.cpp",
+      "fn": "public: virtual void __thiscall vostok::engine::engine_world::on_alttab(bool)"
+    },
+    {
+      "pct": 28.25,
+      "unit": "vostok/network_core/udp_match_connection_inline.h",
+      "fn": "private: void __thiscall vostok::network_core::udp_match_connection::process_multipacket_message<class vostok::network_core::process_packet_predicate>(class vostok::network_core::process_packet_predicate const &, class vostok::network_core::buffer_reader &)"
+    },
+    {
+      "pct": 28.307692,
+      "unit": "vostok/game_core/sources/oxygen_tank.cpp",
+      "fn": "public: virtual void __thiscall survarium::oxygen_tank::get_item_props(struct survarium::inventory_item_props &) const"
+    },
+    {
+      "pct": 28.666666,
+      "unit": "vostok/network_core/sources/udp_match_client.cpp",
+      "fn": "private: void __thiscall vostok::network_core::udp_match_client::process_incoming_packet(class vostok::network_core::buffer_reader &, class boost::asio::ip::basic_endpoint<class boost::asio::ip::udp> const &, struct vostok::network_core::socket_handler *)"
+    },
+    {
+      "pct": 28.757143,
+      "unit": "vostok/game_core/sources/base_player.cpp",
+      "fn": "protected: void __thiscall survarium::base_player::tick_animations(unsigned int, unsigned int)"
+    },
+    {
+      "pct": 28.76087,
+      "unit": "vostok/game_core/sources/player_logic_jump_state.cpp",
+      "fn": "private: virtual void __thiscall survarium::player_logic_jump_state::serialize(class vostok::network_core::buffer_writer const &, class vostok::network_core::buffer_writer const *) const"
+    },
+    {
+      "pct": 29.860655,
+      "unit": "vostok/physics/sources/bullet_character_controller.cpp",
+      "fn": "private: bool __thiscall vostok::physics::bullet_character_controller::impassable_slope(class btVector3const &, class btVector3const &, class btVector3const &) const"
+    }
+  ],
+  "new_or_rewritten": [
+    {
+      "unit": "vostok/animation/animation_player_inline.h",
+      "fn": "public: __thiscall vostok::animation::animation_player::animation_player(unsigned int)"
+    },
+    {
+      "unit": "vostok/animation/mixing_addition_lexeme_inline.h",
+      "fn": "class vostok::animation::mixing::addition_lexeme & __cdecl vostok::animation::mixing::operator+<class vostok::animation::mixing::addition_lexeme, class vostok::animation::mixing::animation_lexeme>(class vostok::animation::mixing::addition_lexeme &, class vostok::animation::mixing::animation_lexeme &)"
+    },
+    {
+      "unit": "vostok/animation/mixing_binary_tree_weight_node.h",
+      "fn": "public: __thiscall vostok::math::float4x4::float4x4(void)"
+    },
+    {
+      "unit": "vostok/animation/sources/animation_player.cpp",
+      "fn": "public: class vostok::math::float4x4 __thiscall vostok::animation::animation_player::computed_bone_matrix(class vostok::animation::skeleton const &, class vostok::animation::skeleton_bone const &, void const *const, unsigned int const *const, class boost::function<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl (unsigned short)> const &, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/animation_player.cpp",
+      "fn": "public: void __thiscall vostok::animation::animation_player::compute_bones_local_matrices(class vostok::animation::skeleton const &, class vostok::math::float4x4*, class vostok::math::float4x4*, void const *const, unsigned int *, class boost::function<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl (unsigned short)> const &, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/animation_player.cpp",
+      "fn": "public: void __thiscall vostok::animation::animation_player::compute_bones_matrices(class vostok::animation::skeleton const &, class vostok::math::float4x4*, class vostok::math::float4x4*, void const *const, unsigned int *, class boost::function<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl (unsigned short)> const &, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/bone_matrices_computer.cpp",
+      "fn": "private: struct stlp_std::pair<class vostok::math::float4x4, class vostok::math::float3> __thiscall vostok::animation::bone_matrices_computer::computed_local_bone_matrix(class vostok::animation::skeleton_bone const &, unsigned int, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/bone_matrices_computer.cpp",
+      "fn": "private: struct vostok::animation::bone_transform __thiscall vostok::animation::bone_matrices_computer::computed_local_bone_transform(class vostok::animation::skeleton_bone const &, unsigned int, unsigned int, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/bone_matrices_computer.cpp",
+      "fn": "private: void __thiscall vostok::animation::bone_matrices_computer::compute_skeleton_branch(class vostok::animation::skeleton_bone const &, class vostok::math::float4x4*, class vostok::math::float4x4const &, unsigned int const *, unsigned int const *, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/bone_matrices_computer.cpp",
+      "fn": "private: void __thiscall vostok::animation::bone_matrices_computer::compute_skeleton_branch_local(class vostok::animation::skeleton_bone const &, class vostok::math::float4x4*, unsigned int const *, unsigned int const *, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/bone_matrices_computer.cpp",
+      "fn": "public: class vostok::math::float4x4 __thiscall vostok::animation::bone_matrices_computer::computed_bone_matrix(class vostok::animation::skeleton_bone const &, unsigned int const *, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/bone_matrices_computer.cpp",
+      "fn": "public: void __thiscall vostok::animation::bone_matrices_computer::compute_bones_local_matrices(class vostok::math::float4x4*, class vostok::math::float4x4*, unsigned int const *, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/bone_matrices_computer.cpp",
+      "fn": "public: void __thiscall vostok::animation::bone_matrices_computer::compute_bones_matrices(class vostok::math::float4x4*, class vostok::math::float4x4*, unsigned int const *, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/cubic_spline_skeleton_animation_cook.cpp",
+      "fn": "public: virtual void __thiscall vostok::animation::cubic_spline_skeleton_animation_cook::destroy_resource(class vostok::resources::managed_resource *)"
+    },
+    {
+      "unit": "vostok/animation/sources/fingers_to_weapon_corrector.cpp",
+      "fn": "public: void __thiscall vostok::animation::fingers_to_weapon_corrector::activate_hand(enum vostok::animation::fingers_to_weapon_corrector::hands_enum, bool, enum vostok::animation::fingers_to_weapon_corrector::fingers_locator_set_id_enum, unsigned int)"
+    },
+    {
+      "unit": "vostok/animation/sources/fingers_to_weapon_corrector.cpp",
+      "fn": "public: void __thiscall vostok::animation::fingers_to_weapon_corrector::activate_hand(enum vostok::animation::fingers_to_weapon_corrector::hands_enum, enum vostok::animation::finger_corrector_animation_events_type_enum, unsigned int)"
+    },
+    {
+      "unit": "vostok/animation/sources/hand_to_weapon_ik_solver.cpp",
+      "fn": "public: void __thiscall vostok::animation::hand_to_weapon_ik_solver::activate_hand(enum vostok::animation::hand_to_weapon_ik_solver::hands_enum, bool, enum vostok::animation::hand_to_weapon_ik_solver::ik_locator_id_enum, unsigned int)"
+    },
+    {
+      "unit": "vostok/animation/sources/hand_to_weapon_ik_solver.cpp",
+      "fn": "public: void __thiscall vostok::animation::hand_to_weapon_ik_solver::activate_hand(enum vostok::animation::hand_to_weapon_ik_solver::hands_enum, enum vostok::animation::ik_animation_events_type, unsigned int)"
+    },
+    {
+      "unit": "vostok/animation/sources/mixing_n_ary_tree.cpp",
+      "fn": "public: void __thiscall vostok::animation::mixing::n_ary_tree::compute_bones_local_matrices(void const *, class vostok::animation::skeleton const &, class vostok::math::float4x4*const, class vostok::math::float4x4*const, unsigned int *, class boost::function<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl (unsigned short)> const &, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/animation/sources/mixing_n_ary_tree.cpp",
+      "fn": "public: void __thiscall vostok::animation::mixing::n_ary_tree::compute_bones_matrices(void const *, class vostok::animation::skeleton const &, class vostok::math::float4x4*const, class vostok::math::float4x4*const, unsigned int *, class boost::function<class vostok::resources::resource_ptr<class vostok::resources::managed_resource, class vostok::resources::managed_intrusive_base> __cdecl (unsigned short)> const &, unsigned char, bool) const"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: __thiscall vostok::buffer_vector<class boost::basic_regex<wchar_t, struct boost::regex_traits<wchar_t, class boost::w32_regex_traits<wchar_t> > > >::~buffer_vector<class boost::basic_regex<wchar_t, struct boost::regex_traits<wchar_t, class boost::w32_regex_traits<wchar_t> > > >(void)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: __thiscall vostok::buffer_vector<struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &)> > >::~buffer_vector<struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &)> > >(void)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: __thiscall vostok::buffer_vector<struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &)> > >::~buffer_vector<struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &)> > >(void)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: __thiscall vostok::buffer_vector<unsigned int>::buffer_vector<unsigned int>(void *, unsigned int, class vostok::buffer_vector<unsigned int> const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: __thiscall vostok::buffer_vector<unsigned int>::buffer_vector<unsigned int>(void *, unsigned int, class vostok::buffer_vector<unsigned int> const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: class vostok::buffer_vector<class vostok::render::buffer_slot> & __thiscall vostok::buffer_vector<class vostok::render::buffer_slot>::operator=(class vostok::buffer_vector<class vostok::render::buffer_slot> const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: class vostok::buffer_vector<class vostok::render::texture_slot> & __thiscall vostok::buffer_vector<class vostok::render::texture_slot>::operator=(class vostok::buffer_vector<class vostok::render::texture_slot> const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: class vostok::buffer_vector<unsigned int> & __thiscall vostok::buffer_vector<unsigned int>::operator=(class vostok::buffer_vector<unsigned int> const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<class vostok::configs::binary_config_value>::insert(class vostok::configs::binary_config_value *const &, unsigned int, class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<class vostok::configs::binary_config_value>::push_back(class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<class vostok::render::scene *>::erase(class vostok::render::scene **const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<class vostok::render::scene *>::erase(class vostok::render::scene **const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<class vostok::variant<32> *>::push_back(class vostok::variant<32> *const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<struct `public: unsigned char __thiscall survarium::swear_filter::filter_text(wchar_t *, unsigned short, wchar_t const *) const'::`2'::mes_excepts>::push_back(struct `public: unsigned char __thiscall survarium::swear_filter::filter_text(wchar_t *, unsigned short, wchar_t const *) const'::`2'::mes_excepts const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &)> > >::push_back(struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &)> > const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &, bool)> > >::push_back(struct stlp_std::pair<class vostok::network_core::udp_match_packet *, class boost::function<void __cdecl (class vostok::network_core::udp_match_packet &, bool)> > const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<struct survarium::armor::body_part_params>::push_back(struct survarium::armor::body_part_params const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<struct survarium::item_modification *>::push_back(struct survarium::item_modification *const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<struct survarium::net_stats::column_info>::push_back(struct survarium::net_stats::column_info const &)"
+    },
+    {
+      "unit": "vostok/buffer_vector_inline.h",
+      "fn": "public: void __thiscall vostok::buffer_vector<unsigned int>::resize(unsigned int)"
+    },
+    {
+      "unit": "vostok/circular_buffer_inline.h",
+      "fn": "public: __thiscall vostok::circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128>::~circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128>(void)"
+    },
+    {
+      "unit": "vostok/circular_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128>::push_back(struct stlp_std::pair<unsigned int, unsigned int> const &)"
+    },
+    {
+      "unit": "vostok/circular_buffer_inline.h",
+      "fn": "public: void __thiscall vostok::circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128>::push_back<class vostok::circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128>::const_iterator>(class vostok::circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128>::const_iterator const &, class vostok::circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128>::const_iterator const &)"
+    },
+    {
+      "unit": "vostok/collision/sources/collision_cook.cpp",
+      "fn": "public: __thiscall vostok::resources::pinned_ptr_const<unsigned char>::~pinned_ptr_const<unsigned char>(void)"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config.cpp",
+      "fn": "class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::configs::create_binary_config(class vostok::mutable_buffer const &, class vostok::memory::base_allocator &)"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_creation.cpp",
+      "fn": "`vostok::configs::create_binary_config_buffer_impl'::`3'::remap_disposer::operator()"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_creation.cpp",
+      "fn": "`vostok::configs::sort'::`5'::predicate::compare"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_creation.cpp",
+      "fn": "void __cdecl vostok::configs::create_binary_config_buffer_impl(class vostok::configs::binary_config_value &, class vostok::memory::stream &)"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_creation.cpp",
+      "fn": "vostok::configs::construct"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_creation.cpp",
+      "fn": "vostok::configs::fill_info_for_fix_up"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_creation.cpp",
+      "fn": "vostok::configs::process_string"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_creation.cpp",
+      "fn": "vostok::configs::sort"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_modification.cpp",
+      "fn": "class vostok::resources::resource_ptr<class vostok::configs::binary_config, class vostok::resources::unmanaged_intrusive_base> __cdecl vostok::configs::modify_binary_config(class vostok::configs::binary_config_value const &, class boost::intrusive::set<struct vostok::configs::modifier, struct boost::intrusive::member_hook<struct vostok::configs::modifier, class boost::intrusive::set_member_hook<struct boost::intrusive::none, struct boost::intrusive::none, struct boost::intrusive::none, struct boost::intrusive::none>, 32>, struct boost::intrusive::compare<struct vostok::configs::modifier::comparer>, struct boost::intrusive::none, struct boost::intrusive::none> const &, class vostok::memory::base_allocator &)"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_modification.cpp",
+      "fn": "vostok::configs::construct"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_modification.cpp",
+      "fn": "vostok::configs::create_binary_config_buffer"
+    },
+    {
+      "unit": "vostok/core/sources/configs_binary_config_modification.cpp",
+      "fn": "vostok::configs::free_memory"
+    },
+    {
+      "unit": "vostok/core/sources/logging_filters_console_command.cpp",
+      "fn": "public: __thiscall vostok::console_commands::logging_filters_console_command::logging_filters_console_command(class vostok::logging::filter_tree &, char const *const, bool, enum vostok::console_commands::command_type, enum vostok::console_commands::execution_filter)"
+    },
+    {
+      "unit": "vostok/core/sources/math_frustum.cpp",
+      "fn": "public: __thiscall vostok::math::float4x4::float4x4(void)"
+    },
+    {
+      "unit": "vostok/core/sources/memory_stream.cpp",
+      "fn": "public: void __thiscall vostok::memory::stream::append(void const *, unsigned int)"
+    },
+    {
+      "unit": "vostok/core/sources/replay_match_io.cpp",
+      "fn": "public: void __thiscall vostok::replay_match_reader::open_replay(char const *)"
+    },
+    {
+      "unit": "vostok/core/sources/replay_match_io.cpp",
+      "fn": "void ** __cdecl vostok::open_file_impl(class vostok::fs_new::device_file_system_no_watcher_proxy &, char const *, enum vostok::fs_new::file_access::access_enum)"
+    },
+    {
+      "unit": "vostok/core/sources/replay_match_io.cpp",
+      "fn": "void __cdecl vostok::create_file_name_by_replay(class vostok::fs_new::native_path_string *const, char const *const)"
+    },
+    {
+      "unit": "vostok/core/sources/resources_cook_classes.cpp",
+      "fn": "public: __thiscall vostok::resources::managed_cook::managed_cook(enum vostok::resources::class_id_enum, enum vostok::resources::cook_base::reuse_enum, unsigned int, class vostok::enum_flags<enum vostok::resources::cook_base::flags_enum>)"
+    },
+    {
+      "unit": "vostok/core/sources/resources_query_result.cpp",
+      "fn": "public: enum assert_on_fail_bool __thiscall vostok::resources::query_result_for_cook::assert_on_fail(void) const"
+    },
+    {
+      "unit": "vostok/core/sources/string_functions_win.cpp",
+      "fn": "unsigned int __cdecl vostok::strings::utf8towcs(wchar_t *, unsigned int, char const *, unsigned int)"
+    },
+    {
+      "unit": "vostok/engine/sources/engine_world_win.cpp",
+      "fn": "public: void __thiscall vostok::engine::engine_world::on_clipboard_changed(void)"
+    },
+    {
+      "unit": "vostok/fixed_string_inline.h",
+      "fn": "public: __thiscall boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > >(class boost::_bi::bind_t<void, class boost::_mfi::mf1<void, class vostok::engine::engine_world, class boost::function<void __cdecl (void)> >, class boost::_bi::list2<class boost::_bi::value<class vostok::engine::engine_world *>, class boost::_bi::value<class boost::function<void __cdecl (void)> > > > const &)"
+    },
+    {
+      "unit": "vostok/fixed_vector_inline.h",
+      "fn": "public: __thiscall vostok::fixed_vector<struct vostok::particle::render_particle_emitter_instance *, 2048>::fixed_vector<struct vostok::particle::render_particle_emitter_instance *, 2048>(class vostok::fixed_vector<struct vostok::particle::render_particle_emitter_instance *, 2048> const &)"
+    },
+    {
+      "unit": "vostok/fs/virtual_path_string.h",
+      "fn": "public: class vostok::fs_new::virtual_path_string const & __thiscall vostok::fs_new::virtual_path_string::operator=<class vostok::configs::binary_config_value>(class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "unit": "vostok/game/game_quest_progress_calculator.cpp",
+      "fn": "public: void __thiscall survarium::game_quest_progress_calculator::calculate_player_game_progress(unsigned char, enum survarium::match_stats_events_dict_enum)"
+    },
+    {
+      "unit": "vostok/game/game_quest_progress_calculator.cpp",
+      "fn": "public: void __thiscall survarium::game_quest_progress_calculator::calculate_victory_item_progress(unsigned char, enum survarium::victory_item_event_type)"
+    },
+    {
+      "unit": "vostok/game/game_quest_progress_calculator.cpp",
+      "fn": "public: void __thiscall survarium::game_quest_progress_calculator::set_player_quests(class vostok::vectora<struct survarium::quest_instance> const *, unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_scene.cpp",
+      "fn": "public: void __thiscall survarium::base_game_scene::hide_movie(class vostok::resources::resource_ptr<struct survarium::flash_movie_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_scene.cpp",
+      "fn": "public: void __thiscall survarium::base_game_scene::show_movie(class vostok::resources::resource_ptr<struct survarium::flash_movie_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_scene.h",
+      "fn": "public: __thiscall survarium::inventory_item_descr::~inventory_item_descr(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::deserialize(class vostok::network_core::buffer_reader &, unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_artefact_took(unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_event(unsigned char, enum survarium::match_stats_events_dict_enum, unsigned short)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_limb_affect(unsigned int, unsigned char, enum survarium::affect_event_type_enum)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_medkit_action(class survarium::medkit const &, bool, unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_pain_body_part_damage_received(unsigned char, unsigned char, float)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_pain_body_part_regenerated(unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_player_damaged(unsigned int, unsigned char, enum survarium::player_stances_enum, unsigned char, float, enum survarium::profile_slot_enum, bool, unsigned int, unsigned short)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_player_killed(unsigned int, unsigned char, enum survarium::player_stances_enum, unsigned short, class vostok::math::float3const &, bool, unsigned char, class vostok::math::float3const &, bool, enum survarium::profile_slot_enum, bool, bool)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_player_weapon_firing(unsigned char, enum survarium::profile_slot_enum, enum survarium::player_stances_enum, unsigned short)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::on_victory_item_event(unsigned char, enum survarium::victory_item_event_type, class survarium::victory_item_core const &)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall survarium::base_game_statistics_handler::serialize(class vostok::network_core::buffer_writer const &, unsigned int) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: virtual void __thiscall vostok::memory::stack_allocator::call_free(void *, char const *const, char const *const, unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: void __thiscall survarium::base_game_statistics_handler::emit_score_changed_event(unsigned char, short)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "protected: void __thiscall survarium::base_game_statistics_handler::recalculate_scores(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "public: __thiscall survarium::base_game_statistics_handler::base_game_statistics_handler(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_game_statistics_handler::finish_match(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_game_statistics_handler::start_match(class survarium::game_world_core &, struct survarium::match_options const &)"
+    },
+    {
+      "unit": "vostok/game/sources/base_game_statistics_handler.cpp",
+      "fn": "public: void __thiscall survarium::base_game_statistics_handler::clear(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual __thiscall survarium::base_local_network_client::~base_local_network_client(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual class vostok::resources::resource_ptr<class survarium::player, class vostok::resources::unmanaged_intrusive_base> __thiscall survarium::base_local_network_client::get_active_player(unsigned char) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual class vostok::resources::resource_ptr<class survarium::player, class vostok::resources::unmanaged_intrusive_base> __thiscall survarium::base_local_network_client::get_player(unsigned char) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_local_network_client::attach_to_next_player(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_local_network_client::attach_to_player(class vostok::resources::resource_ptr<class survarium::player, class vostok::resources::unmanaged_intrusive_base>)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_local_network_client::attach_to_prev_player(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_local_network_client::attach_to_target_player(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_local_network_client::detach_from_player(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.h",
+      "fn": "protected: virtual void __thiscall vostok::particle::particle_system::add_action_to_guid_list(char const *, class vostok::particle::particle_action *)"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.h",
+      "fn": "public: virtual bool __thiscall vostok::collision::object::touch(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_local_network_client.h",
+      "fn": "public: virtual int __thiscall btConvexHullShape::getNumPlanes(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_network_client.cpp",
+      "fn": "public: class vostok::resources::resource_ptr<class survarium::player, class vostok::resources::unmanaged_intrusive_base> __thiscall survarium::base_network_client::get_last_current_player(void)"
+    },
+    {
+      "unit": "vostok/game/sources/base_network_client.cpp",
+      "fn": "public: virtual bool __thiscall vostok::collision::object::touch(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/base_view_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_view_network_client::to_first_view_mode(class survarium::game_world &)"
+    },
+    {
+      "unit": "vostok/game/sources/base_view_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_view_network_client::to_free_fly_mode(class survarium::game_world &)"
+    },
+    {
+      "unit": "vostok/game/sources/base_view_network_client.cpp",
+      "fn": "public: virtual void __thiscall survarium::base_view_network_client::to_third_view_mode(class survarium::game_world &)"
+    },
+    {
+      "unit": "vostok/game/sources/booby_trap_set.cpp",
+      "fn": "private: __thiscall survarium::booby_trap_set::booby_trap_set(class vostok::configs::binary_config_value const &, unsigned char, class survarium::base_game_scene &, struct vostok::physics::world &, class vostok::resources::resource_ptr<class survarium::game_material_manager, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/game/sources/booby_trap_set_cook.h",
+      "fn": "private: virtual class survarium::booby_trap_set_core * __thiscall survarium::booby_trap_set_cook::new_derived_resource(class vostok::configs::binary_config_value const &, unsigned char, struct vostok::physics::world &, class vostok::resources::resource_ptr<class survarium::game_material_manager, class vostok::resources::unmanaged_intrusive_base> const &, void *const)"
+    },
+    {
+      "unit": "vostok/game/sources/chat_handler.cpp",
+      "fn": "private: void __thiscall survarium::chat_handler::on_message_typed(char const (&)[256], enum vostok::messaging::message_channel_enum)"
+    },
+    {
+      "unit": "vostok/game/sources/chat_handler.cpp",
+      "fn": "public: void __thiscall survarium::chat_handler::add_squad_tab(enum vostok::messaging::message_channel_enum)"
+    },
+    {
+      "unit": "vostok/game/sources/chat_handler.cpp",
+      "fn": "public: void __thiscall survarium::chat_handler::filter_message(char (&)[256])"
+    },
+    {
+      "unit": "vostok/game/sources/chat_handler.cpp",
+      "fn": "public: void __thiscall survarium::chat_handler::remove_squad_tab(void)"
+    },
+    {
+      "unit": "vostok/game/sources/effect_zone_cook.cpp",
+      "fn": "private: void __thiscall survarium::effect_zone_cook::create_resource(class vostok::resources::query_result_for_cook &, struct survarium::effect_zone_construct_params const &, class vostok::configs::binary_config_value const &)"
+    },
+    {
+      "unit": "vostok/game/sources/effect_zone_cook.cpp",
+      "fn": "public: virtual void __thiscall survarium::effect_zone_cook::translate_query(class vostok::resources::query_result_for_cook &)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "private: virtual void __thiscall survarium::game::on_alttab(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "private: void __thiscall survarium::game::on_match_stats_movies_loaded(class vostok::resources::queries_result &)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "public: virtual void __thiscall survarium::game::on_clipboard_changed(wchar_t const *)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "public: void __thiscall survarium::game::load(char const *, struct vostok::resources::request *, struct vostok::resources::request *, class vostok::variant<32> const **, class boost::function<void __cdecl (class vostok::resources::queries_result &)> const &)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "public: void __thiscall survarium::game::set_time_in_ms(unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/game.cpp",
+      "fn": "survarium::parse_resolution"
+    },
+    {
+      "unit": "vostok/game/sources/game_entry_point.cpp",
+      "fn": "struct vostok::engine_user::world * __cdecl survarium::game_module::create_world(struct vostok::engine_user::engine &, class vostok::render::world &, struct vostok::sound::world &, struct vostok::network::world &)"
+    },
+    {
+      "unit": "vostok/game/sources/game_options.h",
+      "fn": "public: __thiscall vostok::math::float4x4::float4x4(void)"
+    },
+    {
+      "unit": "vostok/game/sources/game_statistics_handler.cpp",
+      "fn": "private: virtual void __thiscall survarium::game_statistics_handler::on_event(unsigned char, enum survarium::match_stats_events_dict_enum, unsigned short)"
+    },
+    {
+      "unit": "vostok/game/sources/game_statistics_handler.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_statistics_handler::start_match(class survarium::game_world_core &, struct survarium::match_options const &)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world_input.cpp",
+      "fn": "public: virtual bool __thiscall survarium::game_world::on_mouse_key_action(struct vostok::input::world *, enum vostok::input::mouse_button, enum vostok::input::enum_mouse_key_action)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: void __thiscall survarium::game_world_ui::draw_damage_collector(struct survarium::player::inflicted_damage_collector const &)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: void __thiscall survarium::game_world_ui::on_player_killed(unsigned char, unsigned char, bool, unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: void __thiscall survarium::game_world_ui::refresh_minimap_screen_position(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: void __thiscall survarium::game_world_ui::refresh_quests_progress_text_alpha(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: void __thiscall survarium::game_world_ui::refresh_quests_progress_visibility(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/game_world_ui.cpp",
+      "fn": "public: void __thiscall survarium::game_world_ui::set_quests_progress(struct survarium::quest_ui_data *, unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/grenade_set_cook.cpp",
+      "fn": "public: virtual class survarium::grenade_set_core * __thiscall survarium::grenade_set_cook::new_derived_resource(void *const, class vostok::configs::binary_config_value const &, unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/grenade_set_cook.cpp",
+      "fn": "public: virtual int __thiscall btRigidBody::calculateSerializeBufferSize(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "private: void __thiscall survarium::lobby_client::clear_profile_info(void)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: bool __thiscall survarium::lobby_client::read_match_stats(class vostok::network_core::buffer_reader &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: bool __thiscall survarium::lobby_client::read_player_match_stats(class vostok::network_core::buffer_reader &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: bool __thiscall survarium::lobby_client::read_squad_info(class vostok::network_core::buffer_reader &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: unsigned char __thiscall survarium::lobby_client::squad_ready_count(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: void __thiscall survarium::lobby_client::buy_item(unsigned short, unsigned int, unsigned char, bool, enum survarium::profile_slot_enum)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: void __thiscall survarium::lobby_client::query_info_from_server(enum vostok::lobby::query_info_types)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: void __thiscall survarium::lobby_client::query_match_stats(unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_client.cpp",
+      "fn": "public: void __thiscall survarium::lobby_client::read_price_items(class vostok::network_core::buffer_reader &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::on_client_status_received(enum vostok::lobby::query_info_types)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_character.cpp",
+      "fn": "public: struct survarium::lobby_player_profile & __thiscall survarium::lobby_player_profile::operator=(struct survarium::lobby_player_profile const &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_character.cpp",
+      "fn": "public: struct survarium::player_profile & __thiscall survarium::player_profile::operator=(struct survarium::player_profile const &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "private: unsigned int __thiscall survarium::lobby_menu::get_next_number_from_message(class vostok::fixed_string<256> &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "private: void __thiscall survarium::lobby_menu::create_quest_ui_message(char const *, unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "private: void __thiscall survarium::lobby_menu::prepare_quest_object(struct survarium::flash_value &, struct survarium::quest_instance const &, struct survarium::quest_descriptor const &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "protected: void __thiscall survarium::lobby_menu::create_player_params(struct survarium::flash_value &, class survarium::player_params_modifiers_container const &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: __thiscall survarium::dictionary_item::~dictionary_item(void)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::add_quest(struct survarium::quest_instance const &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::fill_match_statistic(struct survarium::match_stats const &, struct survarium::player_result_full const &, unsigned char)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::fill_player_statistic(struct survarium::player_result_brief const &, struct survarium::player_result_full const &)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::fill_reputation_levels(void)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::fill_squad_info(struct survarium::squad<struct survarium::squad_member_item_with_name> const &, bool)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::on_price_items_arrived(void)"
+    },
+    {
+      "unit": "vostok/game/sources/lobby_menu_ui.cpp",
+      "fn": "public: void __thiscall survarium::lobby_menu::show_match_statistic(void)"
+    },
+    {
+      "unit": "vostok/game/sources/login_menu.cpp",
+      "fn": "private: void __thiscall survarium::login_menu::update_online_queue(unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/match_client.cpp",
+      "fn": "public: __thiscall survarium::match_client::match_client(struct vostok::network::world &, class vostok::timing::timer const &)"
+    },
+    {
+      "unit": "vostok/game/sources/match_client.h",
+      "fn": "private: virtual class vostok::network_core::udp_match_stats & __thiscall survarium::match_client::stats(void) const"
+    },
+    {
+      "unit": "vostok/game/sources/messaging_client_process_messagess.cpp",
+      "fn": "public: void __thiscall survarium::messaging_client::on_message_typed(char const *, char const (&)[256], enum vostok::messaging::message_channel_enum)"
+    },
+    {
+      "unit": "vostok/game/sources/network_client.cpp",
+      "fn": "public: virtual __thiscall survarium::base_game_statistics_handler::~base_game_statistics_handler(void)"
+    },
+    {
+      "unit": "vostok/game/sources/network_client_draw_match_stats.cpp",
+      "fn": "public: __thiscall vostok::network_core::udp_match_raw_stats::~udp_match_raw_stats(void)"
+    },
+    {
+      "unit": "vostok/game/sources/network_client_draw_match_stats.cpp",
+      "fn": "public: virtual void __thiscall survarium::network_client::draw_match_stats(unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/network_client_processing.cpp",
+      "fn": "private: void __thiscall survarium::network_client::register_message_in_stats(enum survarium::input_action_enum, enum vostok::match::server::messages_enum) const"
+    },
+    {
+      "unit": "vostok/game/sources/network_client_processing.cpp",
+      "fn": "private: void __thiscall survarium::network_client::try_send_all(unsigned int, bool)"
+    },
+    {
+      "unit": "vostok/game/sources/network_client_processing.cpp",
+      "fn": "public: bool __thiscall survarium::packet_sender::on_player_input_changed(struct survarium::player_update &) const"
+    },
+    {
+      "unit": "vostok/game/sources/network_client_processing.cpp",
+      "fn": "public: virtual void __thiscall survarium::game_camera::on_focus(bool)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "survarium::net_stats::last_values_sum"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "survarium::net_stats::last_values_sum"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "survarium::net_stats::last_values_sum"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "unsigned int __cdecl survarium::net_stats::last_values_max(class vostok::circular_buffer<struct stlp_std::pair<unsigned int, unsigned int>, 128> const &, unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "void __cdecl survarium::net_stats::add_text_cell(class vostok::resources::resource_ptr<struct survarium::flash_movie_resource, class vostok::resources::unmanaged_intrusive_base> const &, char const *const, unsigned int, enum survarium::net_stats::column_info::text_align, unsigned int, struct survarium::flash_value &)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "void __cdecl survarium::net_stats::sprintf_big_number(char (&)[32], unsigned int, unsigned int, unsigned int, char const *const, char const *const, char const *const)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "void __cdecl survarium::net_stats::sprintf_big_number_helper(char (&)[32], unsigned int, unsigned int, char const *const, char, char const *const)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats.h",
+      "fn": "void __cdecl survarium::net_stats::sprintf_time_4_digits(char (&)[32], unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_orders_channel::add_row(struct survarium::flash_value &, unsigned int, char const *const, class vostok::network_core::sequence_number<unsigned short> const &)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_orders_channel::fill_header(void)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_orders_channel::initialize_header(void)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_orders_channel::on_enabled_changed(char const *)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_orders_channel::update_position(unsigned int, unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "public: __thiscall survarium::network_stats_orders_channel::network_stats_orders_channel(class vostok::resources::resource_ptr<struct survarium::flash_movie_resource, class vostok::resources::unmanaged_intrusive_base> const &)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "public: void __thiscall survarium::network_stats_orders_channel::advance(unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "public: void __thiscall survarium::network_stats_orders_channel::fill_data(struct vostok::network_core::udp_match_raw_stats &, unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_orders_channel.cpp",
+      "fn": "public: void __thiscall survarium::network_stats_orders_channel::hide_movie(class survarium::base_game_scene &)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_packets.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_packets::add_row(struct survarium::flash_value &, unsigned int, char const *const, struct vostok::network_core::udp_match_bytes_count_stats &, unsigned int)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_packets.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_packets::fill_header(void)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_packets.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_packets::initialize_header(void)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_packets.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_packets::on_enabled_changed(char const *)"
+    },
+    {
+      "unit": "vostok/game/sources/network_stats_packets.cpp",
+      "fn": "private: void __thiscall survarium::network_stats_packets::update_position(unsigned int, unsigned int)"
+    }
+  ]
+}
